@@ -16,9 +16,9 @@ const Navbar2 = ({ options }) => {
 
 				{/* Primary Navbar */}
 				<div className='text-2xl'>
-					<Link className='text-stone-700 mx-1 px-2 border-2 bg-gray-200 rounded-lg hover:rounded-3xl hover:bg-gray-300 focus:bg-neutral-700 focus:border-indigo-200 transition duration-300' to='home'>{options[0]}</Link>
-					<Link className='text-stone-700 mx-2 px-1' to='projects'>{options[1]}</Link>
-					<Link className='text-stone-700 mx-2 px-1' to='blogs'>{options[2]}</Link>
+					<Link className='text-stone-600 mx-1 px-2 pb-1 border-2 bg-gray-200 rounded-lg hover:bg-gray-300 hover:text-black focus:rounded-xl focus:bg-neutral-700 focus:border-indigo-200 focus:text-white transition duration-900' to={options[0].toLowerCase()}>{options[0]}</Link>
+					<Link className='text-stone-600 mx-1 px-2 pb-1 border-2 bg-gray-200 rounded-md hover:bg-gray-300 hover:text-black focus:rounded-xl focus:bg-neutral-700 focus:border-indigo-200 focus:text-white transition duration-900' to={options[1].toLowerCase()}>{options[1]}</Link>
+					<Link className='text-stone-600 mx-1 px-2 pb-1 border-2 bg-gray-200 rounded-md hover:bg-gray-300 hover:text-black focus:rounded-xl focus:bg-neutral-700 focus:border-indigo-200 focus:text-white transition duration-900' to={options[2].toLowerCase()}>{options[2]}</Link>
 				</div>
 
 			</div>
