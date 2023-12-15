@@ -1,7 +1,9 @@
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects';
+import Project from './components/pages/Project';
 import Blogs from './components/pages/Blogs';
 import Navbar from './components/pages/Navbar';
+import ProjectDisplayCardLayout from './components/reusable/ProjectDisplayCardLayout';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -14,9 +16,10 @@ function App() {
         <Navbar options={navbarOptions}/>
         <Routes>
           <Route exact path="/" element={<Home/>} />
-          <Route exact path={'/'+navbarOptions[0].toLowerCase()} element={<Home/>} />
-          <Route exact path={'/'+navbarOptions[1].toLowerCase()} element={<Projects/>} />
-          <Route exact path={'/'+navbarOptions[2].toLowerCase()} element={<Blogs/>} />
+          <Route exact path="/home" element={<Home/>} />
+          <Route exact path="/projects" element={<Projects/>} />
+          <Route exact path="/blogs" element={<Blogs/>} />
+          <Route exact path="/projects/:projectId" element={<Project/>} />
         </Routes>
       </BrowserRouter>
     </>
