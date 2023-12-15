@@ -9,7 +9,7 @@ function App() {
   const navbarOptions = ['Home', 'Projects', 'Blogs']
 
   return (
-    <div>
+    <>
       <BrowserRouter>
         <Navbar options={navbarOptions}/>
         <Routes>
@@ -19,7 +19,7 @@ function App() {
           <Route exact path={'/'+navbarOptions[2].toLowerCase()} element={<Blogs/>} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
