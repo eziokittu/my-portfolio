@@ -9,7 +9,7 @@ import img5 from '../images/img5.png';
 import img6 from '../images/img6.png';
 
 const Project = () => {
-	const projectId = useParams().projectId;
+	const projectId = useParams().pid;
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
     img1,
@@ -32,6 +32,7 @@ const Project = () => {
     'Full Stack',
     'Website',
   ]
+  const projectType = 'Web Dev';
 
   const nextImage = () => {
     setCurrentImage((prevImage) => (prevImage + 1) % images.length);
@@ -43,19 +44,29 @@ const Project = () => {
 
   return (
     <div className="mx-4 sm:container sm:mx-auto mt-8">
-      <h1 className="text-center text-2xl sm:text-3xl md:text-6xl font-bold mb-4">Project Title [{projectId}]</h1>
+
+      {/* Project Title */}
+      <h1 className="text-center text-xl md:text-2xl font-bold mb-1">({projectType})</h1>
+      <h1 className="text-center text-2xl md:text-4xl font-bold mb-4">Project Title [{projectId}]</h1>
+
       {/* project tags */}
-      <p className="text-xl text-gray-700 text-center">Project Tags</p>
-      <div className='flex flex-wrap items-center border border-stone-400 bg-stone-200 rounded-lg mx-1 p-2  gap-2'>
+      <p className="text-xl text-stone-700 text-center">Project Tags</p>
+      <div className='flex flex-wrap justify-center border border-stone-400 bg-stone-200 rounded-lg mx-1 mb-4 p-2  gap-2'>
         {tags.map(tag => (
           <p className='text-center text-white border rounded-full bg-stone-700 px-4 py-1'>
             {tag}
           </p>
         ))}
       </div>
-      <p className="text-gray-700 mb-4">Short Description of the project goes here.</p>
+
+      {/* Project Description */}
+      <p className='text-xl text-stone-700 text-center'>Project Description</p>
+      <p className="max-h-[500px] text-gray-700 mb-4 p-2 border text-justify border-stone-400 rounded-lg mx-1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt rutrum augue id fermentum. Suspendisse vel rhoncus lorem, quis vehicula diam. Nam placerat euismod magna, non scelerisque ex cursus et. Donec ornare efficitur ipsum, sed facilisis lacus auctor at. Aenean vitae ex et nulla venenatis malesuada eu in nunc. Aenean tempus bibendum sem, ut dictum libero bibendum at. Sed vel maximus massa, eu elementum mauris. Integer id enim lacus. In tortor dui, consectetur at velit in, auctor auctor tellus. Fusce tincidunt, risus congue molestie fringilla, nulla elit scelerisque sapien, non rutrum est nisi at quam. Nullam dapibus nisi quis turpis ullamcorper tincidunt. Sed maximus ornare orci, vitae sodales est rhoncus et. Aliquam porta arcu vitae augue pharetra, ut maximus nisl tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
 
       {/* Image Viewer */}
+      <p className='text-xl text-stone-700 text-center'>Project Images</p>
       <div className="relative overflow-hidden mb-4 h-[300px] sm:h-[400px] md:h-[700px] bg-zinc-700 border rounded-lg flex items-center justify-center">
         <img
           src={images[currentImage]}

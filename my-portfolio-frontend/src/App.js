@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/home" element={<Home/>} />
           <Route exact path="/projects" element={<Projects/>} />
           <Route exact path="/blogs" element={<Blogs/>} />
-          <Route exact path="/projects/:projectId" element={<Project/>} />
+          <Route exact path="/projects/:pid" element={<Project/>} />
         </Routes>
       </BrowserRouter>
     </>
