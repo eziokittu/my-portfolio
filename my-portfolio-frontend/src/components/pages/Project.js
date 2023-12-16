@@ -1,6 +1,7 @@
-import {Link, useParams} from 'react-router-dom'
-import React, {useState, useEffect} from "react";
+import {Link, useParams} from 'react-router-dom';
+import React, { useEffect, useState } from "react";
 
+import { useHttpClient } from '../reusable/hooks/http-hook';
 import img1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
 import img3 from '../images/img3.jpg';
@@ -10,49 +11,71 @@ import img6 from '../images/img6.png';
 
 const Project = () => {
 	const projectId = useParams().pid;
+  const [loadedProject, setLoadedProject] = useState();
+  const [loadedImages, setLoadedImages] = useState('');
+  const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const [currentImage, setCurrentImage] = useState(0);
-  const images = [
-    img1,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6
-  ];
-  const tags = [
-    'MERN',
-    'ReactJS',
-    'HTML',
-    'CSS',
-    'NodeJS',
-    'ExpressJS',
-    'MongoDB',
-    'React-Router-DOM',
-    'Tailwind CSS',
-    'Full Stack',
-    'Website',
-  ]
-  const projectType = 'Web Dev';
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const responseData = await sendRequest(
+          `http://localhost:5000/api/projects/${projectId}`
+        );
+        setLoadedProject(responseData.Project);
+        setLoadedImages(loadedProject.image);
+        if (loadedProject.tags.length() === 0){
+          loadedProject.tags = ['No', 'tags', 'associated'];
+        }
+      } catch (err) {
+        console.log("Error in fetching Projects: "+err);
+      }
+    };
+    fetchProjects();
+  }, [sendRequest]);
+
+  // const loadedImages = [
+  //   img1,
+  //   img2,
+  //   img3,
+  //   img4,
+  //   img5,
+  //   img6
+  // ];
+  // const tags = [
+  //   "MERN",
+  //   "ReactJS",
+  //   "HTML",
+  //   "CSS",
+  //   "NodeJS",
+  //   "ExpressJS",
+  //   "MongoDB",
+  //   "React-Router-DOM",
+  //   "Tailwind CSS",
+  //   "Full Stack",
+  //   "Website",
+  // ]
 
   const nextImage = () => {
-    setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    setCurrentImage((prevImage) => (prevImage + 1) % loadedImages.length);
   };
 
   const prevImage = () => {
-    setCurrentImage((prevImage) => (prevImage - 1 + images.length) % images.length);
+    setCurrentImage((prevImage) => (prevImage - 1 + loadedImages.length) % loadedImages.length);
   };
 
+  if (loadedProject)
   return (
     <div className="mx-4 sm:container sm:mx-auto mt-8">
 
       {/* Project Title */}
-      <h1 className="text-center text-xl md:text-2xl font-bold mb-1">({projectType})</h1>
+      <h1 className="text-center text-xl md:text-2xl font-bold mb-1">({loadedProject.project_type})</h1>
       <h1 className="text-center text-2xl md:text-4xl font-bold mb-4">Project Title [{projectId}]</h1>
 
       {/* project tags */}
       <p className="text-xl text-stone-700 text-center">Project Tags</p>
       <div className='flex flex-wrap justify-center border border-stone-400 bg-stone-200 rounded-lg mx-1 mb-4 p-2  gap-2'>
-        {tags.map(tag => (
+        {loadedProject.tags.map(tag => (
           <p className='text-center text-white border rounded-full bg-stone-700 px-4 py-1'>
             {tag}
           </p>
@@ -66,10 +89,10 @@ const Project = () => {
       </p>
 
       {/* Image Viewer */}
-      <p className='text-xl text-stone-700 text-center'>Project Images</p>
+      <p className='text-xl text-stone-700 text-center'>Project loadedImages</p>
       <div className="relative overflow-hidden mb-4 h-[300px] sm:h-[400px] md:h-[700px] bg-zinc-700 border rounded-lg flex items-center justify-center">
         <img
-          src={images[currentImage]}
+          src={loadedImages[currentImage]}
           alt={`Project Image ${currentImage + 1}`}
           className=" max-h-[300px] sm:max-h-[400px] md:max-h-[700px] transition-transform duration-300 transform border-4 border-black rounded-lg"
         />
@@ -88,7 +111,7 @@ const Project = () => {
 
         {/* Navigation Bubbles */}
         <div className="flex items-center overflow-hidden justify-center absolute bottom-1 w-full opacity-60">
-          {images.map((_, index) => (
+          {loadedImages.map((_, index) => (
             <div
               key={index}
               className={`w-[6px] sm:w-[10px] md:w-4 h-[6px] sm:h-[10px] md:h-4 mx-1 rounded-full md:border-[3px] border-black ${
@@ -126,6 +149,10 @@ const Project = () => {
       </div>
     </div>
   );
+
+  return (
+    <div>loading projects...</div>
+  )
 }
 
 export default Project;

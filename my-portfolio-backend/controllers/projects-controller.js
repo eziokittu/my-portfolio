@@ -30,10 +30,11 @@ const getProjects = async (req, res, next) => {
 
 const getProjectById = async (req, res, next) => {
 	const ProjectId = req.params.pid;
-
+  // console.log("DEBUG --- projects-controller.js --- ProjectId:"+ProjectId);
 	let Project;
   try { 
-		Project = await Project.findById(ProjectId);
+		Project = await Project.findById(ProjectId); // ERROR
+    console.log("DEBUG --- projects-controller.js --- title"+Project.title);
 	}
 	catch (err) {
 		const error = new HttpError(
