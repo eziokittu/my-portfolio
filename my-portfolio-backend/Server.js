@@ -66,8 +66,8 @@ app.use((error, req, res, next) => {
 const uriDB = 'mongodb://localhost:27017/my-portfolio'; // community server
 mongoose
   .connect(uriDB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
   })
   .then(() =>{
     app.listen(5000);

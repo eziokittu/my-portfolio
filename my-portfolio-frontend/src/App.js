@@ -3,23 +3,31 @@ import Projects from './components/pages/Projects';
 import Project from './components/pages/Project';
 import Blogs from './components/pages/Blogs';
 import Navbar from './components/pages/Navbar';
-import ProjectDisplayCardLayout from './components/reusable/ProjectDisplayCardLayout';
+import ContactMe from './components/pages/ContactMe';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
 
 function App() {
   const navbarOptions = ['Home', 'Projects', 'Blogs']
 
+  // For Contact Me Overlay
+	const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const closeOverlay = (parameter) => {
+    setIsOverlayOpen(parameter);
+  };
+
   return (
     <>
       <BrowserRouter>
-        <Navbar options={navbarOptions}/>
+        <Navbar options={navbarOptions} contactMeButtonNotClicked={closeOverlay}/>
         <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route exact path="/home" element={<Home/>} />
           <Route exact path="/projects" element={<Projects/>} />
           <Route exact path="/blogs" element={<Blogs/>} />
-          <Route exact path="/projects/:pid" element={<Project/>} />
+          <Route exact path="/contact" element={<ContactMe/>} />
+          <Route exact path="/projects/:pid" element={<Project contactMeOverlayOn={!isOverlayOpen}/>} />
         </Routes>
       </BrowserRouter>
     </>

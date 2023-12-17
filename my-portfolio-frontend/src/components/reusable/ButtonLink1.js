@@ -6,12 +6,13 @@ const ButtonLink1 = (props) => {
 		return (
 			<Link 
 				className='
+					transition-all duration-300
 					text-stone-600 hover:text-black focus:text-white 
 					mx-1 px-2 pb-1 
 					border-2 focus:border-zinc-900 
 					bg-gray-200 hover:bg-gray-300 focus:bg-neutral-700 
 					rounded-lg focus:rounded-xl 
-					transition duration-900' 
+					' 
 				to={props.linkTo}
 			>
 				{props.buttonName}
@@ -22,12 +23,12 @@ const ButtonLink1 = (props) => {
 		return (
 			<Link 
 				className='
+					transition-all duration-300
 					text-stone-600 hover:text-black focus:text-white 
 					block mx-1 px-2 pb-1 
 					border-2 focus:border-zinc-900 
 					bg-gray-200 hover:bg-gray-300 focus:bg-neutral-700 
-					rounded-lg focus:rounded-xl 
-					transition duration-900' 
+					rounded-lg focus:rounded-xl ' 
 				to={props.linkTo}
 			>
 				{props.buttonName}

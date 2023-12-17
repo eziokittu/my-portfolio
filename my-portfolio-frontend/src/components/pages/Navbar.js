@@ -2,17 +2,35 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import ButtonLink1 from '../reusable/ButtonLink1';
+import ContactMe from './ContactMe';
 
-const Navbar2 = ({ options }) => {
+const Navbar2 = ({ options, contactMeButtonNotClicked }) => {
+
+	// For Mobile Menu Hamburger
 	const [mobileMenuOpen, isMobileMenuClicked] = useState(false);
-
 	const closeMobileMenu = () => {
     isMobileMenuClicked(true);
   };
-
 	const openMobileMenu = () => {
     isMobileMenuClicked(false);
   };
+
+	// For Contact Me Overlay
+	const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const openOverlay = () => {
+		contactMeButtonNotClicked(true);
+    setIsOverlayOpen(true);
+  };
+  const closeOverlay = (parameter) => {
+		contactMeButtonNotClicked(false);
+    setIsOverlayOpen(parameter);
+  };
+
+	// const [parameterFromChild, setParameterFromChild] = useState(false);
+  // // Callback function to receive the parameter from the child
+  // const handleChildParameter = (parameter) => {
+  //   setParameterFromChild(parameter);
+  // };
 
   return (
 		<nav className=' bg-slate-200/60 p-2'>
@@ -44,7 +62,18 @@ const Navbar2 = ({ options }) => {
 
 				{/* Right Side */}
 				<div className='hidden sm:flex items-center justify-between space-x-1 text-sm'>
-					<ButtonLink1 linkTo='#' buttonName='Contact Me' isBlock={false}/>
+					<Link 
+						className='
+							text-stone-600 hover:text-black focus:text-white 
+							mx-1 px-2 pb-1 
+							border-2 focus:border-zinc-900 
+							bg-gray-200 hover:bg-gray-300 focus:bg-neutral-700 
+							rounded-lg focus:rounded-xl 
+							transition duration-900' 
+						onClick={openOverlay}
+					>
+						Contact Me
+					</Link>
 					<ButtonLink1 linkTo='#' buttonName='More' isBlock={false}/>
 				</div>
 
@@ -83,11 +112,26 @@ const Navbar2 = ({ options }) => {
 				</div>
 				<hr/><hr/><hr/><hr/><hr/><hr/>
 				<div className='w-32 space-y-2 mt-4'>
-					<ButtonLink1 linkTo='#' buttonName='Contact Me' isBlock={true}/>
+					<Link 
+						className='
+							text-stone-600 hover:text-black focus:text-white 
+							block mx-1 px-2 pb-1 
+							border-2 focus:border-zinc-900 
+							bg-gray-200 hover:bg-gray-300 focus:bg-neutral-700 
+							rounded-lg focus:rounded-xl 
+							transition duration-900'
+						onClick={openOverlay} 
+					>
+						Contact Me
+					</Link>
 					<ButtonLink1 linkTo='#' buttonName='More' isBlock={true}/>
 				</div>
 			</div>}
 
+			{/* Contact Me Overlay */}
+			{isOverlayOpen && 
+				<ContactMe onParameterChange={closeOverlay}/>
+			}
 		</nav>
 	);
 };

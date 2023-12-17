@@ -9,7 +9,7 @@ import img4 from '../images/img4.png';
 import img5 from '../images/img5.png';
 import img6 from '../images/img6.png';
 
-const Project = () => {
+const Project = (props) => {
 	const projectId = useParams().pid;
   const [loadedProject, setLoadedProject] = useState();
   const [loadedImages, setLoadedImages] = useState([]);
@@ -33,28 +33,6 @@ const Project = () => {
     };
     fetchProjects();
   }, [sendRequest]);
-
-  // const loadedImages = [
-  //   img1,
-  //   img2,
-  //   img3,
-  //   img4,
-  //   img5,
-  //   img6
-  // ];
-  // const tags = [
-  //   "MERN",
-  //   "ReactJS",
-  //   "HTML",
-  //   "CSS",
-  //   "NodeJS",
-  //   "ExpressJS",
-  //   "MongoDB",
-  //   "React-Router-DOM",
-  //   "Tailwind CSS",
-  //   "Full Stack",
-  //   "Website",
-  // ]
 
   const nextImage = () => {
     setCurrentImage((prevImage) => (prevImage + 1) % loadedImages.length);
@@ -90,7 +68,7 @@ const Project = () => {
 
       {/* Image Viewer */}
       <p className='text-xl text-stone-700 text-center'>Project Images</p>
-      {loadedImages && <div className="relative overflow-hidden mb-4 h-[300px] sm:h-[400px] md:h-[700px] bg-zinc-700 border rounded-lg flex items-center justify-center">
+      {loadedImages && (props.contactMeOverlayOn===true) && <div className="relative overflow-hidden mb-4 h-[300px] sm:h-[400px] md:h-[700px] bg-zinc-700 border rounded-lg flex items-center justify-center">
         <img
           src={loadedImages[currentImage]}
           alt={`${loadedImages[currentImage]}`}
