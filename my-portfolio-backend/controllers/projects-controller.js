@@ -29,12 +29,11 @@ const getProjects = async (req, res, next) => {
 };
 
 const getProjectById = async (req, res, next) => {
-	const ProjectId = req.params.pid;
-  // console.log("DEBUG --- projects-controller.js --- ProjectId:"+ProjectId);
-	let Project;
+	const projectId = req.params.pid;
+  // console.log("DEBUG --- projects-controller.js --- ProjectId:"+projectId);
+	let project;
   try { 
-		Project = await Project.findById(ProjectId); // ERROR
-    console.log("DEBUG --- projects-controller.js --- title"+Project.title);
+		project = await Project.findById(projectId);
 	}
 	catch (err) {
 		const error = new HttpError(
@@ -43,14 +42,14 @@ const getProjectById = async (req, res, next) => {
 		return next(error);
 	}
 
-  if (!Project) {
+  if (!project) {
     const error = new HttpError(
 			'Could not find a Project for the provided id.', 404
 		);
 		return next(error);
   }
 
-  res.json({ Project: Project.toObject({ getters: true}) });
+  res.json({ Project: project.toObject({ getters: true}) });
 };
 
 // const getProjectsByUserId = async (req, res, next) => {

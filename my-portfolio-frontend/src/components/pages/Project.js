@@ -12,7 +12,7 @@ import img6 from '../images/img6.png';
 const Project = () => {
 	const projectId = useParams().pid;
   const [loadedProject, setLoadedProject] = useState();
-  const [loadedImages, setLoadedImages] = useState('');
+  const [loadedImages, setLoadedImages] = useState([]);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -23,10 +23,10 @@ const Project = () => {
           `http://localhost:5000/api/projects/${projectId}`
         );
         setLoadedProject(responseData.Project);
-        setLoadedImages(loadedProject.image);
-        if (loadedProject.tags.length() === 0){
-          loadedProject.tags = ['No', 'tags', 'associated'];
-        }
+        setLoadedImages([loadedProject.image]);
+        // if (loadedProject.tags.length() === 0){
+        //   loadedProject.tags = ['No', 'tags', 'associated'];
+        // }
       } catch (err) {
         console.log("Error in fetching Projects: "+err);
       }
@@ -66,14 +66,14 @@ const Project = () => {
 
   if (loadedProject)
   return (
-    <div className="mx-4 sm:container sm:mx-auto mt-8">
+    <div className="mx-4 sm:container sm:mx-auto mt-4 mb-12">
 
       {/* Project Title */}
-      <h1 className="text-center text-xl md:text-2xl font-bold mb-1">({loadedProject.project_type})</h1>
-      <h1 className="text-center text-2xl md:text-4xl font-bold mb-4">Project Title [{projectId}]</h1>
+      <h1 className="text-stone-700 text-center text-md md:text-2xl mb-1 border w-fit mx-auto p-1 rounded-lg border-stone-200 border-b-[2px] border-b-stone-300">ID: {loadedProject.project_type}</h1>
+      <h1 className="text-stone-700 text-center text-2xl md:text-4xl font-bold mb-4 border-b-2 w-fit mx-auto border-b-stone-300">{loadedProject.title}</h1>
 
       {/* project tags */}
-      <p className="text-xl text-stone-700 text-center">Project Tags</p>
+      <p className="text-xl text-stone-700 text-center">Tags</p>
       <div className='flex flex-wrap justify-center border border-stone-400 bg-stone-200 rounded-lg mx-1 mb-4 p-2  gap-2'>
         {loadedProject.tags.map(tag => (
           <p className='text-center text-white border rounded-full bg-stone-700 px-4 py-1'>
@@ -83,17 +83,17 @@ const Project = () => {
       </div>
 
       {/* Project Description */}
-      <p className='text-xl text-stone-700 text-center'>Project Description</p>
+      <p className='text-xl text-stone-700 text-center'>Description</p>
       <p className="max-h-[500px] text-gray-700 mb-4 p-2 border text-justify border-stone-400 rounded-lg mx-1">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt rutrum augue id fermentum. Suspendisse vel rhoncus lorem, quis vehicula diam. Nam placerat euismod magna, non scelerisque ex cursus et. Donec ornare efficitur ipsum, sed facilisis lacus auctor at. Aenean vitae ex et nulla venenatis malesuada eu in nunc. Aenean tempus bibendum sem, ut dictum libero bibendum at. Sed vel maximus massa, eu elementum mauris. Integer id enim lacus. In tortor dui, consectetur at velit in, auctor auctor tellus. Fusce tincidunt, risus congue molestie fringilla, nulla elit scelerisque sapien, non rutrum est nisi at quam. Nullam dapibus nisi quis turpis ullamcorper tincidunt. Sed maximus ornare orci, vitae sodales est rhoncus et. Aliquam porta arcu vitae augue pharetra, ut maximus nisl tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      {loadedProject.description_long}
       </p>
 
       {/* Image Viewer */}
-      <p className='text-xl text-stone-700 text-center'>Project loadedImages</p>
-      <div className="relative overflow-hidden mb-4 h-[300px] sm:h-[400px] md:h-[700px] bg-zinc-700 border rounded-lg flex items-center justify-center">
+      <p className='text-xl text-stone-700 text-center'>Project Images</p>
+      {loadedImages && <div className="relative overflow-hidden mb-4 h-[300px] sm:h-[400px] md:h-[700px] bg-zinc-700 border rounded-lg flex items-center justify-center">
         <img
           src={loadedImages[currentImage]}
-          alt={`Project Image ${currentImage + 1}`}
+          alt={`${loadedImages[currentImage]}`}
           className=" max-h-[300px] sm:max-h-[400px] md:max-h-[700px] transition-transform duration-300 transform border-4 border-black rounded-lg"
         />
         <button
@@ -120,10 +120,10 @@ const Project = () => {
             />
           ))}
         </div>
-      </div>
+      </div>}
 
       {/* Resource Links */}
-      <div className="mb-4">
+      <div className="">
         <h2 className="text-xl font-semibold mb-2">Resource Links</h2>
         <ul className="list-disc pl-4">
           <li>
@@ -141,12 +141,11 @@ const Project = () => {
       </div>
 
       {/* Code Section */}
-      <div>
+      {/* <div>
         <h2 className="text-xl font-semibold mb-2">Code Section</h2>
         <pre className="bg-gray-800 text-white p-4 rounded-md">
-          {/* Your code goes here */}
         </pre>
-      </div>
+      </div> */}
     </div>
   );
 
