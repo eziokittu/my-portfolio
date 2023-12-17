@@ -1,4 +1,3 @@
-import {Link} from 'react-router-dom'
 import React, { useEffect, useState } from "react";
 
 import { useHttpClient } from '../reusable/hooks/http-hook';
@@ -7,7 +6,7 @@ import img1 from "../images/img1.jpg";
 
 const Projects = () => {
   const [loadedProjects, setLoadedProjects] = useState();
-  const { isLoading, error, sendRequest, clearError } = useHttpClient();
+  const { sendRequest} = useHttpClient();
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -24,7 +23,7 @@ const Projects = () => {
   }, [sendRequest]);
 
   return (
-    <div className='m-4'>
+    <div className='p-4 bg-zinc-200'>
       <h1 className='mb-2 text-center text-4xl text-stone-700'>All my projects below!</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {loadedProjects && loadedProjects.map(project => (

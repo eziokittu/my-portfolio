@@ -11,16 +11,27 @@ const ContactMe = ({ onParameterChange }) => {
 		setCloseButtonHovered(true);
 	}
 
+	const redirectToGmail = () => {
+    const email = 'bodhisatta1999@gmail.com';
+    const subject = '[Redirected from Bodhisatta-portfolio-]';
+    const body = 'Thanks for contacting me!';
+		const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+
+    window.open(gmailUrl, '_blank');
+  };
+	const link_gmail = "https://mail.google.com/mail/?view=cm&fs=1&to=bodhisatta1999@gmail.com";
+
 	const link_github = "https://github.com/eziokittu";
 	const link_leetcode = "https://leetcode.com/bodhisatta1999/";
 	const link_hackerRank = "https://www.hackerrank.com/profile/bodhisatta1999";
 	const link_codeForces = "https://codeforces.com/profile/eziokittu";
 
 	const link_facebook = "https://www.facebook.com/eziokittu/";
+	const link_linkedIn = "https://www.linkedin.com/in/bodhisatta1999/";
 	const link_instagram = "https://www.instagram.com/bodhisatta_bhattacharjee/";
 	const link_twitter = "https://twitter.com/bodhikittu";
 	const link_spotify = "https://open.spotify.com/user/31e2rn3jjdpkjjybb3p6sro3oe7m?si=&nd=1&dlsi=496ff4a4e50b4462";
-	const link_steam = ""
+	const link_steam = "https://steamcommunity.com/id/kit2_ezio/"
 
   return (
     <div>
@@ -55,7 +66,7 @@ const ContactMe = ({ onParameterChange }) => {
 								rounded-2xl p-1"
 						>
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" 
-								className="w-8 h-8">
+								className="animate-pulse w-8 h-8">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 							</svg>
 
@@ -97,7 +108,9 @@ const ContactMe = ({ onParameterChange }) => {
 							</svg>
 						</div>
 						
-						<button className='flex items-center w-fit mx-auto'>
+						<button 
+							onClick={redirectToGmail}
+							className='flex items-center w-fit mx-auto'>
 							<p className='text-xl md:text-2xl mr-2'>
 								bodhisatta1999@gmail.com
 							</p>
@@ -178,6 +191,16 @@ const ContactMe = ({ onParameterChange }) => {
 
 						</div>
 						<div className='my-4 gap-2 grid grid-cols-1 xsm:grid-cols-2'>
+
+							{/* LinkedIn */}
+							<button
+								onClick={()=>{window.open(`${link_linkedIn}`, '_blank')}}
+								className='flex justify-center items-center text-sky-600
+								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
+								<p className='text-xl md:text-2xl mr-2'>LinkedIn</p>
+								<svg className='w-6 h-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" id="linkedin"><g fill="none" fill-rule="evenodd"><g><rect width="72" height="72" fill="#117EB8" rx="4"></rect><path fill="#FFF" d="M13.139 27.848h9.623V58.81h-9.623V27.848zm4.813-15.391c3.077 0 5.577 2.5 5.577 5.577 0 3.08-2.5 5.581-5.577 5.581a5.58 5.58 0 1 1 0-11.158zm10.846 15.39h9.23v4.231h.128c1.285-2.434 4.424-5 9.105-5 9.744 0 11.544 6.413 11.544 14.75V58.81h-9.617V43.753c0-3.59-.066-8.209-5-8.209-5.007 0-5.776 3.911-5.776 7.95V58.81h-9.615V27.848z"></path></g></g></svg>
+							</button>
+
 							{/* Facebook */}
 							<button 
 								onClick={()=>{window.open(`${link_facebook}`, '_blank')}}
@@ -220,6 +243,15 @@ const ContactMe = ({ onParameterChange }) => {
 								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" className='bi bi-spotify w-6 h-6'> 
 									<path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"/>
 								</svg>
+							</button>
+							
+							{/* Steam */}
+							<button 
+								onClick={()=>{window.open(`${link_steam}`, '_blank')}}
+								className='flex justify-center items-center text-blue-950
+								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
+								<p className='text-xl md:text-2xl mr-2'>Steam</p>
+								<svg className='w-6 h-6 color1a1918 svgShape' xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 259" id="Steam"><path fill="#122172" d="M127.779 0C60.42 0 5.24 52.412 0 119.014l68.724 28.674a35.812 35.812 0 0 1 20.426-6.366c.682 0 1.356.019 2.02.056l30.566-44.71v-.626c0-26.903 21.69-48.796 48.353-48.796 26.662 0 48.352 21.893 48.352 48.796 0 26.902-21.69 48.804-48.352 48.804-.37 0-.73-.009-1.098-.018l-43.593 31.377c.028.582.046 1.163.046 1.735 0 20.204-16.283 36.636-36.294 36.636-17.566 0-32.263-12.658-35.584-29.412L4.41 164.654c15.223 54.313 64.673 94.132 123.369 94.132 70.818 0 128.221-57.938 128.221-129.393C256 57.93 198.597 0 127.779 0zM80.352 196.332l-15.749-6.568c2.787 5.867 7.621 10.775 14.033 13.47 13.857 5.83 29.836-.803 35.612-14.799a27.555 27.555 0 0 0 .046-21.035c-2.768-6.79-7.999-12.086-14.706-14.909-6.67-2.795-13.811-2.694-20.085-.304l16.275 6.79c10.222 4.3 15.056 16.145 10.794 26.46-4.253 10.314-15.998 15.195-26.22 10.895zm121.957-100.29c0-17.925-14.457-32.52-32.217-32.52-17.769 0-32.226 14.595-32.226 32.52 0 17.926 14.457 32.512 32.226 32.512 17.76 0 32.217-14.586 32.217-32.512zm-56.37-.055c0-13.488 10.84-24.42 24.2-24.42 13.368 0 24.208 10.932 24.208 24.42 0 13.488-10.84 24.421-24.209 24.421-13.359 0-24.2-10.933-24.2-24.42z"></path></svg>
 							</button>
 						</div>
 					</div>
