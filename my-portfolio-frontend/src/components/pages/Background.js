@@ -25,6 +25,16 @@ const Background = () => {
 				src={backgroundImage2}
 				alt="gg"
 			/>
+			<img 
+				className=""
+				src={backgroundImage1}
+				alt="gg"
+			/>
+			<img 
+				className=""
+				src={backgroundImage2}
+				alt="gg"
+			/>
 		</div>
 	);
 }

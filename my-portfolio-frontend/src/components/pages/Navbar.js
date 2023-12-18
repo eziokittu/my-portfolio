@@ -79,7 +79,7 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 								border-2 border-stone-500 focus:border-zinc-900 
 								bg-gray-200 hover:bg-gray-300 focus:bg-neutral-700 
 								rounded-lg focus:rounded-xl 
-								transition duration-900' 
+								transition duration-900 shadow-slate-200-800' 
 							onClick={openOverlay}
 						>
 							Contact Me
