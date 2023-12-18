@@ -21,9 +21,7 @@ function App() {
 
   return (
     <>
-      {/* <div className='fixed w-full h-[400px] top-0 bg-slate-200 z-0'>
-        <Background />
-      </div> */}
+      <Background />
       <BrowserRouter >
         <Navbar options={navbarOptions} contactMeButtonNotClicked={closeOverlay}/>
         <Routes>
