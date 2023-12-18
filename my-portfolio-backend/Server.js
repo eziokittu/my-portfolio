@@ -18,6 +18,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ProjectsRoutes = require('./routes/projects-routes');
+const ProfileRoutes = require('./routes/profile-routes');
 const HttpError = require('./models/http-error');
 
 const app = express();
@@ -39,6 +40,7 @@ app.use((req, res, next) => {
 
 // app.use(express.urlencoded({extended: true}));
 app.use('/api/projects', ProjectsRoutes);
+app.use('/api/home', ProfileRoutes);
 // app.use('/api/users', usersRoutes);
 // app.use('/api/admins', adminsRoutes);
 // app.use('/api/categories', categoriesRoutes);

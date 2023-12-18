@@ -1,5 +1,3 @@
-// Home.js
-import {Link} from 'react-router-dom'
 import React from "react";
 import img1 from "../images/img1.jpg";
 
@@ -9,7 +7,7 @@ const Blogs = () => {
       <h1 className="text-1xl font-bold mb-4 text-yellow-200">Welcome to the Blogs Page</h1>
       <img
         src={img1}
-        alt="Home Page Image"
+        alt="Home Page"
         className="mb-4 w-full h-auto rounded-lg"
       />
       

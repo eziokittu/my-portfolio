@@ -29,6 +29,10 @@ const Projects = () => {
         {loadedProjects && loadedProjects.map(project => (
           <ProjectDisplayCardLayout id={project.id} cardTitle={project.title} cardDescription={project.description_short} cardImage={img1} />
         ))}
+        {!loadedProjects && (
+        <div className="text-center">
+          <p className="text-2xl animate-pulse">... Loading Projects please wait ...</p>
+        </div>)}
       </div>
     </div>
   );

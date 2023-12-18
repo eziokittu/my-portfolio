@@ -8,7 +8,7 @@ const Home = () => {
       <h1 className="text-1xl font-bold mb-4 text-yellow-200">Welcome to the Home Page</h1>
       <img
         src={img1}
-        alt="Home Page Image"
+        alt="Home Page"
         className="mb-4 w-full h-auto rounded-lg"
       />
       

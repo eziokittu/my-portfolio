@@ -1,37 +1,49 @@
 // ContactMe.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useHttpClient } from '../reusable/hooks/http-hook';
 
 const ContactMe = ({ onParameterChange }) => {
   const handleButtonClick = () => {
     onParameterChange(false);
   };
 
-	const [closeButtonHovered, setCloseButtonHovered] = useState(false);
-	const handleButtonHover = () => {
-		setCloseButtonHovered(true);
-	}
-
 	const redirectToGmail = () => {
-    const email = 'bodhisatta1999@gmail.com';
-    const subject = '[Redirected from Bodhisatta-portfolio-]';
-    const body = 'Thanks for contacting me!';
+    const email = loadedProfile[0].links.link_email_primary;
+    const subject = '[Redirected from Bodhisatta-portfolio]';
+    const body = 'Hi Bodhisatta,\n';
 		const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
 
     window.open(gmailUrl, '_blank');
   };
-	const link_gmail = "https://mail.google.com/mail/?view=cm&fs=1&to=bodhisatta1999@gmail.com";
 
-	const link_github = "https://github.com/eziokittu";
-	const link_leetcode = "https://leetcode.com/bodhisatta1999/";
-	const link_hackerRank = "https://www.hackerrank.com/profile/bodhisatta1999";
-	const link_codeForces = "https://codeforces.com/profile/eziokittu";
+	// const link_github = "https://github.com/eziokittu";
+	// const link_leetcode = "https://leetcode.com/bodhisatta1999/";
+	// const link_hackerrank = "https://www.hackerrank.com/profile/bodhisatta1999";
+	// const link_codeforces = "https://codeforces.com/profile/eziokittu";
 
-	const link_facebook = "https://www.facebook.com/eziokittu/";
-	const link_linkedIn = "https://www.linkedin.com/in/bodhisatta1999/";
-	const link_instagram = "https://www.instagram.com/bodhisatta_bhattacharjee/";
-	const link_twitter = "https://twitter.com/bodhikittu";
-	const link_spotify = "https://open.spotify.com/user/31e2rn3jjdpkjjybb3p6sro3oe7m?si=&nd=1&dlsi=496ff4a4e50b4462";
-	const link_steam = "https://steamcommunity.com/id/kit2_ezio/"
+	// const link_facebook = "https://www.facebook.com/eziokittu/";
+	// const link_linkedin = "https://www.linkedin.com/in/bodhisatta1999/";
+	// const link_instagram = "https://www.instagram.com/bodhisatta_bhattacharjee/";
+	// const link_twitter = "https://twitter.com/bodhikittu";
+	// const link_spotify = "https://open.spotify.com/user/31e2rn3jjdpkjjybb3p6sro3oe7m?si=&nd=1&dlsi=496ff4a4e50b4462";
+	// const link_steam = "https://steamcommunity.com/id/kit2_ezio/"
+
+	const [loadedProfile, setLoadedProfile] = useState();
+  const { sendRequest } = useHttpClient();
+	useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const responseData = await sendRequest(
+          `http://localhost:5000/api/home/`
+        );
+        setLoadedProfile(responseData.Profile);
+
+      } catch (err) {
+        console.log("Error in fetching Profile: "+err);
+      }
+    };
+    fetchProfile();
+  }, [sendRequest]);
 
   return (
     <div>
@@ -99,7 +111,7 @@ const ContactMe = ({ onParameterChange }) => {
 					<hr className='border-stone-800 border-2'/>
 
 					{/* Emails */}
-					<div className='my-2 items-center justify-center'>
+					{loadedProfile && (<div className='my-2 items-center justify-center'>
 						<div className='flex text-red-700 font-bold text-xl items-center justify-center w-fit mx-auto border-b-[2px]'>
 							<h2 className='mr-2'>Email</h2>
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -112,19 +124,19 @@ const ContactMe = ({ onParameterChange }) => {
 							onClick={redirectToGmail}
 							className='flex items-center w-fit mx-auto'>
 							<p className='text-xl md:text-2xl mr-2'>
-								bodhisatta1999@gmail.com
+								{loadedProfile[0].links.link_email_primary}
 							</p>
 							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" data-name="Layer 1" viewBox="0 0 32 32" id="gmail">
 								<path fill="#ea4435" d="M16.58,19.1068l-12.69-8.0757A3,3,0,0,1,7.1109,5.97l9.31,5.9243L24.78,6.0428A3,3,0,0,1,28.22,10.9579Z"></path><path fill="#00ac47" d="M25.5,5.5h4a0,0,0,0,1,0,0v18a3,3,0,0,1-3,3h0a3,3,0,0,1-3-3V7.5a2,2,0,0,1,2-2Z" transform="rotate(180 26.5 16)"></path><path fill="#ffba00" d="M29.4562,8.0656c-.0088-.06-.0081-.1213-.0206-.1812-.0192-.0918-.0549-.1766-.0823-.2652a2.9312,2.9312,0,0,0-.0958-.2993c-.02-.0475-.0508-.0892-.0735-.1354A2.9838,2.9838,0,0,0,28.9686,6.8c-.04-.0581-.09-.1076-.1342-.1626a3.0282,3.0282,0,0,0-.2455-.2849c-.0665-.0647-.1423-.1188-.2146-.1771a3.02,3.02,0,0,0-.24-.1857c-.0793-.0518-.1661-.0917-.25-.1359-.0884-.0461-.175-.0963-.267-.1331-.0889-.0358-.1837-.0586-.2766-.0859s-.1853-.06-.2807-.0777a3.0543,3.0543,0,0,0-.357-.036c-.0759-.0053-.1511-.0186-.2273-.018a2.9778,2.9778,0,0,0-.4219.0425c-.0563.0084-.113.0077-.1689.0193a33.211,33.211,0,0,0-.5645.178c-.0515.022-.0966.0547-.1465.0795A2.901,2.901,0,0,0,23.5,8.5v5.762l4.72-3.3043a2.8878,2.8878,0,0,0,1.2359-2.8923Z"></path><path fill="#4285f4" d="M5.5,5.5h0a3,3,0,0,1,3,3v18a0,0,0,0,1,0,0h-4a2,2,0,0,1-2-2V8.5a3,3,0,0,1,3-3Z"></path><path fill="#c52528" d="M2.5439,8.0656c.0088-.06.0081-.1213.0206-.1812.0192-.0918.0549-.1766.0823-.2652A2.9312,2.9312,0,0,1,2.7426,7.32c.02-.0475.0508-.0892.0736-.1354A2.9719,2.9719,0,0,1,3.0316,6.8c.04-.0581.09-.1076.1342-.1626a3.0272,3.0272,0,0,1,.2454-.2849c.0665-.0647.1423-.1188.2147-.1771a3.0005,3.0005,0,0,1,.24-.1857c.0793-.0518.1661-.0917.25-.1359A2.9747,2.9747,0,0,1,4.3829,5.72c.089-.0358.1838-.0586.2766-.0859s.1853-.06.2807-.0777a3.0565,3.0565,0,0,1,.357-.036c.076-.0053.1511-.0186.2273-.018a2.9763,2.9763,0,0,1,.4219.0425c.0563.0084.113.0077.169.0193a2.9056,2.9056,0,0,1,.286.0888,2.9157,2.9157,0,0,1,.2785.0892c.0514.022.0965.0547.1465.0795a2.9745,2.9745,0,0,1,.3742.21A2.9943,2.9943,0,0,1,8.5,8.5v5.762L3.78,10.9579A2.8891,2.8891,0,0,1,2.5439,8.0656Z"></path>
 							</svg>
 						</button>
-					</div>
+					</div>)}
 
 					{/* horizontal line */}
 					<hr className='border-stone-800 border-2'/>
 
 					{/* Useful Links */}
-					<div className='my-2'>
+					{loadedProfile && (<div className='my-2'>
 						<div className='flex text-red-700 font-bold text-xl items-center justify-center w-fit mx-auto border-b-[2px]'>
 							<h2 className='mr-2'>Useful Links</h2>
 							<svg className='w-6 h-6 fill-red-700' xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30">
@@ -134,7 +146,7 @@ const ContactMe = ({ onParameterChange }) => {
 						<div className='my-4 gap-2 grid grid-cols-1 xsm:grid-cols-2'>
 							{/* Github */}
 							<button 
-								onClick={()=>{window.open(`${link_github}`, '_blank')}} 
+								onClick={()=>{window.open(`${loadedProfile[0].links.link_github}`, '_blank')}} 
 								className='flex justify-center items-center text-stone-600
 								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
 								<p className='text-xl md:text-2xl mr-2'>GitHub</p>
@@ -145,7 +157,7 @@ const ContactMe = ({ onParameterChange }) => {
 
 							{/* Leetcode */}
 							<button 
-								onClick={()=>{window.open(`${link_leetcode}`, '_blank')}}
+								onClick={()=>{window.open(`${loadedProfile[0].links.link_leetcode}`, '_blank')}}
 								className='flex justify-center items-center text-yellow-600
 								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
 								<p className='text-xl md:text-2xl mr-2'>Leetcode</p>
@@ -156,7 +168,7 @@ const ContactMe = ({ onParameterChange }) => {
 
 							{/* CodeForces */}
 							<button 
-								onClick={()=>{window.open(`${link_codeForces}`, '_blank')}}
+								onClick={()=>{window.open(`${loadedProfile[0].links.link_codeforces}`, '_blank')}}
 								className='flex justify-center items-center text-orange-600
 								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
 								<p className='text-xl md:text-2xl mr-2'>CodeForces</p>
@@ -167,7 +179,7 @@ const ContactMe = ({ onParameterChange }) => {
 							
 							{/* HackerRank */}
 							<button 
-								onClick={()=>{window.open(`${link_hackerRank}`, '_blank')}}
+								onClick={()=>{window.open(`${loadedProfile[0].links.link_hackerrank}`, '_blank')}}
 								className='flex justify-center items-center text-indigo-950
 								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
 								<p className='text-xl md:text-2xl mr-2'>HackerRank</p>
@@ -176,13 +188,13 @@ const ContactMe = ({ onParameterChange }) => {
 								</svg>
 							</button>
 						</div>
-					</div>
+					</div>)}
 
 					{/* horizontal line */}
 					<hr className='border-stone-800 border-2'/>
 
 					{/* Social Media Links */}
-					<div className='my-2'>
+					{loadedProfile && (<div className='my-2'>
 						<div className='flex text-red-700 font-bold text-xl items-center justify-center w-fit mx-auto border-b-[2px]'>
 							<h2 className='mr-2'>Social Media / Others</h2>
 							<svg className='stroke-red-700 w-6 h-6' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -194,7 +206,7 @@ const ContactMe = ({ onParameterChange }) => {
 
 							{/* LinkedIn */}
 							<button
-								onClick={()=>{window.open(`${link_linkedIn}`, '_blank')}}
+								onClick={()=>{window.open(`${loadedProfile[0].links.link_linkedin}`, '_blank')}}
 								className='flex justify-center items-center text-sky-600
 								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
 								<p className='text-xl md:text-2xl mr-2'>LinkedIn</p>
@@ -203,7 +215,7 @@ const ContactMe = ({ onParameterChange }) => {
 
 							{/* Facebook */}
 							<button 
-								onClick={()=>{window.open(`${link_facebook}`, '_blank')}}
+								onClick={()=>{window.open(`${loadedProfile[0].links.link_facebook}`, '_blank')}}
 								className='flex justify-center items-center text-blue-600
 								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
 								<p className='text-xl md:text-2xl mr-2'>Facebook</p>
@@ -214,7 +226,7 @@ const ContactMe = ({ onParameterChange }) => {
 
 							{/* Instagram */}
 							<button 
-								onClick={()=>{window.open(`${link_instagram}`, '_blank')}}
+								onClick={()=>{window.open(`${loadedProfile[0].links.link_instagram}`, '_blank')}}
 								className='flex justify-center items-center text-pink-700
 								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
 								<p className='text-xl md:text-2xl mr-2'>Instagram</p>
@@ -225,7 +237,7 @@ const ContactMe = ({ onParameterChange }) => {
 
 							{/* Twitter */}
 							<button 
-								onClick={()=>{window.open(`${link_twitter}`, '_blank')}}
+								onClick={()=>{window.open(`${loadedProfile[0].links.link_twitter}`, '_blank')}}
 								className='flex justify-center items-center text-gray-900
 								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
 								<p className='text-xl md:text-2xl mr-2'>Twitter/X</p>
@@ -236,7 +248,7 @@ const ContactMe = ({ onParameterChange }) => {
 
 							{/* Spotify */}
 							<button 
-								onClick={()=>{window.open(`${link_spotify}`, '_blank')}}
+								onClick={()=>{window.open(`${loadedProfile[0].links.link_spotify}`, '_blank')}}
 								className='flex justify-center items-center text-green-500
 								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
 								<p className='text-xl md:text-2xl mr-2'>Spotify</p>
@@ -247,14 +259,14 @@ const ContactMe = ({ onParameterChange }) => {
 							
 							{/* Steam */}
 							<button 
-								onClick={()=>{window.open(`${link_steam}`, '_blank')}}
+								onClick={()=>{window.open(`${loadedProfile[0].links.link_steam}`, '_blank')}}
 								className='flex justify-center items-center text-blue-950
 								w-fit mx-auto border-b-2 border-slate-50 hover:border-b-2 hover:border-slate-400'>
 								<p className='text-xl md:text-2xl mr-2'>Steam</p>
 								<svg className='w-6 h-6 color1a1918 svgShape' xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 259" id="Steam"><path fill="#122172" d="M127.779 0C60.42 0 5.24 52.412 0 119.014l68.724 28.674a35.812 35.812 0 0 1 20.426-6.366c.682 0 1.356.019 2.02.056l30.566-44.71v-.626c0-26.903 21.69-48.796 48.353-48.796 26.662 0 48.352 21.893 48.352 48.796 0 26.902-21.69 48.804-48.352 48.804-.37 0-.73-.009-1.098-.018l-43.593 31.377c.028.582.046 1.163.046 1.735 0 20.204-16.283 36.636-36.294 36.636-17.566 0-32.263-12.658-35.584-29.412L4.41 164.654c15.223 54.313 64.673 94.132 123.369 94.132 70.818 0 128.221-57.938 128.221-129.393C256 57.93 198.597 0 127.779 0zM80.352 196.332l-15.749-6.568c2.787 5.867 7.621 10.775 14.033 13.47 13.857 5.83 29.836-.803 35.612-14.799a27.555 27.555 0 0 0 .046-21.035c-2.768-6.79-7.999-12.086-14.706-14.909-6.67-2.795-13.811-2.694-20.085-.304l16.275 6.79c10.222 4.3 15.056 16.145 10.794 26.46-4.253 10.314-15.998 15.195-26.22 10.895zm121.957-100.29c0-17.925-14.457-32.52-32.217-32.52-17.769 0-32.226 14.595-32.226 32.52 0 17.926 14.457 32.512 32.226 32.512 17.76 0 32.217-14.586 32.217-32.512zm-56.37-.055c0-13.488 10.84-24.42 24.2-24.42 13.368 0 24.208 10.932 24.208 24.42 0 13.488-10.84 24.421-24.209 24.421-13.359 0-24.2-10.933-24.2-24.42z"></path></svg>
 							</button>
 						</div>
-					</div>
+					</div>)}
 
 				</div>
 			</div>

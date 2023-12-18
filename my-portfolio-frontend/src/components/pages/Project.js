@@ -1,19 +1,19 @@
-import {Link, useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from "react";
 
 import { useHttpClient } from '../reusable/hooks/http-hook';
-import img1 from '../images/img1.jpg';
-import img2 from '../images/img2.jpg';
-import img3 from '../images/img3.jpg';
-import img4 from '../images/img4.png';
-import img5 from '../images/img5.png';
-import img6 from '../images/img6.png';
+// import img1 from '../images/img1.jpg';
+// import img2 from '../images/img2.jpg';
+// import img3 from '../images/img3.jpg';
+// import img4 from '../images/img4.png';
+// import img5 from '../images/img5.png';
+// import img6 from '../images/img6.png';
 
 const Project = (props) => {
 	const projectId = useParams().pid;
   const [loadedProject, setLoadedProject] = useState();
   const [loadedImages, setLoadedImages] = useState([]);
-  const { isLoading, error, sendRequest, clearError } = useHttpClient();
+  const { sendRequest } = useHttpClient();
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {

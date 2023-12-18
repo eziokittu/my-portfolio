@@ -9,8 +9,9 @@ const ButtonLink1 = (props) => {
 					transition-all duration-300
 					text-stone-600 hover:text-black focus:text-white 
 					mx-1 px-2 pb-1 
-					border-2 focus:border-zinc-900 
-					bg-gray-200 hover:bg-gray-300 focus:bg-neutral-700 
+					border-2 border-stone-500 focus:border-zinc-900 
+					focus:bg-gradient-to-b focus:from-stone-500 focus:to-stone-800
+					bg-gray-200 hover:bg-gray-300
 					rounded-lg focus:rounded-xl 
 					' 
 				to={props.linkTo}
@@ -26,8 +27,9 @@ const ButtonLink1 = (props) => {
 					transition-all duration-300
 					text-stone-600 hover:text-black focus:text-white 
 					block mx-1 px-2 pb-1 
-					border-2 focus:border-zinc-900 
-					bg-gray-200 hover:bg-gray-300 focus:bg-neutral-700 
+					border-2 border-stone-500 focus:border-zinc-900 
+					focus:bg-gradient-to-b focus:from-stone-500 focus:to-stone-800
+					bg-gray-200 hover:bg-gray-300
 					rounded-lg focus:rounded-xl ' 
 				to={props.linkTo}
 			>

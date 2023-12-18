@@ -7,7 +7,7 @@ const projectSchema = new Schema({
 	description_long: {type: String, required: true },
 	project_type: {type: mongoose.Types.ObjectId, required: true, ref: 'ProjectTypes'},
 	tags: { type: [String], default: [] },
-  image: { type: [String], default: [] },
+  	image: { type: [String], default: [] },
 	createdAt: {type: Date, default: Date.now()},
 });
 
