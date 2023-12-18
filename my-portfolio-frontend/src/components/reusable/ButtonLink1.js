@@ -13,6 +13,7 @@ const ButtonLink1 = (props) => {
 					focus:bg-gradient-to-b focus:from-stone-500 focus:to-stone-800
 					bg-gray-200 hover:bg-gray-300
 					rounded-lg focus:rounded-xl 
+					shadow-slate-200-800
 					' 
 				to={props.linkTo}
 			>
@@ -30,7 +31,7 @@ const ButtonLink1 = (props) => {
 					border-2 border-stone-500 focus:border-zinc-900 
 					focus:bg-gradient-to-b focus:from-stone-500 focus:to-stone-800
 					bg-gray-200 hover:bg-gray-300
-					rounded-lg focus:rounded-xl ' 
+					rounded-lg focus:rounded-xl shadow-slate-200-800' 
 				to={props.linkTo}
 			>
 				{props.buttonName}

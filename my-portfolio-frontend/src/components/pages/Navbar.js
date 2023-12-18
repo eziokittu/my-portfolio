@@ -39,7 +39,16 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 				<div className='p-2 flex justify-between items-center '>
 
 					{/* logo */}
-					<Link className='bg-gradient-to-b from-stone-500 to-stone-800 flex justify-between px-5 py-3 mr-3 text-white bg-neutral-700 rounded-t-[42px] rounded-b-2xl drop-shadow-2xl'>
+					<Link 
+						className="
+							bg-gradient-to-b from-stone-500 to-stone-800 
+							flex justify-between px-5 py-3 mr-3 
+							text-white bg-neutral-700 
+							rounded-t-[42px] rounded-b-2xl 
+							shadow-slate-800-200
+						"
+						to="/home"
+					>
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
 						<path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
 					</svg>
@@ -85,9 +94,11 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 					<div className='flex sm:hidden text-lg'>
 						<ButtonLink1 buttonName="Dark" isBlock={false}/>
 					</div>
+
+					{/* Open Button */}
 					<button 
 						onClick={closeMobileMenu} 
-						className='animate-bounce hover:animate-none flex space-x-3 items-center text-stone-600 mx-1 px-2 pb-1 border-2 bg-gray-200 rounded-lg hover:border-green-200 hover:bg-gray-300 hover:text-black focus:rounded-xl focus:bg-lime-100 focus:border-lime-300 focus:text-stone-800 transition duration-900'
+						className='shadow-slate-200-800 animate-bounce hover:animate-none flex space-x-3 items-center text-stone-600 mx-1 px-2 pb-1 border-2 bg-gray-200 rounded-lg hover:border-green-200 hover:bg-gray-300 hover:text-black focus:rounded-xl focus:bg-lime-100 focus:border-lime-300 focus:text-stone-800 transition duration-900'
 					>
 					<div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
   					<path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />
@@ -100,9 +111,11 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 					<div className='flex sm:hidden text-lg'>
 						<ButtonLink1 buttonName="Dark" isBlock={false}/>
 					</div>
+
+					{/* Close Button */}
 					<button 
 						onClick={openMobileMenu} 
-						className='animate-bounce hover:animate-none flex space-x-3 items-center text-stone-600 mx-1 px-2 pb-1 border-2 bg-gray-200 rounded-lg hover:border-red-200 hover:bg-gray-300 hover:text-black focus:rounded-xl focus:bg-rose-100 focus:border-rose-300 focus:text-stone-800 transition duration-900'
+						className='shadow-slate-200-800 animate-bounce hover:animate-none flex space-x-3 items-center text-stone-600 mx-1 px-2 pb-1 border-2 bg-gray-200 rounded-lg hover:border-red-200 hover:bg-gray-300 hover:text-black focus:rounded-xl focus:bg-rose-100 focus:border-rose-300 focus:text-stone-800 transition duration-900'
 					>
 					<div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
   					<path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12" />
@@ -130,7 +143,7 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 							border-2 border-stone-500 focus:border-zinc-900 
 							bg-gray-200 hover:bg-gray-300 focus:bg-neutral-700 
 							rounded-lg focus:rounded-xl 
-							transition duration-900'
+							transition duration-900 shadow-slate-200-800'
 						onClick={openOverlay} 
 					>
 						Contact Me
