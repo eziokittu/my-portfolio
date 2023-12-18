@@ -3,7 +3,7 @@ import React from "react";
 
 const ProjectDisplayCardLayout = (props) => {
     return (
-			<div className="flex flex-col justify-between max-w-full min-h-[400px] max-h-[620px]  border-4 rounded-lg shadow bg-gray-800 hover:bg-gray-700 boerder-white hover:border-yellow-400">
+			<div className="relative z-10 flex flex-col justify-between max-w-full min-h-[400px] max-h-[620px]  border-4 rounded-lg shadow bg-gray-800 hover:bg-gray-700 boerder-white hover:border-yellow-400 shadow-slate-800-200 hover:shadow-slate-200-800">
 				<div className="p-5 flex flex-col justify-between">
 					<p className='text-sm'>ID: {props.id}</p>
 					<div class="max-h-[400px] overflow-hidden">

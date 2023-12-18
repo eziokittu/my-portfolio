@@ -33,7 +33,7 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
   // };
 
   return (
-		<nav className=' bg-slate-400/100'>
+		<nav className=' bg-slate-300/10 relative z-10'>
 			<div className='flex justify-between items-center '>
 				{/* Left Side */}
 				<div className='p-2 flex justify-between items-center '>

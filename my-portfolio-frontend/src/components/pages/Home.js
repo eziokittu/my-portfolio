@@ -1,21 +1,20 @@
 // Home.js
 import React from "react";
-import img1 from "../images/img1.jpg";
+
+import profileData from "../../Data/profile/data.json";
+import img1 from '../../Data/profile/images/image1.jpg';
 
 const Home = () => {
   return (
-    <div className="bg-black">
-      <h1 className="text-1xl font-bold mb-4 text-yellow-200">Welcome to the Home Page</h1>
-      <img
-        src={img1}
-        alt="Home Page"
-        className="mb-4 w-full h-auto rounded-lg"
-      />
-      
-      <p>Your content goes here...</p>
-      <footer className="mt-20 border-t pt-4 text-center">
-        <p>&copy; 2023 Your Website Name</p>
-      </footer>
+    <div 
+      className="
+      absolute top-16
+      m-3
+      bg-black"
+    >
+      <div>
+        {/* <img src={img1} alt="hello" /> */}
+      </div>
     </div>
   );
 };
