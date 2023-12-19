@@ -20,10 +20,11 @@ function App() {
   };
 
   return (
-    <>
-      <Background />
-      <BrowserRouter >
+    <div className='flex flex-col min-h-screen relative'>
+      <Background/>
+      <BrowserRouter>
         <Navbar options={navbarOptions} contactMeButtonNotClicked={closeOverlay}/>
+        
         <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route exact path="/home" element={<Home/>} />
@@ -32,9 +33,13 @@ function App() {
           <Route exact path="/contact" element={<ContactMe/>} />
           <Route exact path="/projects/:pid" element={<Project contactMeOverlayOn={!isOverlayOpen}/>} />
         </Routes>
+
+        {/* <div className="flex-grow">
+        </div> */}
+
         <Footer />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

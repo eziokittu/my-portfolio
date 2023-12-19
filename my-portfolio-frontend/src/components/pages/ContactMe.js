@@ -46,10 +46,10 @@ const ContactMe = ({ onParameterChange }) => {
   }, [sendRequest]);
 
   return (
-    <div>
+    <div className=''>
 			<div 
 				className="
-					fixed inset-0 
+					fixed inset-0
 				bg-black bg-opacity-75
 					backdrop-filter backdrop-blur-[4px]
 					flex items-center justify-center text-center">

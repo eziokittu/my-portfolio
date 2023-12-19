@@ -23,7 +23,9 @@ const Projects = () => {
   }, [sendRequest]);
 
   return (
-    <div className="relative z-10">
+    <div className="relative z-0">
+
+      {/* content of projects */}
       <div className='p-4 bg-slate-200/50 '>
         <h1 className='mb-2 text-center text-4xl bg-stone-200 rounded-lg text-stone-800 pb-2'>All my projects below!</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -36,7 +38,9 @@ const Projects = () => {
           </div>)}
         </div>
       </div>
-      <div className="w-full h-40 bg-gradient-to-b from-slate-200/50 to-transparent"></div>
+
+      {/* a gradiant gap */}
+      {/* <div className="w-full h-60 bg-gradient-to-b from-slate-200/50 to-transparent"></div> */}
     </div>
   );
 };
