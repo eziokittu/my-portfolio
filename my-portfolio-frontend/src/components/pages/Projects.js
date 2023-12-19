@@ -39,8 +39,8 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* a gradiant gap */}
-      {/* <div className="w-full h-60 bg-gradient-to-b from-slate-200/50 to-transparent"></div> */}
+      {/* a gradiant gap - remember to add this in each page */}
+      <div className="w-full h-24 bg-gradient-to-b from-slate-200/50 to-transparent"></div>
     </div>
   );
 };

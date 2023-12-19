@@ -34,10 +34,10 @@ function App() {
           <Route exact path="/projects/:pid" element={<Project contactMeOverlayOn={!isOverlayOpen}/>} />
         </Routes>
 
-        {/* <div className="flex-grow">
-        </div> */}
+        {/* a gradiant gap - adjust the height  */}
+        <div className="w-full h-72 "></div>
 
-        <Footer />
+        <Footer/>
       </BrowserRouter>
     </div>
   );
