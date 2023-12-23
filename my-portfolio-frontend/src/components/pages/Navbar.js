@@ -58,7 +58,7 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 					<div className='hidden sm:flex text-2xl'>
 						<ButtonLink1 linkTo={options[0].toLowerCase()} buttonName={options[0]} isBlock={false}/>
 						<ButtonLink1 linkTo={options[1].toLowerCase()} buttonName={options[1]} isBlock={false}/>
-						<ButtonLink1 linkTo={options[2].toLowerCase()} buttonName={options[2]} isBlock={false}/>
+						{/* <ButtonLink1 linkTo={options[2].toLowerCase()} buttonName={options[2]} isBlock={false}/> */}
 					</div>
 
 				</div>
@@ -66,12 +66,14 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 				{/* Right Side */}
 				<div className='pr-2 flex'>
 					{/* Dark Mode */}
-					<div className='hidden sm:flex text-lg'>
+					{/* <div className='hidden sm:flex text-lg'>
 						<ButtonLink1 buttonName="Dark" isBlock={false}/>
-					</div>
+					</div> */}
 					
 					{/* Other options */}
 					<div className='hidden sm:flex items-center justify-between space-x-1 text-lg'>
+
+						{/* Contact Me */}
 						<Link 
 							className='
 								text-stone-600 hover:text-black focus:text-white 
@@ -84,16 +86,19 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 						>
 							Contact Me
 						</Link>
-						<ButtonLink1 linkTo='#' buttonName='More' isBlock={false}/>
+
+						{/* More Button */}
+						{/* <ButtonLink1 linkTo='#' buttonName='More' isBlock={false}/> */}
+
 					</div>
 				</div>
 
 				{/* Mobile button goes here */}
 				{mobileMenuOpen===false && <div className='p-2 flex sm:hidden items-center opacity-100'>
 					{/* Dark Mode */}
-					<div className='flex sm:hidden text-lg'>
+					{/* <div className='flex sm:hidden text-lg'>
 						<ButtonLink1 buttonName="Dark" isBlock={false}/>
-					</div>
+					</div> */}
 
 					{/* Open Button */}
 					<button 
@@ -108,9 +113,9 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 				</div>}
 				{mobileMenuOpen===true && <div className='p-2 flex sm:hidden items-center'>
 					{/* Dark Mode */}
-					<div className='flex sm:hidden text-lg'>
+					{/* <div className='flex sm:hidden text-lg'>
 						<ButtonLink1 buttonName="Dark" isBlock={false}/>
-					</div>
+					</div> */}
 
 					{/* Close Button */}
 					<button 
@@ -133,9 +138,11 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 				<div className='w-40 space-y-2 mt-1 mb-2 p-2 text-lg'>
 					<ButtonLink1 linkTo={options[0].toLowerCase()} buttonName={options[0]} isBlock={true}/>
 					<ButtonLink1 linkTo={options[1].toLowerCase()} buttonName={options[1]} isBlock={true}/>
-					<ButtonLink1 linkTo={options[2].toLowerCase()} buttonName={options[2]} isBlock={true}/>
+					{/* <ButtonLink1 linkTo={options[2].toLowerCase()} buttonName={options[2]} isBlock={true}/> */}
 				</div>
 				<div className='w-40 space-y-2 mt-8 px-2 pb-4 text-lg'>
+
+					{/* Contact Me */}
 					<Link 
 						className='
 							text-stone-600 hover:text-black focus:text-white 
@@ -148,7 +155,10 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 					>
 						Contact Me
 					</Link>
-					<ButtonLink1 linkTo='#' buttonName='More' isBlock={true}/>
+
+					{/* More Button */}
+					{/* <ButtonLink1 linkTo='#' buttonName='More' isBlock={true}/> */}
+
 				</div>
 				
 				<hr className='border-2 border-stone-700' />

@@ -6,24 +6,17 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        '2xsm': '290px',
         'xsm': '430px',
-        // => @media (min-width: 992px) { ... }
-
         'sm': '675px',
-        // => @media (min-width: 640px) { ... }
-
         'md': '810px',
-        // => @media (min-width: 768px) { ... }
-
         'lg': '1024px',
-        // => @media (min-width: 1024px) { ... }
-
         'xl': '1280px',
-        // => @media (min-width: 1280px) { ... }
-
         '2xl': '1600px',
-        // => @media (min-width: 1536px) { ... }
       },
+      fontFamily: {
+        'RubikDoodleShadow': ['Rubik Doodle Shadow', 'sans-serif']
+      }
     },
   },
   plugins: [],

@@ -1,0 +1,12 @@
+{
+    "name": "Bodhisatta Bhattacharjee",
+    "year": {
+        "$date":"1970-01-01T00:00:00.000+00:00"
+    },
+    "intro": "Hello, welcome to my profile-prtfolio!",
+    "display_image": "images/image1.jpg",
+    "images": [
+        "images/image1.jpg",
+        "images/image1.jpg"
+    ]
+}
