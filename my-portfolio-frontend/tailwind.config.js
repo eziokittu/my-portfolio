@@ -17,6 +17,8 @@ module.exports = {
       fontFamily: {
         'RubikDoodleShadow': ['Rubik Doodle Shadow', 'sans-serif'],
         'Kolnia': ['Kalnia', 'serif'],
+        'Merriweather': ['Merriweather', 'serif'],
+
       }
     },
   },

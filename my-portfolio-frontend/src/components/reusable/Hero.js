@@ -15,32 +15,34 @@ function Hero() {
     <div className="w-full pt-12 px-2 xsm:px-12 md:flex items-center justify-around mx-auto">
       
       {/* The welcome text */}
-      <div className='pr-4 lg:pr-16 xl:pr-44 2xl:pr-80'>
+      <div className=' pr-4 lg:pr-16 xl:pr-44 2xl:pr-80 '>
 
-        <div className="mb-4 text-3xl  text-indigo-500 ">
+        <div className="font-Merriweather text-4xl text-indigo-500 ">
           Hey There,
         </div>
 
-        <div className="">
-          <span className='text-blue-300 text-xl '>I am </span>
-          <span 
-            className="text-7xl md:text-6xl lg:text-8xl 
-            font-semibold text-blue-600"
-          ><BubbleText text={profileData.name.firstName}/></span>
+        <div className='mt-8 font-Merriweather text-blue-300 text-4xl'>I'm </div>
+
+        <div className="text-7xl md:text-6xl lg:text-8xl 
+          font-semibold text-blue-600 mt-2">
+          <BubbleText text={profileData.name.firstName}/>
         </div>
         
-        <h3 className="text-4xl md:text-6xl 
-        font-semibold text-blue-500"
-        ><BubbleText text={profileData.name.lastName}/></h3>
+        <h3 className="text-4xl md:text-6xl mt-2 
+        font-semibold text-blue-500 font-Merriweather"
+        >{profileData.name.lastName}</h3>
 
         {/* Typing Text Animation  */}
-        <div className="text-base md:text-lg text-slate-700 my-4 md:my-6">
+        <div 
+          className="font-mono text-base p-4 mt-4 
+          md:text-lg text-slate-700 bg-white sm:min-w-[500px]"
+        >
           <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={30}/>
         </div>
 
         {/* About Me Button */}
         <button 
-          className="w-[160px] flex justify-center
+          className="w-[160px] flex justify-center mt-4
           bg-indigo-500 text-white font-normal hover:font-bold  rounded 
           transition hover:bg-indigo-600 active:scale-95 py-2 px-4
           duration-500 "
