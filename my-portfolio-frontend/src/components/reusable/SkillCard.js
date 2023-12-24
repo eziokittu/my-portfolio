@@ -36,14 +36,14 @@ function SkillCard({skillName, skillImageSrc}) {
 
         {/* title of skill */}
         <div className={
-          `flex items-center justify-center w-full bg-slate-800 rounded-b-lg
+          `flex items-center justify-center w-full  rounded-b-lg
           ${buttonHovered ? 
-            'h-[60px] -translate-y-1/2 bg-violet-950 transition duration-1000' : 
+            'h-[60px] -translate-y-1/4 bg-violet-950 transition duration-1000' : 
             'h-[60px]  bg-fuchsia-100'}
           `}>
           <p className={`overflow-visible
           text-center text-lg sm:text-xl xl:text-2xl
-          ${buttonHovered ?'leading-5 font-bold text-pink-200 transition duration-500' : ' leading-3 text-pink-950'}`}>
+          ${buttonHovered ?'leading-5 font-bold text-pink-200 transition duration-500' : ' leading-4 text-pink-950'}`}>
             {skillName}
           </p>
         </div>
