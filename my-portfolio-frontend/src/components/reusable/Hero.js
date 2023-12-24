@@ -12,17 +12,18 @@ function Hero() {
   return (
     <div>
 
-       {/* Intro Text */}
+      {/* Intro Text */}
       <div>
-        <p>Hey there</p>
+        <p>Hey there,</p>
         <p>I am</p>
         <p>{profileData.name.firstName}</p>
         <p>{profileData.name.lastName}</p>
       </div>
-      {/* Typing Text Animation */}
-      {/* <div className="bg-blue-400 text-slate-100">
+
+      {/* Typing Text Animation  */}
+      <div className="">
         <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={30}/>
-      </div> */}
+      </div>
       
     </div>
   )
