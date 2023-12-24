@@ -15,7 +15,8 @@ module.exports = {
         '2xl': '1600px',
       },
       fontFamily: {
-        'RubikDoodleShadow': ['Rubik Doodle Shadow', 'sans-serif']
+        'RubikDoodleShadow': ['Rubik Doodle Shadow', 'sans-serif'],
+        'Kolnia': ['Kalnia', 'serif'],
       }
     },
   },
