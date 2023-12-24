@@ -49,7 +49,7 @@ const Bubble = ({myText}) => {
   }, []);
 
   return (
-    <h2 className="hover-text text-7xl md:text-6xl lg:text-8xl font-thin text-indigo-300">
+    <h2 className="hover-text text-6xl md:text-8xl font-thin text-indigo-300">
       <Text>{myText}</Text>
     </h2>
   );

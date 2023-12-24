@@ -12,10 +12,10 @@ import profileData from "../../Data/profile/profileData.json";
 function Hero() {
 
   return (
-    <div className="w-full pt-12 px-2 xsm:px-12 md:flex items-center justify-around mx-auto">
+    <div className="w-full pt-12 px-2 xsm:px-12 lg:flex items-center justify-around mx-auto mb-8 bg-stone-800/20">
       
       {/* The welcome text */}
-      <div className=' pr-4 lg:pr-16 xl:pr-44 2xl:pr-80 '>
+      <div className=' pr-4 xl:pr-44 2xl:pr-80 mb-12 lg:mb-0'>
 
         <div className="font-Merriweather text-4xl text-indigo-500 ">
           Hey There,
@@ -35,7 +35,7 @@ function Hero() {
         {/* Typing Text Animation  */}
         <div 
           className="font-mono text-base p-4 mt-4 
-          md:text-lg text-slate-700 bg-white sm:min-w-[500px]"
+          md:text-xl text-slate-700 bg-white sm:min-w-[500px]"
         >
           <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={30}/>
         </div>
