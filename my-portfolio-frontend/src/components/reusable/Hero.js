@@ -34,8 +34,9 @@ function Hero() {
 
         {/* Typing Text Animation  */}
         <div 
-          className="font-mono text-base p-4 mt-4 
-          md:text-xl text-slate-700 bg-white sm:min-w-[500px]"
+          className="font-mono text-base p-4 mt-4 rounded-2xl drop-shadow-xl
+          md:text-xl text-white bg-zinc-700 sm:min-w-[500px]
+          shadow-[0_0_25px_black]"
         >
           <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={30}/>
         </div>
@@ -45,7 +46,7 @@ function Hero() {
           className="w-[160px] flex justify-center mt-4 group
           bg-indigo-500 text-white font-normal  rounded 
           transition hover:bg-indigo-600 active:scale-95 py-2 px-4
-          duration-500 "
+          duration-500 drop-shadow-xl"
         >
           <p
             className='group-hover:font-bold'
