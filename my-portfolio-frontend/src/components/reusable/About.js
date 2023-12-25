@@ -1,32 +1,124 @@
 import React from 'react'
 
-function About() {
+// importing data from local files
+import profileData from "../../Data/profile/profileData.json";
+
+const About = () => {
+  const redirectToGmail = (mail) => {
+    const subject = '[Redirected from Bodhisatta-portfolio]';
+    const body = 'Hi Bodhisatta,\n';
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${mail}&su=${subject}&body=${body}`;
+  
+    window.open(gmailUrl, '_blank');
+  };
+
   return (
-    <div>
-      <div className='mx-12 bg-gray-400 p-4 mb-4'>
-        <div className='text-center text-4xl font-bold'>
-          About Section
+    <div className='bg-green-400/20 min-h-[700px]'>
+
+      {/* About Body */}
+      <div 
+        className=' group/g1 mx-2 xsm:mx-12 md:mx-auto md:w-[700px] lg:w-[900px] p-2 xsm:p-4 rounded-lg shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-300
+        bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-lime-600/75 via-green-200/75 to-teal-600/75
+        hover:bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] hover:from-lime-600 hover:via-green-200 hover:to-teal-600'
+      >
+
+        {/* Heading */}
+        <div 
+          className='text-center text-4xl font-semibold group-hover/g1:font-bold border-b-[4px] border-green-600
+          bg-gradient-to-r from-lime-700 via-green-900 to-teal-600 w-fit mx-auto bg-clip-text text-transparent
+          flex gap-2 items-center'
+        >
+
+          {/* Heading Icon */}
+          <div className='text-green-900 group-hover/g1:animate-bounce'>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" viewBox="0 0 24 24" 
+              stroke-width="1.5" 
+              stroke="currentColor" 
+              className="w-10 h-10 group-hover/g1:animate-spin">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+            </svg>
+          </div>
+
+          {/* Heating Title */}
+          <p>About Me</p>
+
         </div>
-        <div className='text-justify'>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        <br/>
-        Why do we use it?
-        <br/>
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        <br/>
-        Where does it come from?
-        <br/>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        <br/>
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        <br/>
-        Where can I get some?
-        <br/>
-        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+        {/* Content of About Section */}
+        <div>
+          {/* Aout Me Text */}
+          <div className='text-justify text-sm xsm:text-lg md:text-2xl'>
+            {profileData.about.map((text) => 
+              <div className='mb-4'>
+                {text}
+              </div>
+            )}
+          </div>
+
+          {/* Some Contact details */}
+          <div className='mt-12 text-md sm:text-2xl md:text-3xl text-teal-950'>
+            {/* Primary Email */}
+            <div className='mb-2 '>
+              <span className='mr-2 text-lime-950 font-bold'>Primary Email:</span>
+              <span>
+                <button
+                  onClick={() => redirectToGmail(profileData.email)}
+                  className='hover:underline'
+                >
+                  {profileData.email}
+                </button>
+              </span>
+            </div>
+
+            {/* KIIT Email */}
+            <div className='mb-2'>
+              <span className='mr-2 text-lime-950 font-bold'>KIIT Email:</span>
+              <span>
+                <button
+                  onClick={() => redirectToGmail(profileData.email_KIIT)}
+                  className='hover:underline'
+                >
+                  {profileData.email_KIIT}
+                </button>
+              </span>
+            </div>
+
+            {/* Place Details */}
+            <div className=''>
+              <span className='mr-2 text-lime-950 font-bold'>Place:</span>
+              <span>{profileData.home}</span>
+            </div>
+          </div>
+
+          {/* Resume Button */}
+          <div className='w-fit'>
+            <button
+              onClick={()=>{window.open(`${profileData.resume}`, '_blank')}}
+              className='mt-12 transition duration-500 w-[250px] rounded-lg
+              bg-green-400 hover:bg-green-500 hover:font-bold group/g2'
+            >
+              <div className='flex items-center p-4 justify-center'>
+                <p 
+                  className='text-4xl
+                  transition duration-500'
+                >Resume</p>
+                <svg 
+                  className='w-10 h-10 
+                  group-hover/g2:translate-x-2' 
+                  xmlns="http://www.w3.org/2000/svg"  
+                  viewBox="0 0 30 30"
+                ><path d="M 25.980469 2.9902344 A 1.0001 1.0001 0 0 0 25.869141 3 L 20 3 A 1.0001 1.0001 0 1 0 20 5 L 23.585938 5 L 13.292969 15.292969 A 1.0001 1.0001 0 1 0 14.707031 16.707031 L 25 6.4140625 L 25 10 A 1.0001 1.0001 0 1 0 27 10 L 27 4.1269531 A 1.0001 1.0001 0 0 0 25.980469 2.9902344 z M 6 7 C 4.9069372 7 4 7.9069372 4 9 L 4 24 C 4 25.093063 4.9069372 26 6 26 L 21 26 C 22.093063 26 23 25.093063 23 24 L 23 14 L 23 11.421875 L 21 13.421875 L 21 16 L 21 24 L 6 24 L 6 9 L 14 9 L 16 9 L 16.578125 9 L 18.578125 7 L 16 7 L 14 7 L 6 7 z"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  )
-}
 
-export default About
+    </div>
+  );
+};
+
+export default About;

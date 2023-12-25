@@ -1,32 +1,54 @@
 import React from 'react'
 
-function Education() {
+import EducationCard from './EducationCard';
+
+const Education = () => {
   return (
-    <div>
-      <div className='mx-12 bg-gray-400 p-4 mb-4'>
-        <div className='text-center text-4xl font-bold'>
-          Education Section
+    <div className='bg-yellow-300/20 min-h-[700px]'>
+{/* drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] */}
+      {/* All the contents of section */}
+      <div 
+        className='mx-2 xsm:mx-12 md:mx-auto md:w-[700px] lg:w-[900px] p-2 xsm:p-4
+        bg-amber-500/40 hover:bg-amber-300/70 rounded-lg group
+        shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500'
+      >
+
+        {/* Section Title */}
+        <div className='text-center text-2xl 2xsm:text-3xl sm:text-4xl font-bold border-b-[4px] border-amber-950
+          w-fit mx-auto bg-clip-text text-transparent
+          bg-gradient-to-r from-orange-400 via-yellow-300 to-amber-500
+          group-hover:from-amber-800 group-hover:via-orange-500 group-hover:to-orange-800
+          flex gap-2 items-center'
+        >
+
+          {/* Education Icon */}
+          <div 
+            className=' text-black 
+            group-hover:animate-[bounce_1s_ease-in-out_infinite_.3s]'
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 16 16" 
+              fill="currentColor" 
+              className="w-10 h-10 group-hover:animate-pulse">
+              <path d="M7.25 3.688a8.035 8.035 0 0 0-4.872-.523A.48.48 0 0 0 2 3.64v7.994c0 .345.342.588.679.512a6.02 6.02 0 0 1 4.571.81V3.688ZM8.75 12.956a6.02 6.02 0 0 1 4.571-.81c.337.075.679-.167.679-.512V3.64a.48.48 0 0 0-.378-.475 8.034 8.034 0 0 0-4.872.523v9.268Z" />
+            </svg>
+          </div>
+
+          {/* Title */}
+          <p>My Education</p>
+
         </div>
-        <div className='text-justify'>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          <br/>
-          Why do we use it?
-          <br/>
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-          <br/>
-          Where does it come from?
-          <br/>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          <br/>
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-          <br/>
-          Where can I get some?
-          <br/>
-          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+        {/* Section Body */}
+        <div>
+          <EducationCard />
         </div>
+        
       </div>
+
     </div>
   )
-}
+};
 
-export default Education
+export default Education;

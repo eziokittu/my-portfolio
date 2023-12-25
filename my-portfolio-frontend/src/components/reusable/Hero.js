@@ -15,7 +15,7 @@ function Hero() {
     <div className="w-full pt-12 px-2 xsm:px-12 lg:flex items-center justify-around mx-auto mb-8 bg-stone-800/20">
       
       {/* The welcome text */}
-      <div className=' pr-4 xl:pr-44 2xl:pr-80 mb-12 lg:mb-0'>
+      <div className=' pr-4 xl:pr-44 2xl:pr-auto mb-12 lg:mb-0'>
 
         <div className="font-Merriweather text-4xl text-indigo-500 ">
           Hey There,
@@ -42,13 +42,15 @@ function Hero() {
 
         {/* About Me Button */}
         <button 
-          className="w-[160px] flex justify-center mt-4
-          bg-indigo-500 text-white font-normal hover:font-bold  rounded 
+          className="w-[160px] flex justify-center mt-4 group
+          bg-indigo-500 text-white font-normal  rounded 
           transition hover:bg-indigo-600 active:scale-95 py-2 px-4
           duration-500 "
         >
-          <p>About Me</p>
-          <svg className='w-6 h-6 ml-2'
+          <p
+            className='group-hover:font-bold'
+          >About Me</p>
+          <svg className='w-6 h-6 ml-2 fill-slate-400 group-hover:fill-white group-hover:translate-x-2'
             xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
             <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"/>
           </svg>
@@ -56,7 +58,7 @@ function Hero() {
       </div>
 
       {/* The grid for shuffling hero images */}
-      <div className='w-full p-2 xsm:p-8 bg-black/20 rounded-lg '>
+      <div className='w-full lg:w-[600px] 2xl:w-[600px] p-2 xsm:p-8 bg-black/20 rounded-lg '>
         <ShuffleHero />
       </div>
       
