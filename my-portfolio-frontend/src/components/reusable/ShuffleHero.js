@@ -69,7 +69,7 @@ const ShuffleGrid = () => {
     <div 
       className="
       grid grid-cols-4 grid-rows-4 gap-1
-      h-[200px] 2xsm:h-[300px] xsm:h-[400px] sm:h-[600px] md:h-[400px] lg:h-[600px] "
+      h-[200px] 2xsm:h-[300px] xsm:h-[400px] sm:h-[600px] md:h-[600px] lg:h-[400px] xl:h-[600px]"
     >
       {squares.map((sq) => sq)}
     </div>
