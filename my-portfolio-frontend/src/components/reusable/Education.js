@@ -1,6 +1,10 @@
 import React from 'react'
 
+// reusable components
 import EducationCard from './EducationCard';
+
+// importing data from local storage
+import educationData from "../../Data/profile/educationData.json";
 
 const Education = () => {
   return (
@@ -42,7 +46,10 @@ const Education = () => {
 
         {/* Section Body */}
         <div>
-          <EducationCard />
+          <EducationCard props={educationData.data[0]}/>
+          <EducationCard props={educationData.data[1]}/>
+          <EducationCard props={educationData.data[2]}/>
+          <EducationCard props={educationData.data[3]}/>
         </div>
         
       </div>

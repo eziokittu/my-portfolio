@@ -1,12 +1,21 @@
 import React from 'react'
 
-const EducationCard = (props) => {
+const EducationCard = ({props}) => {
   return (
-    <div>
+    <div 
+      className='group bg-yellow-500/50 hover:bg-yellow-500
+      rounded-lg p-2 sm:flex'
+    >
 
       {/* Institute Image */}
-      <div>
-        KIIT Image
+      <div 
+        className='h-[200px] w-fit'
+      >
+        <img
+          className='h-full w-full rounded-t-lg sm:rounded-tr-none sm:rounded-l-lg'
+          src={props.image}
+          alt={props.alt}
+        />
       </div>
 
       {/* Education Details */}
@@ -14,17 +23,31 @@ const EducationCard = (props) => {
 
         {/* Degree Achieved */}
         <div>
-          Btech
+          <p>{props.achieved}</p>
         </div>
 
-        {/* Institute Name */}
+        {/* Name and Board */}
         <div>
-          KIIT
+
+          {/* Institute Name */}
+          <div>
+            <p>{props.name}</p>
+          </div>
+
+          {/* Institute Board */}
+          <div>
+            <p>{props.board}</p>
+          </div>
+
         </div>
 
         {/* Institute Study Year Duration */}
         <div>
-          2022-2025
+          <span>{props.yearStart}</span>
+          <span>-</span>
+          <span>{props.yearEnd}</span>
+          <span>|</span>
+          <span>{props.status}</span>
         </div>
 
       </div>

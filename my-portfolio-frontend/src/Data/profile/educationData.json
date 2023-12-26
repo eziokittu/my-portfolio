@@ -1,0 +1,48 @@
+{
+  "data" : [
+    {
+      "image":"./images/educationImages/img_kiit.jpg",
+      "alt":"KIIT",
+      "name":"Kalinga Institute Of Industrial Technology",
+      "board":"Deemed To Be University",
+      "place":"Bhubaneshwar, Odisha",
+      "achieved":"Bachelor Of Technology In Computer Science And Engineering",
+      "yearStart":"2022",
+      "yearEnd":"2025",
+      "status":"Pursuing"
+    },
+    {
+      "image":"./images/educationImages/img_jissp.jpeg",
+      "alt":"JISSP",
+      "name":"JIS School of Polytechnic",
+      "board":"West Bengal State Council of Technical & Vocational Education and Skill Development (WBSCTE)",
+      "place":"Kalyani, Nadia, West Bengal",
+      "achieved":"Diploma in Computer Science And Technology",
+      "yearStart":"2019",
+      "yearEnd":"2022",
+      "status":"Completed"
+    },
+    {
+      "image":"./images/educationImages/img_sphs.jpg",
+      "alt":"SPHS",
+      "name":"South Point High School",
+      "board":"Central Board of Secondary Education (CBSE)",
+      "place":"Ballygunge, Kolkata, West Bengal",
+      "achieved":"Matriculation",
+      "yearStart":"2010",
+      "yearEnd":"2016",
+      "status":"Completed"
+    },
+    {
+      "image":"./images/educationImages/img_sps.jpg",
+      "alt":"SPS",
+      "name":"South Point School (Junior)",
+      "board":"West Bengal Board of Primary Education (WBPE)",
+      "place":"Ballygunge, Kolkata, West Bengal",
+      "achieved":"(Till Class 5)",
+      "yearStart":"2003",
+      "yearEnd":"2010",
+      "status":"Completed"
+    }
+  ]
+}
