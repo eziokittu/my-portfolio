@@ -15,13 +15,7 @@ const Background = () => {
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
@@ -63,7 +57,7 @@ const Background = () => {
 			},
 			"detectRetina": true,
 			"duration": 0,
-			"fpsLimit": 50,
+			"fpsLimit": 30,
 			"interactivity": {
 				"detectsOn": "window",
 				"events": {
@@ -357,7 +351,7 @@ const Background = () => {
 						"mode": "delete",
 						"value": 0
 					},
-					"value": 200
+					"value": 250
 				},
 				"opacity": {
 					"value": 1,
