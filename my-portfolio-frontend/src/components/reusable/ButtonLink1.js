@@ -7,13 +7,13 @@ const ButtonLink1 = (props) => {
 			<Link 
 				className='
 					transition-all duration-300
-					text-stone-600 hover:text-black focus:text-white 
+					hover:text-stone-600 text-black focus:text-white 
 					mx-1 px-2 pb-1 
 					border-2 border-stone-500 focus:border-zinc-900 
 					focus:bg-gradient-to-b focus:from-stone-500 focus:to-stone-800
 					bg-gray-200 hover:bg-gray-300
 					rounded-lg focus:rounded-xl 
-					shadow-slate-200-800
+					shadow-slate-800-200
 					' 
 				to={props.linkTo}
 			>
@@ -26,12 +26,12 @@ const ButtonLink1 = (props) => {
 			<Link 
 				className='
 					transition-all duration-300
-					text-stone-600 hover:text-black focus:text-white 
+					hover:text-stone-600 text-black focus:text-white 
 					block mx-1 px-2 pb-1 
 					border-2 border-stone-500 focus:border-zinc-900 
 					focus:bg-gradient-to-b focus:from-stone-500 focus:to-stone-800
 					bg-gray-200 hover:bg-gray-300
-					rounded-lg focus:rounded-xl shadow-slate-200-800' 
+					rounded-lg focus:rounded-xl shadow-slate-800-200' 
 				to={props.linkTo}
 			>
 				{props.buttonName}

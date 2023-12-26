@@ -8,7 +8,7 @@ import educationData from "../../Data/profile/educationData.json";
 
 const Education = () => {
   return (
-    <div className='bg-yellow-300/20 min-h-[700px]'>
+    <div id='education' className='bg-yellow-300/20 min-h-[700px]'>
 {/* drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] */}
       {/* All the contents of section */}
       <div 
@@ -20,16 +20,16 @@ const Education = () => {
       >
 
         {/* Section Title */}
-        <div className='text-center text-2xl 2xsm:text-3xl sm:text-4xl font-bold border-b-[4px] border-amber-950
+        <div className='text-center text-2xl 2xsm:text-3xl sm:text-4xl font-bold border-b-[4px] border-amber-200
           w-fit mx-auto bg-clip-text text-transparent transition duration-300
           bg-gradient-to-r from-amber-600 via-yellow-300 to-amber-600
           group-hover/edu1:from-yellow-300 group-hover/edu1:via-amber-400 group-hover/edu1:to-yellow-300
-          flex gap-2 items-center'
+          flex gap-2 items-center mb-2'
         >
 
           {/* Education Icon */}
           <div 
-            className=' text-black 
+            className=' text-yellow-400 
             group-hover/edu1:animate-[bounce_1s_ease-in-out_infinite_.3s]'
           >
             <svg 

@@ -18,20 +18,20 @@
 
 /* Scrollbar modification */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background-color: rgba(129, 94, 243, 0.384);
+    background-color: rgb(23, 0, 123);
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background-color: rgb(28, 24, 69);
+    background-color: rgb(17, 255, 0);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(109, 6, 173);
+    background-color: rgb(229, 255, 0);
   }

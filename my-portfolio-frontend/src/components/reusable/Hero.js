@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 // importing reusable components
 import TypingComponent from './TypingComponent';
@@ -12,7 +13,10 @@ import profileData from "../../Data/profile/profileData.json";
 function Hero() {
 
   return (
-    <div className="w-full pt-12 px-2 xsm:px-12 lg:flex items-center justify-around mx-auto mb-8 bg-stone-800/20">
+    <div 
+      className="w-full pt-12 px-2 xsm:px-12 lg:flex items-center justify-around mx-auto mb-8 bg-stone-800/20"
+      id='hero'
+    >
       
       {/* The welcome text */}
       <div className=' pr-4 xl:pr-44 2xl:pr-auto mb-12 lg:mb-0'>
@@ -42,20 +46,27 @@ function Hero() {
         </div>
 
         {/* About Me Button */}
-        <button 
-          className="w-[160px] flex justify-center mt-4 group
-          bg-indigo-500 text-white font-normal  rounded 
-          transition hover:bg-indigo-600 active:scale-95 py-2 px-4
-          duration-500 drop-shadow-xl"
+        <Link 
+          activeClass="active" spy={true} smooth={true} offset={-70} duration={500}
+          className=''
+          to='about'
         >
-          <p
-            className='group-hover:font-bold'
-          >About Me</p>
-          <svg className='w-6 h-6 ml-2 fill-slate-400 group-hover:fill-white group-hover:translate-x-2'
-            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-            <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"/>
-          </svg>
-        </button>
+          <button 
+            className="w-[160px] flex justify-center mt-4 group
+            bg-indigo-500 text-white font-normal  rounded 
+            transition hover:bg-indigo-600 active:scale-95 py-2 px-4
+            duration-500 drop-shadow-xl"
+          >
+            <p
+              className='group-hover:font-bold'
+            >About Me</p>
+            <svg className='w-6 h-6 ml-2 fill-slate-400 group-hover:fill-white group-hover:translate-x-2'
+              xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"/>
+            </svg>
+          </button>
+        </Link>
+        
       </div>
 
       {/* The grid for shuffling hero images */}

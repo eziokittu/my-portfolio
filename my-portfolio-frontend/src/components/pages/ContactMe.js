@@ -46,7 +46,7 @@ const ContactMe = ({ onParameterChange }) => {
   }, [sendRequest]);
 
   return (
-    <div className=''>
+    <div className='z-20'>
 			<div 
 				className="
 					fixed inset-0

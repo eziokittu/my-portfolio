@@ -351,7 +351,7 @@ const Background = () => {
 						"mode": "delete",
 						"value": 0
 					},
-					"value": 250
+					"value": 150
 				},
 				"opacity": {
 					"value": 1,

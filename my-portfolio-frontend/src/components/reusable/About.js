@@ -13,7 +13,7 @@ const About = () => {
   };
 
   return (
-    <div className='bg-green-400/20 min-h-[700px]'>
+    <div className='bg-green-400/20 min-h-[700px]' id='about'>
 
       {/* About Body */}
       <div 

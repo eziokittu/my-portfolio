@@ -34,6 +34,8 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 
   return (
 		<nav className=' bg-slate-300/10 relative z-10'>
+
+			{/* Bigger Screen Devices Menu */}
 			<div className='flex justify-between items-center '>
 				{/* Left Side */}
 				<div className='p-2 flex justify-between items-center '>
@@ -129,7 +131,8 @@ const Navbar = ({ options, contactMeButtonNotClicked }) => {
 					</button>
 				</div>}
 			</div>
-			<hr className='border-2 border-stone-700' />
+
+			{/* <hr className='border-2 border-stone-700' /> */}
 			{/* {mobileMenuOpen===false && <div className='w-full h-10 bg-gradient-to-b from-slate-400 to-zinc-200'></div>} */}
 
 			{/* Mobile Menu here */}

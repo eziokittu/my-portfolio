@@ -10,7 +10,7 @@ import Education from "../reusable/Education";
 const Home = () => {
 
   return (
-    <div className="relative z-0">
+    <div className="relative z-0" id="home">
 
       {/* content of page */}
       <div className="">
