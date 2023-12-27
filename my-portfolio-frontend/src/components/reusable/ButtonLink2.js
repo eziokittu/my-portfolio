@@ -7,7 +7,7 @@ import React from "react";
 const ButtonLink2 = (props) => {
   return (
     <Link 
-      activeClass="active" spy={true} smooth={true} offset={-70} duration={500}
+      activeClass="active" spy={true} smooth={true} offset={-150} duration={500}
       className='
         transition-all duration-300
         hover:text-stone-600 text-black focus:text-white 

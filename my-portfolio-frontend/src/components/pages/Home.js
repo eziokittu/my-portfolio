@@ -3,8 +3,9 @@ import React from "react";
 
 // importing reusable components
 import Hero from "../reusable/Hero";
-import SkillDisplay from "../reusable/SkillDisplay";
 import About from "../reusable/About";
+import SkillDisplay from "../reusable/SkillDisplay";
+import Projects from "./Projects";
 import Education from "../reusable/Education";
 
 const Home = () => {
@@ -33,7 +34,14 @@ const Home = () => {
         <section className="min-h-[700px]">
           <SkillDisplay />
           {/* Transperant gradient - change the height and colours acordingly*/}
-			    <div className="h-40 w-full bg-gradient-to-b from-pink-300/20 to-yellow-300/20"></div>
+			    <div className="h-40 w-full bg-gradient-to-b from-pink-300/20 to-slate-200/20"></div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="min-h-[700px]">
+          <Projects />
+          {/* Transperant gradient - change the height and colours acordingly*/}
+			    <div className="h-40 w-full bg-gradient-to-b from-slate-200/20 to-yellow-300/20"></div>
         </section>
 
         {/* Education Section */}

@@ -26,7 +26,7 @@ const Projects = () => {
     <div className="relative z-0">
 
       {/* content of projects */}
-      <div className='p-4 bg-slate-200/50 '>
+      <div className='p-4 bg-slate-200/20 '>
 
         {/* Heading */}
         <h1 className='mb-2 text-center text-4xl bg-slate-200 rounded-lg text-stone-800 pb-2'>All my projects below!</h1>
@@ -50,7 +50,7 @@ const Projects = () => {
       </div>
 
       {/* a gradiant gap - remember to add this in each page */}
-      <div className="w-full h-24 bg-gradient-to-b from-slate-200/50 to-transparent"></div>
+      {/* <div className="w-full h-24 bg-gradient-to-b from-slate-200/50 to-transparent"></div> */}
 
     </div>
   );

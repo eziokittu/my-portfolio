@@ -29,12 +29,13 @@ function App() {
         {/* <Navbar options={navbarOptions1} contactMeButtonNotClicked={closeOverlay}/> */}
         <Navbar2 
           options={navbarOptions2} 
+          contactMeOverlayOn={!isOverlayOpen}
           contactMeButtonNotClicked={closeOverlay}
         />
-        <StickyContactMeButton 
+        {/* <StickyContactMeButton 
           contactMeButtonNotClicked={closeOverlay} 
           contactMeOverlayOn={!isOverlayOpen}
-        />
+        /> */}
 
         <Routes>
           <Route exact path="/" element={<Home/>} />
