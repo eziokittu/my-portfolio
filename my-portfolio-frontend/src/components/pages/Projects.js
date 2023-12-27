@@ -1,26 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { useHttpClient } from '../reusable/hooks/http-hook';
+// importing reusable components
 import ProjectDisplayCardLayout from '../reusable/ProjectDisplayCardLayout';
-import img1 from "../images/img1.jpg";
 
-const Projects = () => {
-  const [loadedProjects, setLoadedProjects] = useState();
-  const { sendRequest} = useHttpClient();
+// importing data
+import projectData from '../../Data/projects/projectData.json';
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const responseData = await sendRequest(
-          `http://localhost:5000/api/projects/`
-        );
-        setLoadedProjects(responseData.Projects);
-      } catch (err) {
-        console.log("Error in fetching Projects: "+err);
-      }
-    };
-    fetchProjects();
-  }, [sendRequest]);
+const Projects = (props) => {
 
   return (
     <div 
@@ -35,17 +21,9 @@ const Projects = () => {
 
         {/* Project cards in grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-
-          {/* if projects are loaded */}
-          {loadedProjects && loadedProjects.map(project => (
-            <ProjectDisplayCardLayout id={project.id} cardTitle={project.title} cardDescription={project.description_short} cardImage={img1} />
+          {projectData.Projects.map(p => (
+            <ProjectDisplayCardLayout project={p} contactMeOverlayOn={props.contactMeOverlayOn} />
           ))}
-
-          {/* if projects not loaded */}
-          {!loadedProjects && (
-          <div className="text-center">
-            <p className="text-2xl animate-pulse bg-slate-200 rounded-lg text-stone-800 pb-2">... Loading Projects please wait ...</p>
-          </div>)}
 
         </div>
 

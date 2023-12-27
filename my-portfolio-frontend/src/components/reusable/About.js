@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react'
+import React from 'react'
 import { Fade } from "react-awesome-reveal";
 
 // importing data from local files

@@ -43,6 +43,7 @@ const Navbar2 = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => 
               animate-[pulse_1s_ease-in-out_infinite_0.2s]
               group-hover/nav-logo:animate-[spin_1s_ease-in-out_1_0.2s]'
               src={profileData.display_image}
+              alt='Bodhisatta'
             />
           </Link>
         </div>
