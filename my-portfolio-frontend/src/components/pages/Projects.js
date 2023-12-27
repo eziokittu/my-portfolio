@@ -23,7 +23,9 @@ const Projects = () => {
   }, [sendRequest]);
 
   return (
-    <div className="relative z-0">
+    <div 
+      id="projects"
+      className="relative z-0">
 
       {/* content of projects */}
       <div className='p-4 bg-slate-200/20 '>

@@ -13,7 +13,7 @@ import React, { useState } from 'react';
 
 function App() {
   const navbarOptions1 = ['Home', 'Projects', 'Blogs'];
-  const navbarOptions2 = ['Home', 'About', 'Skills', 'Education'];
+  const navbarOptions2 = ['Home', 'About', 'Skills', 'Projects', 'Education'];
 
   // For Contact Me Overlay
 	const [isOverlayOpen, setIsOverlayOpen] = useState(false);
