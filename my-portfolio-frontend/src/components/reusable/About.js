@@ -15,14 +15,14 @@ const About = () => {
 
   return (
     <div className='bg-green-400/20 min-h-[700px]' id='about'>
-
+      <Fade delay={150}>
         {/* About Body */}
         <div 
           className=' group/g1 mx-2 xsm:mx-12 md:mx-auto md:w-[700px] lg:w-[900px] p-2 xsm:p-4 rounded-lg shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-300
           bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-lime-600/75 via-green-200/75 to-teal-600/75
           hover:bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] hover:from-lime-600 hover:via-green-200 hover:to-teal-600'
         >
-
+          <Fade delay={150}>
           {/* Heading */}
           <div 
             className='text-center text-4xl font-semibold group-hover/g1:font-bold border-b-[4px] border-green-600
@@ -45,8 +45,9 @@ const About = () => {
             {/* Heating Title */}
             <p>About Me</p>
 
-          </div>
+          </div></Fade>
 
+          <Fade delay={150}>
           {/* Content of About Section */}
           <div>
             {/* Aout Me Text */}
@@ -60,6 +61,8 @@ const About = () => {
 
             {/* Some Contact details */}
             <div className='mt-12 text-md sm:text-2xl md:text-3xl text-teal-950'>
+
+              <Fade delay={150}>
               {/* Primary Email */}
               <div className='mb-2 '>
                 <span className='mr-2 text-lime-950 font-bold'>Primary Email:</span>
@@ -71,8 +74,9 @@ const About = () => {
                     {profileData.email}
                   </button>
                 </span>
-              </div>
+              </div></Fade>
 
+              <Fade delay={150}>
               {/* KIIT Email */}
               <div className='mb-2'>
                 <span className='mr-2 text-lime-950 font-bold'>KIIT Email:</span>
@@ -84,15 +88,17 @@ const About = () => {
                     {profileData.email_KIIT}
                   </button>
                 </span>
-              </div>
+              </div></Fade>
 
+              <Fade delay={150}>
               {/* Place Details */}
               <div className=''>
                 <span className='mr-2 text-lime-950 font-bold'>Place:</span>
                 <span>{profileData.home}</span>
-              </div>
+              </div></Fade>
             </div>
 
+            <Fade delay={150}>
             {/* Resume Button */}
             <div className='w-fit'>
               <button
@@ -114,11 +120,12 @@ const About = () => {
                   </svg>
                 </div>
               </button>
-            </div>
-          </div>
+            </div></Fade>
+          </div></Fade>
+          
         </div>
-
-      </div>
+      </Fade>
+    </div>
   );
 };
 

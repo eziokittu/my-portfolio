@@ -1,5 +1,6 @@
 // importing necessary library files
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 // importing reusable components
 import SkillCard from './SkillCard';
@@ -13,6 +14,7 @@ const SkillDisplay = () => {
 	return (
 		<div id="skills" className='bg-pink-300/20  min-h-[700px] p-2 group/g1'>
 
+			<Fade delay={150}>
 			{/* Title of the section */}
 			<button 
 				className='relative overflow-hidden group/g2
@@ -46,8 +48,9 @@ const SkillDisplay = () => {
 					<p className='text-violet-900 pr-1 sm:pr-3'>&</p>
 					<p className='text-teal-800  '>Abilities</p>
 				</span>
-			</button>
+			</button></Fade>
 
+			<Fade delay={150}>
 			{/* the grid consisting of all the skills */}
 			<div className='w-4/5 mx-auto rounded-3xl bg-pink-300/5 hover:bg-pink-300/20 shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500'>
 				<div 
@@ -59,7 +62,7 @@ const SkillDisplay = () => {
 						<SkillCard skillImageSrc={skill[1]} skillName={skill[0]}/>
 					))}
 				</div>
-			</div>
+			</div></Fade>
 
 		</div>
 	);
