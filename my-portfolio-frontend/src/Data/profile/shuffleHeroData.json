@@ -1,0 +1,68 @@
+{
+  "images" : [
+    {
+      "id": 1,
+      "src": "./images/otherImages/img_ezio.jpg"
+    },
+    {
+      "id": 2,
+      "src": "./images/otherImages/img_acodyssey.jpg"
+    },
+    {
+      "id": 3,
+      "src": "./images/otherImages/img_cat1.jpg"
+    },
+    {
+      "id": 4,
+      "src": "./images/otherImages/img_cat2.jpg"
+    },
+    {
+      "id": 5,
+      "src": "./images/otherImages/img_cs2.jpg"
+    },
+    {
+      "id": 6,
+      "src": "./images/myImages/img_7.jpg"
+    },
+    {
+      "id": 7,
+      "src": "./images/otherImages/img_gta6.jpg"
+    },
+    {
+      "id": 8,
+      "src": "./images/myImages/img_8.jpg"
+    },
+    {
+      "id": 9,
+      "src": "./images/myImages/img_1.jpg"
+    },
+    {
+      "id": 10,
+      "src": "./images/myImages/img_2.jpg"
+    },
+    {
+      "id": 11,
+      "src": "./images/myImages/img_3.jpg"
+    },
+    {
+      "id": 12,
+      "src": "./images/myImages/img_4.jpg"
+    },
+    {
+      "id": 13,
+      "src": "./images/myImages/img_5.jpg"
+    },
+    {
+      "id": 14,
+      "src": "./images/myImages/img_6.jpg"
+    },
+    {
+      "id": 15,
+      "src": "./images/otherImages/img_sister.jpg"
+    },
+    {
+      "id": 16,
+      "src": "./images/otherImages/img_weight.jpg"
+    }
+  ]
+}

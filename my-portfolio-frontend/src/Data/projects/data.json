@@ -1,0 +1,44 @@
+{
+    "Projects": {
+        "Project1": {
+            "title": "Project1",
+            "tags": [
+                "MERN",
+                "ReactJS",
+                "HTML",
+                "CSS",
+                "NodeJS",
+                "ExpressJS",
+                "MongoDB",
+                "React-Router-DOM",
+                "Tailwind CSS",
+                "Full Stack",
+                "Website"
+            ],
+            "description_short": "Project 1 Description in short",
+            "description_long": "Project 1 Description in long",
+            "image": "images/p1_image1.png",
+            "project_type": "657d8bc43cc60d2db1a6df30"
+        },
+        "Project2": {
+            "title": "Project2",
+            "tags": [
+                "MERN",
+                "ReactJS",
+                "HTML",
+                "CSS",
+                "NodeJS",
+                "ExpressJS",
+                "MongoDB",
+                "React-Router-DOM",
+                "Tailwind CSS",
+                "Full Stack",
+                "Website"
+            ],
+            "description_short": "Project 2 Description in short",
+            "description_long": "Project 2 Description in long",
+            "image": "images/p1_image1.png",
+            "project_type": "657d8bc43cc60d2db1a6df30"
+        }
+    }
+}
