@@ -8,7 +8,7 @@ import SkillDisplay from "../reusable/SkillDisplay";
 import Projects from "./Projects";
 import Education from "../reusable/Education";
 
-const Home = () => {
+const Home = ({contactMeOverlayOn}) => {
 
   return (
     <div className="relative z-0" id="home">

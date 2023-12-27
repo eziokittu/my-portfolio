@@ -1,25 +1,25 @@
 import React, {useState} from "react";
+import ImageGallery from "react-image-gallery";
 
-import SwipeCarousel from "./SwipeCarousel";
+// importing CSS
+import "react-image-gallery/styles/css/image-gallery.css";
 
-const ProjectDisplayCardLayout = ({project, contactMeOverlayOn}) => {
-	// const loadedImages = project.images;
-  // const [currentImage, setCurrentImage] = useState(0);
-	// const nextImage = () => {
-  //   setCurrentImage((prevImage) => (prevImage + 1) % loadedImages.length);
-  // };
-  // const prevImage = () => {
-  //   setCurrentImage((prevImage) => (prevImage - 1 + loadedImages.length) % loadedImages.length);
-  // };
+const ProjectDisplayCardLayout = ({project}) => {
+
+	const loadedImages = project.images.map(imageSrc => ({
+    original: imageSrc,
+    thumbnail: imageSrc
+  }));
 
 	return (
 		<div className="relative z-10 flex flex-col justify-between max-w-full min-h-[400px] max-h-[620px]  border-4 rounded-lg shadow bg-gray-800 hover:bg-gray-700 boerder-white hover:border-yellow-400 shadow-slate-800-200 hover:shadow-slate-200-800">
 			<div className="p-5 flex flex-col justify-between">
 
-				{/* Project Card Image */}
-				{/* <div class="max-h-[400px] overflow-hidden">
-					<img className="rounded-lg w-auto" src={project.images[0]} alt="" />
-				</div> */}
+				{/* Project Image Viewer */}
+				<div class="max-h-[400px] overflow-hidden">
+					{/* <img className="rounded-lg w-auto" src={project.images[0]} alt="" /> */}
+          <ImageGallery items={loadedImages} />
+				</div>
 
 				{/* Project Card Title and Description */}
 				<div className="pt-5">
@@ -40,11 +40,6 @@ const ProjectDisplayCardLayout = ({project, contactMeOverlayOn}) => {
             </p>
           ))}
         </div> */}
-
-				{/* Image Viewer */}
-        <p className='text-xl text-stone-700 text-center'>Project Images</p>
-        {(contactMeOverlayOn===true) && <SwipeCarousel images={project.images}/>}
-        <div className="w-full h-96"></div>
 
 			</div>
 			
