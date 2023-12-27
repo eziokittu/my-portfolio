@@ -1,18 +1,10 @@
-// import backgroundImage1 from "../../Data/other/backgroundImage1.jpg";
-// fixed w-full h-full top-0 z-0
-
-import backgroundImage1 from "../../Data/other/backgroundImage1.jpg";
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-// import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import { loadSlim } from "@tsparticles/slim";
 
 const Background = () => {
   const [init, setInit] = useState(false);
 
-  // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -26,13 +18,15 @@ const Background = () => {
   };
 
   const options = useMemo(
-    () => ({
+    () => (
+			
+			{
 			"autoPlay": true,
 			"background": {
 				"color": {
 					"value": "#000000"
 				},
-				"image": {backgroundImage1},
+				"image": {},
 				"position": "",
 				"repeat": "",
 				"size": "",
@@ -351,7 +345,7 @@ const Background = () => {
 						"mode": "delete",
 						"value": 0
 					},
-					"value": 150
+					"value": 250
 				},
 				"opacity": {
 					"value": 1,
@@ -621,7 +615,9 @@ const Background = () => {
 					"value": true
 				}
 			}
-		}),
+		}
+		
+		),
     [],
   );
 
