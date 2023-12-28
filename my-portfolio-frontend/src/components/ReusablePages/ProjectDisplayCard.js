@@ -16,15 +16,14 @@ const ProjectDisplayCard = ({project}) => {
 			<div className="p-5 flex flex-col justify-between">
 
 				{/* Project Image Viewer */}
-				<div class="max-h-[400px] overflow-hidden">
-					{/* <img className="rounded-lg w-auto" src={project.images[0]} alt="" /> */}
+				{/* <div class="max-h-[400px] overflow-hidden">
           <ImageGallery 
 						items={loadedImages} 
 						showThumbnails={false}
 						showFullscreenButton={false}
 						showPlayButton={false}
 					/>
-				</div>
+				</div> */}
 
 				{/* Project Card Title and Description */}
 				<div className="pt-5">

@@ -34,14 +34,14 @@ const Home = () => {
         <section className="min-h-[700px]">
           <SkillDisplay />
           {/* Transperant gradient - change the height and colours acordingly*/}
-			    <div className="h-40 w-full bg-gradient-to-b from-pink-300/20 to-slate-200/20"></div>
+			    <div className="h-40 w-full bg-gradient-to-b from-pink-300/20 to-blue-600/20"></div>
         </section>
 
-        {/* Projects Section */}
-        <section className="min-h-[700px]">
+        {/* Projects Section - NEEDS WORK ---- min-h-[700px]*/} 
+        <section className="">
           <Projects />
           {/* Transperant gradient - change the height and colours acordingly*/}
-			    <div className="h-40 w-full bg-gradient-to-b from-slate-200/20 to-yellow-300/20"></div>
+			    <div className="h-40 w-full bg-gradient-to-b from-blue-600/20 to-yellow-300/20"></div>
         </section>
 
         {/* Education Section */}

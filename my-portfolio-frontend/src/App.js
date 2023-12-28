@@ -59,4 +59,7 @@ function App() {
   );
 }
 
-export default DisableInspectMenu( DisableRightClick(App) );
+// comment this line when testing the webpage
+// export default DisableInspectMenu( DisableRightClick(App) );
+
+export default App;

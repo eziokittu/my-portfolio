@@ -20,7 +20,7 @@ function Hero() {
     >
       
       {/* The welcome text */}
-      <div className=' pr-4 xl:pr-44 2xl:pr-auto mb-12 lg:mb-0'>
+      <div className='xl:pr-44 2xl:pr-auto mb-12 lg:mb-0'>
 
         <Slide direction='down'><Fade><div className="font-Merriweather text-4xl text-indigo-500 ">
           Hey There,
@@ -42,7 +42,7 @@ function Hero() {
         {/* Typing Text Animation  */}
         <Slide direction='down'><Fade><div 
           className="font-mono text-base p-4 mt-4 rounded-2xl drop-shadow-xl
-          md:text-xl text-white bg-zinc-700 sm:min-w-[500px]
+          md:text-xl text-white bg-zinc-700 sm:max-w-[460px] lg:min-w-[460px] xl:min-w-[560px]
           shadow-[0_0_25px_black]"
         >
           <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={30}/>
@@ -73,7 +73,7 @@ function Hero() {
       </div>
 
       {/* The grid for shuffling hero images */}
-      <Fade><div className='w-full lg:w-[600px] 2xl:w-[600px] p-2 xsm:p-8 bg-black/20 rounded-lg '>
+      <Fade><div className='w-full lg:w-[500px] 2xl:w-[600px] p-2 xsm:p-8 bg-black/20 rounded-lg '>
         <ShuffleHero />
       </div></Fade>
       
