@@ -48,6 +48,12 @@ const EducationCard = ({props}) => {
             <span className=''>{props.name}</span>
           </div>
 
+          {/* Institute Place */}
+          <div className=''>
+          <span className='font-bold mr-2'>Place:</span>
+            <span className=''>{props.place}</span>
+          </div>
+
           {/* Institute Board */}
           <div className=''>
             <span className='font-bold mr-2'>Board:</span>

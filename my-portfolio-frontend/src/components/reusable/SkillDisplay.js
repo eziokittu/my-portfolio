@@ -1,6 +1,6 @@
 // importing necessary library files
 import React from "react";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 // importing reusable components
 import SkillCard from './SkillCard';
@@ -14,8 +14,8 @@ const SkillDisplay = () => {
 	return (
 		<div id="skills" className='bg-pink-300/20  min-h-[700px] p-2 group/g1'>
 
-			<Fade delay={150}>
 			{/* Title of the section */}
+			<Slide direction='down'><Fade>
 			<button 
 				className='relative overflow-hidden group/g2
 				flex items-center justify-between
@@ -48,10 +48,10 @@ const SkillDisplay = () => {
 					<p className='text-violet-900 pr-1 sm:pr-3'>&</p>
 					<p className='text-teal-800  '>Abilities</p>
 				</span>
-			</button></Fade>
+			</button></Fade></Slide>
 
-			<Fade delay={150}>
 			{/* the grid consisting of all the skills */}
+			<Fade>
 			<div className='w-4/5 mx-auto rounded-3xl bg-pink-300/5 hover:bg-pink-300/20 shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500'>
 				<div 
 					className='

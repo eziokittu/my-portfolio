@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 // reusable components
 import EducationCard from './EducationCard';
@@ -12,17 +12,17 @@ const Education = () => {
     <div id='education' className='bg-yellow-300/20 min-h-[700px]'>
       {/* drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] */}
 
-      <Fade delay={150}>
+      <Fade>
       {/* All the contents of section */}
       <div 
         className='mx-2 xsm:mx-auto
-        w-fit xsm:w-5/6 sm:w-4/5 lg:w-3/4 xl:w-3/5 2xl:w-1/2
+        w-fit xsm:w-11/12 lg:w-3/4 xl:w-3/5 2xl:w-1/2
         p-2 xsm:p-4
         bg-yellow-500/10 hover:bg-yellow-500/20 rounded-lg group/edu1
         shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500'
       >
 
-        <Fade delay={150}>
+        <Slide direction='down'><Fade delay={100}>
         {/* Section Title */}
         <div className='text-center text-2xl 2xsm:text-3xl sm:text-4xl font-bold border-b-[4px] border-amber-200
           w-fit mx-auto bg-clip-text text-transparent transition duration-300
@@ -48,14 +48,14 @@ const Education = () => {
           {/* Title */}
           <p>My Education</p>
 
-        </div></Fade>
+        </div></Fade></Slide>
 
         {/* Section Body */}
         <div className='flex flex-col gap-2 xsm:gap-4'>
-          <Fade delay={150}><EducationCard props={educationData.data[0]}/></Fade>
-          <Fade delay={150}><EducationCard props={educationData.data[1]}/></Fade>
-          <Fade delay={150}><EducationCard props={educationData.data[2]}/></Fade>
-          <Fade delay={150}><EducationCard props={educationData.data[3]}/></Fade>
+          <Fade delay={100}><EducationCard props={educationData.data[0]}/></Fade>
+          <Fade delay={100}><EducationCard props={educationData.data[1]}/></Fade>
+          <Fade delay={100}><EducationCard props={educationData.data[2]}/></Fade>
+          <Fade delay={100}><EducationCard props={educationData.data[3]}/></Fade>
         </div>
         
       </div>
