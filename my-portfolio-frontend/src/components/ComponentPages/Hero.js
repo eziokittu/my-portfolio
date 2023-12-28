@@ -15,18 +15,22 @@ function Hero() {
 
   return (
     <div 
-      className="w-full pt-12 px-2 xsm:px-12 lg:flex items-center justify-around mx-auto mb-8 bg-stone-800/20"
+      className="w-full pt-12 px-2 xsm:px-8 lg:px-0 lg:flex items-center justify-around mx-auto mb-8 bg-stone-800/20"
       id='hero'
     >
       
       {/* The welcome text */}
-      <div className='xl:pr-44 2xl:pr-auto mb-12 lg:mb-0'>
+      <div className='  mb-12 lg:mb-0'>
 
-        <Slide direction='down'><Fade><div className="font-Merriweather text-4xl text-indigo-500 ">
-          Hey There,
+        <Slide direction='down'><Fade><div className="flex font-Merriweather text-4xl text-indigo-500 ">
+          Hey There<span class="text-5xl animate-[wave_1.3s_ease-in-out_infinite]">👋🏻</span>
         </div></Fade></Slide>
 
-        <Slide direction='down'><Fade><div className='mt-8 font-Merriweather text-blue-300 text-4xl'>I'm </div></Fade></Slide>
+        <Slide direction='down'><Fade>
+          <h1 className='font-Merriweather text-blue-300 text-4xl'>
+            <p>I'm </p>
+          </h1>
+        </Fade></Slide>
 
         <Slide direction='down'><Fade>
         <div className="text-7xl md:text-6xl lg:text-8xl 
@@ -73,7 +77,7 @@ function Hero() {
       </div>
 
       {/* The grid for shuffling hero images */}
-      <Fade><div className='w-full lg:w-[500px] 2xl:w-[600px] p-2 xsm:p-8 bg-black/20 rounded-lg '>
+      <Fade><div className='w-full lg:w-[500px] xl:w-[600px] 2xl:w-[700px] p-2 xsm:p-8 lg:p-0 bg-black/20 rounded-lg '>
         <ShuffleHero />
       </div></Fade>
       

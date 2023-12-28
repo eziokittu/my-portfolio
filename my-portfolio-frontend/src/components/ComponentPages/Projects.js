@@ -30,7 +30,7 @@ const Projects = (props) => {
           className='relative overflow-hidden group/g2
           flex items-center justify-between
           font-bold cursor-default text-center
-          bg-pink-300/100 w-fit mx-auto rounded-lg p-4 my-2'
+          bg-sky-200 w-fit mx-auto rounded-lg p-4 my-2'
         >
 
           {/* The animated underline */}
@@ -67,7 +67,7 @@ const Projects = (props) => {
 
           {/* The title */}
           <span className='flex flex-wrap items-center justify-center font-Kolnia text-xl 2xsm:text-2xl xsm:text-3xl sm:text-5xl xl:text-7xl'>
-            <p className='text-violet-950 pr-1 sm:pr-3'>My Projects</p>
+            <p className='text-blue-900 pr-1 sm:pr-3'>My Projects</p>
           </span>
         </div></Fade></Slide>
 
@@ -79,7 +79,7 @@ const Projects = (props) => {
         </div> */}
 
         {/* Temporary - TO BE REMOVED */}
-        <div className="w-fit p-4 m-4 bg-pink-400/50 hover:bg-pink-400 text-2xl mx-auto">This Section is being worked upon</div>
+        <div className="w-fit p-4 m-4 bg-sky-500 text-4xl mx-auto animate-pulse">This Section is being worked upon</div>
 
       </div>
 

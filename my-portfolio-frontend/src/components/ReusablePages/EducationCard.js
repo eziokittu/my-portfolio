@@ -22,7 +22,7 @@ const EducationCard = ({props}) => {
 
       {/* Education Details */}
       <div className='flex flex-col
-        w-fit sm:w-7/12 lg:w-3/5 xl:w-2/3
+        w-full sm:w-7/12 lg:w-3/5 xl:w-2/3
         sm:h-[250px] lg:h-[300px] xl:h-[350px]
         '>
 
