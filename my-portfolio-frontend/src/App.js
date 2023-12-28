@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // importing reusable components
 import Home from './components/MainPages/Home';
@@ -14,6 +14,27 @@ function App() {
   const closeOverlay = (parameter) => {
     setIsOverlayOpen(parameter);
   };
+
+  // changing the title of website
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        // The page is not visible (user switched tabs)
+        document.title = '🫡 Thank You | Visit Again';
+      } else {
+        // The page is visible again
+        document.title = 'Portfolio | Bodhisatta';
+      }
+    };
+
+    // Add event listener when the component mounts
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
     <div className='flex flex-col min-h-screen relative'>

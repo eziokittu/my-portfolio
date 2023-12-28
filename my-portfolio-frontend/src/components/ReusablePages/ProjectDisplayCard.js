@@ -18,7 +18,12 @@ const ProjectDisplayCard = ({project}) => {
 				{/* Project Image Viewer */}
 				<div class="max-h-[400px] overflow-hidden">
 					{/* <img className="rounded-lg w-auto" src={project.images[0]} alt="" /> */}
-          <ImageGallery items={loadedImages} />
+          <ImageGallery 
+						items={loadedImages} 
+						showThumbnails={false}
+						showFullscreenButton={false}
+						showPlayButton={false}
+					/>
 				</div>
 
 				{/* Project Card Title and Description */}
