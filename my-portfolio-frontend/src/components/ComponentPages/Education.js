@@ -2,10 +2,10 @@ import React from 'react';
 import { Fade, Slide } from "react-awesome-reveal";
 
 // reusable components
-import EducationCard from './EducationCard';
+import EducationCard from '../ReusablePages/EducationCard';
 
 // importing data from local storage
-import educationData from "../../Data/profile/educationData.json";
+import educationData from "../../data/educationData.json";
 
 const Education = () => {
   return (

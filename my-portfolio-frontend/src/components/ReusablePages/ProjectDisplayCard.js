@@ -4,7 +4,7 @@ import ImageGallery from "react-image-gallery";
 // importing CSS
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const ProjectDisplayCardLayout = ({project}) => {
+const ProjectDisplayCard = ({project}) => {
 
 	const loadedImages = project.images.map(imageSrc => ({
     original: imageSrc,
@@ -47,4 +47,4 @@ const ProjectDisplayCardLayout = ({project}) => {
 	);
 }
 
-export default ProjectDisplayCardLayout;
+export default ProjectDisplayCard;

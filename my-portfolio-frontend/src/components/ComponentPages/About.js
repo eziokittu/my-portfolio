@@ -2,9 +2,11 @@ import React from 'react'
 import { Fade, Slide } from "react-awesome-reveal";
 
 // importing data from local files
-import profileData from "../../Data/profile/profileData.json";
+import profileData from "../../data/profileData.json";
 
 const About = () => {
+  const revealFadeDelay = 50;
+
   const redirectToGmail = (mail) => {
     const subject = '[Redirected from Bodhisatta-portfolio]';
     const body = 'Hi Bodhisatta,\n';
@@ -22,7 +24,7 @@ const About = () => {
         bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-lime-600/75 via-green-200/75 to-teal-600/75
         hover:bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] hover:from-lime-600 hover:via-green-200 hover:to-teal-600'
       >
-        <Slide direction='down'><Fade delay={150}>
+        <Slide direction='down'><Fade delay={revealFadeDelay}>
         {/* Heading */}
         <div 
           className='text-center text-4xl font-semibold group-hover/g1:font-bold border-b-[4px] border-green-600
@@ -47,13 +49,13 @@ const About = () => {
 
         </div></Fade></Slide>
 
-        <Fade delay={150}>
+        <Fade delay={revealFadeDelay}>
         {/* Content of About Section */}
         <div>
           {/* Aout Me Text */}
           <div className='text-justify text-sm xsm:text-lg md:text-2xl'>
             {profileData.about.map((text) => 
-              <Slide direction='down'><Fade delay={150}>
+              <Slide direction='down'><Fade delay={revealFadeDelay}>
               <div className='mb-4'>
                 {text}
               </div></Fade></Slide>
@@ -63,7 +65,7 @@ const About = () => {
           {/* Some Contact details */}
           <div className='mt-12 text-md sm:text-2xl md:text-3xl text-teal-950'>
 
-            <Slide direction='down'><Fade delay={150}>
+            <Slide direction='down'><Fade delay={revealFadeDelay}>
             {/* Primary Email */}
             <div className='mb-2 '>
               <span className='mr-2 text-lime-950 font-bold'>Primary Email:</span>
@@ -77,7 +79,7 @@ const About = () => {
               </span>
             </div></Fade></Slide>
 
-            <Slide direction='down'><Fade delay={150}>
+            <Slide direction='down'><Fade delay={revealFadeDelay}>
             {/* KIIT Email */}
             <div className='mb-2'>
               <span className='mr-2 text-lime-950 font-bold'>KIIT Email:</span>
@@ -91,7 +93,7 @@ const About = () => {
               </span>
             </div></Fade></Slide>
 
-            <Slide direction='down'><Fade delay={150}>
+            <Slide direction='down'><Fade delay={revealFadeDelay}>
             {/* Place Details */}
             <div className=''>
               <span className='mr-2 text-lime-950 font-bold'>Place:</span>
@@ -99,7 +101,7 @@ const About = () => {
             </div></Fade></Slide>
           </div>
 
-          <Slide direction='down'><Fade delay={150}>
+          <Slide direction='down'><Fade delay={revealFadeDelay}>
           {/* Resume Button */}
           <div className='w-fit'>
             <button

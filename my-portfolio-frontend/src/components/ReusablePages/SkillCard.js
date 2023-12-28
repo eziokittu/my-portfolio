@@ -1,10 +1,6 @@
 import React, {useState} from 'react'
 import { Fade, Slide } from "react-awesome-reveal";
 
-function getRandomNumber(min, max) {
-  return Math.random() * (max - min) + min;
-}
-
 function SkillCard({skillName, skillImageSrc}) {
   const [buttonHovered, setButtonHovered] = useState(false);
   const handleButtonNotHovered = () => {

@@ -3,10 +3,10 @@ import React from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 
 // importing reusable components
-import SkillCard from './SkillCard';
+import SkillCard from '../ReusablePages/SkillCard';
 
 // importing data from local files
-import skillsData from "../../Data/profile/skillsData.json";
+import skillsData from "../../data/skillsData.json";
 
 const SkillDisplay = () => {
 	const skills = skillsData.skills;

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-import shuffleHeroData from "../../Data/profile/shuffleHeroData.json";
+import shuffleHeroData from "../../data/shuffleHeroData.json";
 
 const squareData = shuffleHeroData.images;
 

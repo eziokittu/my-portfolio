@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import {Link} from 'react-scroll';
 
-import ButtonLink2 from '../reusable/ButtonLink2';
-import ContactMe from '../pages/ContactMe';
+import ButtonLink1 from '../ReusablePages/ButtonLink1';
+import ContactMe from '../ComponentPages/ContactMe';
 
-import profileData from '../../Data/profile/profileData.json';
+import profileData from '../../data/profileData.json';
 
-const Navbar2 = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => {
+const Navbar = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => {
 
   // For Contact Me Overlay
 	const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -54,11 +54,11 @@ const Navbar2 = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => 
           2xsm:gap-2 sm:gap-4 items-center justify-center my-4 md:my-2 xsm:my-0
           md:text-2xl lg:text-3xl'
         >
-          <ButtonLink2 linkTo={options[0].toLowerCase()} buttonName={options[0]} />
-          <ButtonLink2 linkTo={options[1].toLowerCase()} buttonName={options[1]} />
-          <ButtonLink2 linkTo={options[2].toLowerCase()} buttonName={options[2]} />
-          <ButtonLink2 linkTo={options[3].toLowerCase()} buttonName={options[3]} />
-          <ButtonLink2 linkTo={options[4].toLowerCase()} buttonName={options[4]} />
+          <ButtonLink1 linkTo={options[0].toLowerCase()} buttonName={options[0]} />
+          <ButtonLink1 linkTo={options[1].toLowerCase()} buttonName={options[1]} />
+          <ButtonLink1 linkTo={options[2].toLowerCase()} buttonName={options[2]} />
+          <ButtonLink1 linkTo={options[3].toLowerCase()} buttonName={options[3]} />
+          <ButtonLink1 linkTo={options[4].toLowerCase()} buttonName={options[4]} />
         </div>  
 
         {/* Contact Me */}
@@ -112,4 +112,4 @@ const Navbar2 = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => 
   )
 };
 
-export default Navbar2;
+export default Navbar;

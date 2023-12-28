@@ -2,13 +2,13 @@
 import React from "react";
 
 // importing reusable components
-import Hero from "../reusable/Hero";
-import About from "../reusable/About";
-import SkillDisplay from "../reusable/SkillDisplay";
-import Projects from "./Projects";
-import Education from "../reusable/Education";
+import Hero from "../ComponentPages/Hero";
+import About from "../ComponentPages/About";
+import SkillDisplay from "../ComponentPages/SkillDisplay";
+import Projects from "../ComponentPages/Projects";
+import Education from "../ComponentPages/Education";
 
-const Home = ({contactMeOverlayOn}) => {
+const Home = () => {
 
   return (
     <div className="relative z-0" id="home">

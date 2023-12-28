@@ -2,10 +2,10 @@
 import React from "react";
 
 // importing reusable components
-import ProjectDisplayCardLayout from '../reusable/ProjectDisplayCardLayout';
+import ProjectDisplayCard from '../ReusablePages/ProjectDisplayCard';
 
 // importing data
-import projectData from '../../Data/projects/projectData.json';
+import projectData from '../../data/projectData.json';
 
 const Projects = (props) => {
 
@@ -28,7 +28,7 @@ const Projects = (props) => {
         {/* Project cards in grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {projectData.Projects.map(p => (
-            <ProjectDisplayCardLayout project={p} />
+            <ProjectDisplayCard project={p} />
           ))}
         </div>
       </div>

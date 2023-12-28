@@ -3,13 +3,13 @@ import { Link } from 'react-scroll';
 import { Fade, Slide } from "react-awesome-reveal";
 
 // importing reusable components
-import TypingComponent from './TypingComponent';
-import ShuffleHero from './ShuffleHero';
-import BubbleText from "./BubbleText";
+import TypingComponent from '../ReusablePages/TypingComponent';
+import ShuffleHero from '../ReusablePages/ShuffleHero';
+import BubbleText from "../ReusablePages/BubbleText";
 
 // importing data from local files
-import heroTextAnimateData from "../../Data/profile/heroTextAnimateData.json";
-import profileData from "../../Data/profile/profileData.json";
+import heroTextAnimateData from "../../data/heroTextAnimateData.json";
+import profileData from "../../data/profileData.json";
 
 function Hero() {
 

@@ -1,10 +1,7 @@
 import { Link } from "react-scroll";
 import React from "react";
-<Link to="hero"
-  activeClass="active" spy={true} smooth={true} offset={-70} duration={500}
-><p>Home</p>
-</Link> 
-const ButtonLink2 = (props) => {
+
+const ButtonLink1 = (props) => {
   return (
     <Link 
       activeClass="active" spy={true} smooth={true} offset={-180} duration={500}
@@ -25,4 +22,4 @@ const ButtonLink2 = (props) => {
   );
 }
 
-export default ButtonLink2;
+export default ButtonLink1;
