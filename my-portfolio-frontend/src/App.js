@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 // importing reusable components
+import DisableRightClick from './components/ReusablePages/DisableRightClick';
+import DisableInspectMenu from './components/ReusablePages/DisableInspectMenu';
 import Home from './components/MainPages/Home';
 import Navbar from './components/MainPages/Navbar';
 import Footer from './components/MainPages/Footer';
@@ -15,15 +17,18 @@ function App() {
     setIsOverlayOpen(parameter);
   };
 
-  // changing the title of website
   useEffect(() => {
     const handleVisibilityChange = () => {
+      const favicon = document.getElementById('favicon');
+
       if (document.hidden) {
         // The page is not visible (user switched tabs)
-        document.title = '🫡 Thank You | Visit Again';
+        document.title = 'Thanks for Visiting | Bodhisatta';
+        favicon.href = '/favicon2.ico';
       } else {
         // The page is visible again
         document.title = 'Portfolio | Bodhisatta';
+        favicon.href = '/favicon1.ico';
       }
     };
 
@@ -48,8 +53,10 @@ function App() {
       {/* a gap for the footer - adjust the height  */}
       <div className="w-full mt-auto h-96"></div>
       <Footer/>
+
+      
     </div> 
   );
 }
 
-export default App;
+export default DisableInspectMenu( DisableRightClick(App) );
