@@ -29,7 +29,7 @@ const Navbar = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => {
         {/* logo */}
         <div className='mr-auto xsm:ml-2 my-8 md:my-2'>
           <Link to="home"
-            activeClass="active" spy={true} smooth={true} offset={-200} duration={500}
+            activeClass="active" spy={true} offset={-200} duration={1500} smooth={'easeOutBack'}
             className=" w-fit p-2 rounded-full group/nav-logo
               bg-gradient-to-b from-amber-400/60 to-fuchsia-600/60 
               hover:bg-gradient-to-b hover:from-amber-400 hover:to-fuchsia-600 

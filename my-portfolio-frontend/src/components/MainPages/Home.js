@@ -27,7 +27,7 @@ const Home = () => {
         <section className="">
           <About />
           {/* Transperant gradient - change the height and colours acordingly*/}
-			    <div className="h-44 w-full bg-gradient-to-b from-green-400/20 to-pink-300/20"></div>
+			    <div className="h-48 w-full bg-gradient-to-b from-green-400/20 to-pink-300/20"></div>
         </section>
 
         {/* Skills Section */}

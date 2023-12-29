@@ -4,7 +4,7 @@ import React from "react";
 const ButtonLink1 = (props) => {
   return (
     <Link 
-      activeClass="active" spy={true} smooth={true} offset={-180} duration={500}
+      activeClass="active" spy={true} offset={-180}  duration={1500} smooth={'easeOutElastic'}
       className='
         p-[2px] 2xsm:p-1 xsm:p-2
         transition-all duration-500

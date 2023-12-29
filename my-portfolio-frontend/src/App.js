@@ -52,7 +52,7 @@ function App() {
       <Home />
       {/* a gap for the footer - adjust the height  */}
       {/* <div className="w-full mt-auto h-96"></div> */}
-      <Footer/>
+      <Footer options={navbarOptions}/>
 
       
     </div> 
