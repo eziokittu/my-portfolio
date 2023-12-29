@@ -103,7 +103,9 @@ const Navbar = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => {
 
       </div>
 
-      <Divider isBgTransparent={true} isNavbarAbove={true} hasCentreGap={false} />
+      {isOverlayOpen===false && (
+        <Divider isBgTransparent={true} isNavbarAbove={true} hasCentreGap={false} />
+      )}
       
     </div>
   )
