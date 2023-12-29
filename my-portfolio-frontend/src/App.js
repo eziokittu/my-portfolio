@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 // importing reusable components
-import DisableRightClick from './components/ReusablePages/DisableRightClick';
-import DisableInspectMenu from './components/ReusablePages/DisableInspectMenu';
-import Divider from './components/ReusablePages/Divider';
+// import DisableRightClick from './components/ReusablePages/DisableRightClick';
+// import DisableInspectMenu from './components/ReusablePages/DisableInspectMenu';
 import Home from './components/MainPages/Home';
 import Navbar from './components/MainPages/Navbar';
 import Footer from './components/MainPages/Footer';

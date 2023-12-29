@@ -3,18 +3,18 @@ import React from "react";
 import { Fade, Slide } from 'react-awesome-reveal';
 
 // importing reusable components
-import ProjectCard from "../ReusablePages/ProjectCard";
-import ProjectDisplayCard from '../ReusablePages/ProjectDisplayCard';
+// import ProjectCard from "../ReusablePages/ProjectCard";
+// import ProjectDisplayCard from '../ReusablePages/ProjectDisplayCard';
 
 // importing data
-import projectData from '../../data/projectData.json';
+// import projectData from '../../data/projectData.json';
 
 const Projects = (props) => {
 
-  const loadedImages = projectData.Projects[0].images.map(imageSrc => ({
-    original: imageSrc,
-    thumbnail: imageSrc
-  }));
+  // const loadedImages = projectData.Projects[0].images.map(imageSrc => ({
+  //   original: imageSrc,
+  //   thumbnail: imageSrc
+  // }));
 
   return (
     <div 

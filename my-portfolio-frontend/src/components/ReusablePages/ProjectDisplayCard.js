@@ -1,15 +1,15 @@
-import React, {useState} from "react";
-import ImageGallery from "react-image-gallery";
+import React from "react";
+// import ImageGallery from "react-image-gallery";
 
 // importing CSS
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const ProjectDisplayCard = ({project}) => {
 
-	const loadedImages = project.images.map(imageSrc => ({
-    original: imageSrc,
-    thumbnail: imageSrc
-  }));
+	// const loadedImages = project.images.map(imageSrc => ({
+  //   original: imageSrc,
+  //   thumbnail: imageSrc
+  // }));
 
 	return (
 		<div className="relative z-10 flex flex-col justify-between max-w-full min-h-[400px] max-h-[620px]  border-4 rounded-lg shadow bg-gray-800 hover:bg-gray-700 boerder-white hover:border-yellow-400 shadow-slate-800-200 hover:shadow-slate-200-800">
