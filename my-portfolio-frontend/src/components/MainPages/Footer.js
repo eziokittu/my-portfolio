@@ -171,7 +171,7 @@ const Footer = ({options}) => {
 
 								{/* Instagram Button */}
 								<button
-									onClick={()=>{window.open(`${contactData.links.link_github}`, '_blank')}}
+									onClick={()=>{window.open(`${contactData.links.link_instagram}`, '_blank')}}
 									className=''
 								>
 									<div className="bg-slate-100 hover:bg-amber-500 
