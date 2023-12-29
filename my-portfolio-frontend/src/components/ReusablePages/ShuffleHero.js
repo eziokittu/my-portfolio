@@ -54,19 +54,20 @@ const ShuffleGrid = () => {
   const [squares, setSquares] = useState(generateSquares());
 
   useEffect(() => {
+    const shuffleSquares = () => {
+      setSquares(generateSquares());
+      timeoutRef.current = setTimeout(shuffleSquares, 3500);
+    };
+
     shuffleSquares();
 
     return () => clearTimeout(timeoutRef.current);
-  }, []);
 
-  const shuffleSquares = () => {
-    setSquares(generateSquares());
-
-    timeoutRef.current = setTimeout(shuffleSquares, 3500);
-  };
+    // Add setSquares to the dependency array
+  }, [setSquares]);
 
   return (
-    <div 
+    <div
       className="
       grid grid-cols-4 grid-rows-4 gap-1
       h-[200px] 2xsm:h-[300px] xsm:h-[400px] sm:h-[600px] md:h-[600px] lg:h-[400px] xl:h-[600px]"
@@ -75,5 +76,6 @@ const ShuffleGrid = () => {
     </div>
   );
 };
+
 
 export default ShuffleHero;
