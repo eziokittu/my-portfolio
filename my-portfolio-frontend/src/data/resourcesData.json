@@ -1,0 +1,13 @@
+{
+  "links": {
+    "link_auro": "https://aurophile.netlify.app/",
+    "link_chatgpt": "https://chat.openai.com/",
+    "link_youtube-tailwind-tricks": "https://www.youtube.com/watch?v=aSlK3GhRuXA",
+    "link_css-particlejs": "https://particles.js.org/",
+    "link_react-scroll": "https://www.npmjs.com/package/react-scroll",
+    "link_react-documentation": "https://react.dev/reference/react",
+    "link_react-awesome-reveal": "https://react-awesome-reveal.morello.dev/guides/getting-started",
+    "link_tailwind-documentation": "https://tailwindcss.com/",
+    "link_tailwind-animated-components": "https://www.hover.dev/components"
+  }
+}

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 // importing reusable components
 import DisableRightClick from './components/ReusablePages/DisableRightClick';
 import DisableInspectMenu from './components/ReusablePages/DisableInspectMenu';
+import Divider from './components/ReusablePages/Divider';
 import Home from './components/MainPages/Home';
 import Navbar from './components/MainPages/Navbar';
 import Footer from './components/MainPages/Footer';
@@ -49,6 +50,8 @@ function App() {
         contactMeOverlayOn={!isOverlayOpen}
         contactMeButtonNotClicked={closeOverlay}
       />
+      {/* divider */}
+      {/* <Divider isBgTransparent={true} isNavbarAbove={true}/> */}
       <Home />
       {/* a gap for the footer - adjust the height  */}
       {/* <div className="w-full mt-auto h-96"></div> */}

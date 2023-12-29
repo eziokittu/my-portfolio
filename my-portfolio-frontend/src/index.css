@@ -23,15 +23,15 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background-color: rgb(23, 0, 123);
+    background-color: rgb(0, 55, 83);
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background-color: rgb(17, 255, 0);
+    background-color: rgb(28, 255, 130);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(229, 255, 0);
+    background-color: rgb(246, 255, 164);
   }
