@@ -12,7 +12,7 @@ const Education = () => {
     <div id='education' className='bg-yellow-300/20 min-h-[700px]'>
       {/* drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] */}
 
-      <Fade>
+
       {/* All the contents of section */}
       <div 
         className='mx-2 xsm:mx-auto
@@ -22,7 +22,7 @@ const Education = () => {
         shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500'
       >
 
-        <Slide direction='down'><Fade delay={100}>
+        {/* <Slide direction='down'><Fade delay={100}> */}
         {/* Section Title */}
         <div className='text-center text-2xl 2xsm:text-3xl sm:text-4xl font-bold border-b-[4px] border-amber-200
           w-fit mx-auto bg-clip-text text-transparent transition duration-300
@@ -48,7 +48,8 @@ const Education = () => {
           {/* Title */}
           <p>My Education</p>
 
-        </div></Fade></Slide>
+        </div>
+        {/* </Fade></Slide> */}
 
         {/* Section Body */}
         <div className='flex flex-col gap-2 xsm:gap-4'>
@@ -59,7 +60,6 @@ const Education = () => {
         </div>
         
       </div>
-      </Fade>
 
     </div>
   )

@@ -17,7 +17,7 @@ const Home = () => {
       <div className="">
 
         {/* Hero Section */}
-        <section className="min-h-[700px]">
+        <section className="">
           <Hero />
           {/* Transperant gradient - change the height and colours acordingly*/}
 			    <div className="h-44 w-full bg-gradient-to-b from-transparent to-green-400/20"></div>
@@ -31,7 +31,7 @@ const Home = () => {
         </section>
 
         {/* Skills Section */}
-        <section className="min-h-[700px]">
+        <section className="">
           <SkillDisplay />
           {/* Transperant gradient - change the height and colours acordingly*/}
 			    <div className="h-44 w-full bg-gradient-to-b from-pink-300/20 to-blue-600/20"></div>
@@ -45,7 +45,7 @@ const Home = () => {
         </section>
 
         {/* Education Section */}
-        <section className="min-h-[700px]">
+        <section className="">
           <Education />
           {/* Transperant gradient - change the height and colours acordingly*/}
 			    <div className="h-44 w-full bg-gradient-to-b from-yellow-300/20 to-transparent"></div>

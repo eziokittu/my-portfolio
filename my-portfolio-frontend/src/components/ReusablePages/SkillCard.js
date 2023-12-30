@@ -11,9 +11,8 @@ function SkillCard({skillName, skillImageSrc}) {
   };
   return (
     <button 
-      onClick={handleButtonHovered}
-      onPointerEnter={handleButtonHovered}
-      onPointerLeave={handleButtonNotHovered}
+      onMouseEnter={handleButtonHovered}
+      onMouseLeave={handleButtonNotHovered}
     >
       <Slide direction='down'><Fade delay={100}>
       <div

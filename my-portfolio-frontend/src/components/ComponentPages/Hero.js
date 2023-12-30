@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { Fade, Slide } from "react-awesome-reveal";
 
 // importing reusable components
 import TypingComponent from '../ReusablePages/TypingComponent';
+import DelayedComponent from "../ReusablePages/DelayedComponent";
 import ShuffleHero from '../ReusablePages/ShuffleHero';
 import BubbleText from "../ReusablePages/BubbleText";
 
 // importing data from local files
 import heroTextAnimateData from "../../data/heroTextAnimateData.json";
 import profileData from "../../data/profileData.json";
+import shuffleHeroData from "../../data/shuffleHeroData.json";
 
 function Hero() {
+  const [typingComponentInViewPort, setTypingComponentInViewPort] = useState(false) // first time the visibily is false
+  const handleComponentInViewPort = () => {
+    setTypingComponentInViewPort(!typingComponentInViewPort);
+    console.log(`Component is ${typingComponentInViewPort===true ? 'entering' : 'exiting'} the viewport`);
+  }
+
+  const loadedImages = shuffleHeroData.images.map(imageSrc => ({
+    original: imageSrc[1],
+    thumbnail: imageSrc[1]
+  }));
 
   return (
     <div 
@@ -22,39 +34,58 @@ function Hero() {
       {/* The welcome text */}
       <div className='  mb-12 lg:mb-0'>
 
-        <Slide direction='down'><Fade><div className="flex font-Merriweather text-4xl text-indigo-500 ">
+        <Slide direction='down'><Fade>
+        <div className="flex font-Merriweather text-4xl text-indigo-500 ">
           Hey There<span class="text-5xl animate-[wave_1.3s_ease-in-out_infinite]">👋🏻</span>
-        </div></Fade></Slide>
+        </div>
+        </Fade></Slide>
 
         <Slide direction='down'><Fade>
-          <h1 className='font-Merriweather text-blue-300 text-4xl'>
-            <p>I'm </p>
-          </h1>
+        <h1 className='font-Merriweather text-blue-300 text-4xl'>
+          <p>I'm </p>
+        </h1>
         </Fade></Slide>
 
         <Slide direction='down'><Fade>
         <div className="text-7xl md:text-6xl lg:text-8xl 
           font-semibold text-blue-600 mt-2">
           <BubbleText text={profileData.name.firstName}/>
-        </div></Fade></Slide>
+        </div>
+        </Fade></Slide>
         
         <Slide direction='down'><Fade>
         <h3 className="text-4xl md:text-6xl mt-2 
         font-semibold text-blue-500 font-Merriweather"
-        >{profileData.name.lastName}</h3></Fade></Slide>
+        >{profileData.name.lastName}</h3>
+        </Fade></Slide>
 
         {/* Typing Text Animation  */}
-        <Slide direction='down'><Fade><div 
+        <Slide onVisibilityChange={handleComponentInViewPort} 
+          direction='down'
           className="font-mono text-base p-4 mt-4 rounded-2xl drop-shadow-xl
           md:text-xl text-white bg-zinc-700 sm:max-w-[460px] lg:min-w-[460px] xl:min-w-[560px]
           shadow-[0_0_25px_black]"
         >
-          <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={30}/>
-        </div></Fade></Slide>
+          {typingComponentInViewPort===true ? (
+            <div>
+              <DelayedComponent isDelayStart={false} isDelayEnd={true} delayToShow={0} delayToHide={1500}>
+              <div>{heroTextAnimateData.defaultText}</div>
+              </DelayedComponent>
+              <DelayedComponent isDelayStart={true} isDelayEnd={false} delayToShow={1500} delayToHide={0}>
+                <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={50}/>
+              </DelayedComponent>
+            </div>
+          ) : (
+            <DelayedComponent delayToShow={0} delayToHide={0}>
+              <div>text never visible XD</div>
+            </DelayedComponent>
+          )}
+        </Slide>
 
         {/* About Me Button */}
-        <Slide direction='down'><Fade><Link 
-          activeClass="active" spy={true} smooth={true} offset={-70} duration={500}
+        <Slide direction='down'><Fade>
+        <Link 
+          activeClass="active" spy={true} offset={-200} duration={1500} smooth={'easeOutBack'}
           className=''
           to='about'
         >
@@ -72,14 +103,18 @@ function Hero() {
               <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"/>
             </svg>
           </button>
-        </Link></Fade></Slide>
+        </Link>
+        </Fade></Slide>
         
       </div>
 
       {/* The grid for shuffling hero images */}
-      <Fade><div className='w-full lg:w-[500px] xl:w-[600px] 2xl:w-[700px] p-2 xsm:p-8 lg:p-0 bg-black/20 rounded-lg '>
-        <ShuffleHero />
-      </div></Fade>
+      {/* <Fade> */}
+        {/* <div className='w-full lg:w-[500px] xl:w-[600px] 2xl:w-[700px] p-2 xsm:p-8 lg:p-0 bg-black/20 rounded-lg '>
+          <ShuffleHero />
+        </div> */}
+      {/* </Fade> */}
+      
       
     </div>
   )

@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const EducationCard = ({props}) => {
+  const [cardHovered, setCardHovered] = useState(false)
+  const buttonCardHovered = () => {
+    setCardHovered(true);
+  }
+  const buttonCardNotHovered = () => {
+    setCardHovered(false);
+  }
+
   return (
-    <div 
-      className='group/edu2 bg-yellow-50 hover:bg-yellow-100
+    <button
+      // onMouseEnter={buttonCardHovered}
+      onMouseEnter={buttonCardHovered}
+      onMouseLeave={buttonCardNotHovered}
+      className='bg-yellow-50 hover:bg-yellow-100
       rounded-lg p-2 sm:flex '
     >
 
@@ -28,8 +39,9 @@ const EducationCard = ({props}) => {
 
         {/* Degree Achieved */}
         <div 
-          className='font-bold text-2xl lg:text-3xl xl:text-4xl
-          text-center text-gray-600 group-hover/edu2:text-gray-900'
+          className={`font-bold text-2xl lg:text-3xl xl:text-4xl
+          ${cardHovered ? 'text-gray-900' : 'text-gray-600'}
+          text-center`}
         >
           <p>{props.achieved}</p>
         </div>
@@ -39,8 +51,9 @@ const EducationCard = ({props}) => {
 
         {/* Name and Board */}
         <div 
-          className='text-lg lg:text-xl xl:text-2xl
-          text-gray-600 group-hover/edu2:text-gray-900'>
+          className={`text-lg lg:text-xl xl:text-2xl
+          ${cardHovered ? 'text-gray-900' : 'text-gray-600'}
+        `}>
 
           {/* Institute Name */}
           <div className=''>
@@ -67,9 +80,9 @@ const EducationCard = ({props}) => {
 
         {/* Institute Study Year Duration */}
         <div 
-          className='font-bold 
-          text-green-700 group-hover/edu2:text-green-900
-          text-xl lg:text-2xl xl:text-3xl flex'
+          className={`font-bold 
+          ${cardHovered ? 'text-green-900' : 'text-green-700'}
+          text-xl lg:text-2xl xl:text-3xl flex`}
         >
           <span>{props.yearStart}</span>
           <span>-</span>
@@ -80,7 +93,7 @@ const EducationCard = ({props}) => {
 
       </div>
 
-    </div>
+    </button>
   )
 };
 

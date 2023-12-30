@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
 
-const TypingComponent = ({texts, speedTyping, speedDelete}) => {
+import {Fade} from 'react-awesome-reveal'
+
+const TypingComponent = ({defaultText, texts, speedTyping, speedDelete}) => {
+  const [inViewPort, setInViewPort] = useState(true)
+  const handleComponentInViewPort = () => {
+    setInViewPort(!inViewPort);
+    console.log(`Component is ${inViewPort===true ? 'entering' : 'exiting'} the viewport`);
+  }
+
   return (
     <>
-      <TypeAnimation
-        sequence={texts}
-        wrapper="span"
-        speed={{type: 'keyStrokeDelayInMs', value: speedTyping}}
-        deletionSpeed={{type: 'keyStrokeDelayInMs', value: speedDelete}}
-        style={{}}
-        omitDeletionAnimation={false}
-        repeat={Infinity}
-      />
+      <Fade onVisibilityChange={handleComponentInViewPort}>
+        <TypeAnimation
+          sequence={texts}
+          wrapper="div"
+          speed={{type: 'keyStrokeDelayInMs', value: speedTyping}}
+          deletionSpeed={{type: 'keyStrokeDelayInMs', value: speedDelete}}
+          style={{}}
+          omitDeletionAnimation={false}
+          repeat={Infinity}
+        />
+      </Fade>
     </>
   );
 };
