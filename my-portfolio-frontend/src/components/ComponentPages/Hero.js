@@ -16,7 +16,7 @@ function Hero() {
   const [typingComponentInViewPort, setTypingComponentInViewPort] = useState(false) // first time the visibily is false
   const handleComponentInViewPort = () => {
     setTypingComponentInViewPort(!typingComponentInViewPort);
-    console.log(`Component is ${typingComponentInViewPort===true ? 'entering' : 'exiting'} the viewport`);
+    // console.log(`Component is ${typingComponentInViewPort===true ? 'entering' : 'exiting'} the viewport`);
   }
 
   return (

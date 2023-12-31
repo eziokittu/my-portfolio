@@ -7,7 +7,7 @@ const TypingComponent = ({defaultText, texts, speedTyping, speedDelete}) => {
   const [inViewPort, setInViewPort] = useState(true)
   const handleComponentInViewPort = () => {
     setInViewPort(!inViewPort);
-    console.log(`Component is ${inViewPort===true ? 'entering' : 'exiting'} the viewport`);
+    // console.log(`Component is ${inViewPort===true ? 'entering' : 'exiting'} the viewport`);
   }
 
   return (

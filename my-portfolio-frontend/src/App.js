@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 // importing reusable components
 // import DisableRightClick from './components/ReusablePages/DisableRightClick';
 // import DisableInspectMenu from './components/ReusablePages/DisableInspectMenu';
+import NotFound from './components/MainPages/NotFound';
 import Home from './components/MainPages/Home';
 import Navbar from './components/MainPages/Navbar';
 import Footer from './components/MainPages/Footer';
 import Background from './components/MainPages/Background';
 
 function App() {
-  const navbarOptions = ['Home', 'About', 'Skills', 'Projects', 'Education'];
-
   // For Contact Me Overlay
 	const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const closeOverlay = (parameter) => {
@@ -42,21 +41,22 @@ function App() {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
-    <div className='flex flex-col min-h-screen relative'>
+    <div>
       <Background/>
       <Navbar 
-        options={navbarOptions} 
         contactMeOverlayOn={!isOverlayOpen}
         contactMeButtonNotClicked={closeOverlay}
       />
-      {/* divider */}
-      {/* <Divider isBgTransparent={true} isNavbarAbove={true}/> */}
-      <Home />
-      {/* a gap for the footer - adjust the height  */}
-      {/* <div className="w-full mt-auto h-96"></div> */}
-      <Footer options={navbarOptions}/>
 
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Navbar />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
       
+      <Footer />
     </div> 
   );
 }
@@ -64,4 +64,5 @@ function App() {
 // comment this line when testing the webpage
 // export default DisableInspectMenu( DisableRightClick(App) );
 
+// comment this line before commiting changes
 export default App;

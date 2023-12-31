@@ -12,12 +12,8 @@
     },
     "about": [
         "Hello, I am Bodhisatta Bhattacharjee currently in 6th Semester (as of 25/12/23), pursuing my BTech in Computer Science from KIIT University, Bhubaneshwar, Odisha.",
-        "I enjoy coding, problem solving and learning new technologies; and I’m looking for opportunities to grow as a software engineer and work on exciting and impactful projects. I aspire to be a Software / Game Developer. I had developed few games in UNITY. Currently I am full heartedly doing Web Development with REACT and also learning Machine Learning on other times. I have made a Full Stack MERN project and hope to make more.",
-        "I like playing video games especially competitive FPS games (Counter Strike 2 mainly) and simulation games. I also like to listen to calm and slow music mainly non vocal EDM, POP, JAZZ, HEAVY METAL..."
+        "I enjoy coding, problem solving and learning new technologies, and I'm looking for opportunities to grow as a software engineer and work on exciting and impactful projects. I aspire to be a Software / Game Developer. I had developed few games in UNITY earlier. Currently I am full heartedly doing Web Development with REACT and also learning Machine Learning on other times. I have made a Full Stack MERN project and determined to make more. This portfolio website of mine is the 2nd REACT project which I will host.",
+        "I like playing video games especially competitive FPS games (Counter Strike 2 mainly) and simulation games. I also like to listen to calm and slow music mainly non vocal EDM, POP, JAZZ or in some rare ocassions HEAVY METAL."
     ],
-    "display_image": "images/myImages/img_6.jpg",
-    "images": [
-        "images/image1.jpg",
-        "images/image1.jpg"
-    ]
+    "display_image": "images/myImages/img_6.jpg"
 }

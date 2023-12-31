@@ -12,7 +12,10 @@ const SkillDisplay = () => {
 	const skills = skillsData.skills;
 
 	return (
-		<div id="skills" className='bg-pink-300/20  min-h-[700px] p-2 group/g1'>
+		<div 
+			id="skills" 
+			className='bg-pink-300/20  min-h-[700px] p-2 group/g1'
+		>
 
 			{/* Title of the section */}
 			<Slide direction='down'><Fade>
@@ -20,7 +23,8 @@ const SkillDisplay = () => {
 				className='relative overflow-hidden group/g2
 				flex items-center justify-between
 				font-bold cursor-default text-center
-				bg-pink-300/100 w-fit mx-auto rounded-lg p-4 my-2'
+				bg-pink-300/100 w-fit mx-auto rounded-lg p-4 my-2
+				'
 			>
 
 				{/* The animated underline */}
@@ -52,7 +56,11 @@ const SkillDisplay = () => {
 
 			{/* the grid consisting of all the skills */}
 			<Fade>
-			<div className='w-4/5 mx-auto rounded-3xl bg-pink-300/5 hover:bg-pink-300/20 shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500'>
+			<div 
+				className='w-4/5 mx-auto rounded-3xl bg-pink-300/5 hover:bg-pink-300/20 
+				shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500
+				hover:backdrop-filter hover:backdrop-blur-[3px]'
+			>
 				<div 
 					className='
 					grid grid-cols-1 2xsm:grid-cols-2 xsm:grid-cols-2

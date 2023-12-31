@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import {Link} from 'react-scroll';
+import {Link as ScrollLink} from 'react-scroll';
+import {Link as RouterLink} from 'react-router-dom';
 
 import ButtonLink1 from '../ReusablePages/ButtonLink1';
 import ContactMe from '../ComponentPages/ContactMe';
 import Divider from '../ReusablePages/Divider';
 
 import profileData from '../../data/profileData.json';
+import otherData from '../../data/otherData.json';
 
-const Navbar = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => {
+const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
 
   // For Contact Me Overlay
 	const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -29,7 +31,10 @@ const Navbar = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => {
 
         {/* logo */}
         <div className='mr-auto xsm:ml-2 my-8 md:my-2'>
-          <Link to="home"
+          {/* <RouterLink to='/'>
+            <button>Home</button>
+          </RouterLink> */}
+          <ScrollLink to="home"
             activeClass="active" spy={true} offset={-200} duration={1500} smooth={'easeOutBack'}
             className=" w-fit p-2 rounded-full group/nav-logo
               bg-gradient-to-b from-amber-400/60 to-fuchsia-600/60 
@@ -43,10 +48,10 @@ const Navbar = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => {
               className='h-16 min-w-16 max-w-16 rounded-full
               animate-[pulse_1s_ease-in-out_infinite_0.2s]
               group-hover/nav-logo:animate-[spin_1s_ease-in-out_1_0.2s]'
-              src={profileData.display_image}
+              src={process.env.PUBLIC_URL + '/' + profileData.display_image}
               alt='Bodhisatta'
             />
-          </Link>
+          </ScrollLink>
         </div>
 
         {/* Primary Navbar options */}
@@ -55,18 +60,18 @@ const Navbar = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => {
           2xsm:gap-2 sm:gap-4 items-center justify-center my-4 md:my-2 xsm:my-0
           md:text-2xl lg:text-3xl'
         >
-          <ButtonLink1 linkTo={options[0].toLowerCase()} buttonName={options[0]} />
-          <ButtonLink1 linkTo={options[1].toLowerCase()} buttonName={options[1]} />
-          <ButtonLink1 linkTo={options[2].toLowerCase()} buttonName={options[2]} />
-          <ButtonLink1 linkTo={options[3].toLowerCase()} buttonName={options[3]} />
-          <ButtonLink1 linkTo={options[4].toLowerCase()} buttonName={options[4]} />
+          <ButtonLink1 linkTo={otherData.navbarOptionLinks[0]} buttonName={otherData.navbarOptions[0]} />
+          <ButtonLink1 linkTo={otherData.navbarOptionLinks[1]} buttonName={otherData.navbarOptions[1]} />
+          <ButtonLink1 linkTo={otherData.navbarOptionLinks[2]} buttonName={otherData.navbarOptions[2]} />
+          <ButtonLink1 linkTo={otherData.navbarOptionLinks[3]} buttonName={otherData.navbarOptions[3]} />
+          <ButtonLink1 linkTo={otherData.navbarOptionLinks[4]} buttonName={otherData.navbarOptions[4]} />
         </div>  
 
         {/* Contact Me */}
         <div className="ml-auto xsm:mr-2 my-8 md:my-2">
           {(contactMeOverlayOn===true) && 
             <div className=' group/contact'>
-              <Link 
+              <div 
                 className='' 
                 onClick={openOverlay}
               >
@@ -92,7 +97,7 @@ const Navbar = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => {
                   <p>Contact</p>
                   
                 </div>
-              </Link>
+              </div>
             </div>
           }
           {/* Contact Me Overlay */}

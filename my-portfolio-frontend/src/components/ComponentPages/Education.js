@@ -15,9 +15,8 @@ const Education = () => {
 
       {/* All the contents of section */}
       <div 
-        className='mx-2 xsm:mx-auto
+        className='mx-2 xsm:mx-auto p-2 xsm:p-4 hover:backdrop-filter hover:backdrop-blur-[3px]
         w-fit xsm:w-11/12 lg:w-3/4 xl:w-3/5 2xl:w-1/2
-        p-2 xsm:p-4
         bg-yellow-500/10 hover:bg-yellow-500/20 rounded-lg group/edu1
         shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500'
       >
@@ -52,7 +51,7 @@ const Education = () => {
         {/* </Fade></Slide> */}
 
         {/* Section Body */}
-        <div className='flex flex-col gap-2 xsm:gap-4'>
+        <div className='flex flex-col text-center gap-2 xsm:gap-4 '>
           <Fade delay={100}><EducationCard props={educationData.data[0]}/></Fade>
           <Fade delay={100}><EducationCard props={educationData.data[1]}/></Fade>
           <Fade delay={100}><EducationCard props={educationData.data[2]}/></Fade>

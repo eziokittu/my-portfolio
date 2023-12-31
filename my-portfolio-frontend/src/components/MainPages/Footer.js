@@ -1,16 +1,23 @@
 import React from "react";
 import { Link } from 'react-scroll';
+// import { useNavigate } from 'react-router-dom';
 
 import Divider from "../ReusablePages/Divider";
 
 import contactData from '../../data/contactData.json';
 import resourceData from '../../data/resourcesData.json';
+import otherData from '../../data/otherData.json';
 
-const Footer = ({options}) => {
+const Footer = () => {
+	// let navigate = useNavigate()
+
+  // Function to handle redirection and scrolling
+  // const redirectToDefaultPage = (myLink) => {
+  //   navigate('/');
+  // }; 
+
 	return (
 		<footer className="relative w-full z-0">
-			{/* Transperant gradient - change the height acordingly*/}
-			<div className="h-44 w-full bg-gradient-to-t from-black via-black to-transparent"></div>
 
 			{/* Divider */}
 			<Divider isBgTransparent={false} isNavbarAbove={false} hasCentreGap={true}/>
@@ -61,10 +68,10 @@ const Footer = ({options}) => {
 						{/* Body */}
 						<div className="mt-2 ml-4 text-lg ">
 							{/* All the Buttons */}
-							{options.map((option) => (
+							{otherData.navbarOptionLinks.map((option) => (
+								// <Link to={option.toLowerCase()}
 								<Link to={option.toLowerCase()}
-									activeClass="active" spy={true} offset={-180} 
-									duration={1500} smooth={'easeOutElastic'}
+									activeClass="active" spy={true} offset={-200} duration={1500} smooth={'easeOutBack'}
 								>
 									<button className="flex items-center gap-1 group/g1">
 										<div className=" transition-all duration-300 group-hover/g1:bg-amber-400 bg-clip-content rounded-full">
