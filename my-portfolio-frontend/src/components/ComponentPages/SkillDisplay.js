@@ -58,8 +58,7 @@ const SkillDisplay = () => {
 			<Fade>
 			<div 
 				className='w-4/5 mx-auto rounded-3xl bg-pink-300/5 hover:bg-pink-300/20 
-				shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500
-				hover:backdrop-filter hover:backdrop-blur-[3px]'
+				shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500'
 			>
 				<div 
 					className='

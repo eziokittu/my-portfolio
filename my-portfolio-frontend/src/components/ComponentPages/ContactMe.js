@@ -21,8 +21,7 @@ const ContactMe = ({ onParameterChange }) => {
 			<div 
 				className="
 					fixed inset-0
-				bg-black bg-opacity-75
-					backdrop-filter backdrop-blur-[4px]
+				bg-black bg-opacity-85
 					flex items-center justify-center text-center">
 				<div className="
 						bg-white p-3 

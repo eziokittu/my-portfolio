@@ -4,7 +4,7 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 // importing reusable components
 import TypingComponent from '../ReusablePages/TypingComponent';
-import DelayedComponent from "../ReusablePages/DelayedComponent";
+// import DelayedComponent from "../ReusablePages/DelayedComponent";
 import ShuffleHero from '../ReusablePages/ShuffleHero';
 import BubbleText from "../ReusablePages/BubbleText";
 
@@ -58,10 +58,9 @@ function Hero() {
           onVisibilityChange={handleComponentInViewPort} 
           delay={500} duration={1500} direction='down'
           className="font-mono text-base p-4 mt-4 rounded-2xl drop-shadow-xl
-          md:text-xl text-white bg-zinc-700 sm:max-w-[460px] lg:min-w-[460px] xl:min-w-[560px]
-          shadow-[0_0_25px_black]"
+          md:text-xl text-white bg-zinc-700 sm:max-w-[460px] lg:min-w-[460px] xl:min-w-[560px]"
         >
-          {typingComponentInViewPort===true ? (
+          {/* {typingComponentInViewPort===true ? (
             <div>
               <DelayedComponent isDelayStart={false} isDelayEnd={true} delayToShow={0} delayToHide={2000}>
               <div>{heroTextAnimateData.defaultText}</div>
@@ -74,7 +73,8 @@ function Hero() {
             <DelayedComponent delayToShow={0} delayToHide={0}>
               <div>{heroTextAnimateData.defaultText}</div>
             </DelayedComponent>
-          )}
+          )} */}
+          <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={50}/>
         </Fade>
 
         {/* About Me Button */}
@@ -88,7 +88,7 @@ function Hero() {
             className="w-[160px] flex justify-center mt-4 group
             bg-indigo-500 text-white font-normal  rounded 
             transition hover:bg-indigo-600 active:scale-95 py-2 px-4
-            duration-500 drop-shadow-xl"
+            duration-500"
           >
             <p
               className='group-hover:font-bold'

@@ -26,8 +26,10 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
     <div 
       className='sticky top-0 z-20'
     >
-      <div className={`${isOverlayOpen ? '' : 'backdrop-filter backdrop-blur-[6px]'}
-      flex items-center justify-around bg-slate-500/20 cursor-default`}>
+      <div className='absolute top-0 h-28 md:h-16 w-full bg-white blur-2xl -z-10'></div>
+
+      <div className='w-full z-50
+      flex items-center justify-around bg-slate-500/20 cursor-default'>
 
         {/* logo */}
         <div className='mr-auto xsm:ml-2 my-8 md:my-2'>

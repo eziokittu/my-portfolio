@@ -7,7 +7,7 @@ const NotFound = () => {
       <div className='cursor-default min-h-[400px] sm:min-h-[600px] flex items-center justify-center bg-slate-200/20'>
         <div 
           className='group/g1 px-2 py-8 text-slate-300 hover:text-slate-100 mx-auto text-xl sm:text-4xl text-center rounded-lg hover:rounded-2xl w-4/5
-          shadow-[0_0_10px_black] hover:shadow-[0_0_20px_black] transition-all duration-300 bg-black/20 hover:bg-black/30 hover:backdrop-filter hover:backdrop-blur-[6px]
+          shadow-[0_0_10px_black] hover:shadow-[0_0_20px_black] transition-all duration-300 bg-black/20 hover:bg-black/30
         '>
           <div className='text-3xl sm:text-7xl font-bold'>404 Not Found!</div>
           <div className='my-12'>Sorry, the page you are looking for does not exist.</div>
