@@ -7,7 +7,7 @@ const Divider = ({isBgTransparent, isNavbarAbove, hasCentreGap}) => {
       className={`${isNavbarAbove===true ? 'relative bottom-0' : ''} w-full 
       flex items-center ${isBgTransparent===true ? 'bg-transparent' : 'bg-black'} `}
     >
-      <div className="border-t-4 border-white w-full h-0"></div>
+      <div className="border-t-2 border-slate-200 w-full h-0"></div>
     </div>
     )
   }

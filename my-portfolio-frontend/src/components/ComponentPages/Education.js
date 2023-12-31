@@ -24,11 +24,11 @@ const Education = () => {
 
         {/* <Slide direction='down'><Fade delay={100}> */}
         {/* Section Title */}
-        <div className='text-center text-2xl 2xsm:text-3xl sm:text-4xl font-bold border-b-[4px] border-amber-200
+        <div className='text-center font-bold border-b-[4px] border-amber-200
           w-fit mx-auto bg-clip-text text-transparent transition duration-300
           bg-gradient-to-r from-amber-600 via-yellow-300 to-amber-600
           group-hover/edu1:from-yellow-300 group-hover/edu1:via-amber-400 group-hover/edu1:to-yellow-300
-          flex gap-2 items-center mb-2'
+          flex gap-2 items-center mb-2 text-xl 2xsm:text-2xl xsm:text-3xl sm:text-5xl xl:text-7xl'
         >
 
           {/* Education Icon */}

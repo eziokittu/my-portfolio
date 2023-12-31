@@ -56,7 +56,7 @@ const Background = () => {
 				"detectsOn": "window",
 				"events": {
 					"onClick": {
-						"enable": true,
+						"enable": false,
 						"mode": "repulse"
 					},
 					"onDiv": {
@@ -66,7 +66,7 @@ const Background = () => {
 						"type": "circle"
 					},
 					"onHover": {
-						"enable": true,
+						"enable": false,
 						"mode": "grab",
 						"parallax": {
 							"enable": false,
