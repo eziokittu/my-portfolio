@@ -12,26 +12,56 @@ const ShuffleHero = () => {
         className=" bg-blue-800/25
         text-lime-500 font-bold mb-4 text-center text-4xl "
       >Some Pictures</div>
-      <ShuffleGrid />
+      <div className="h-[200px] 2xsm:h-[300px] xsm:h-[400px] sm:h-[600px] md:h-[600px] lg:h-[400px] xl:h-[600px] overflow-hidden">
+        <ShuffleGrid />
+      </div>
     </div>
   );
 };
 
+// shuffle method that shuffles all the images randomly BOTH vertically and horizontally
+// const shuffle = (array) => {
+//   let currentIndex = array.length,
+//     randomIndex;
+
+//   while (currentIndex !== 0) {
+//     randomIndex = Math.floor(Math.random() * currentIndex);
+//     currentIndex--;
+
+//     [array[currentIndex], array[randomIndex]] = [
+//       array[randomIndex],
+//       array[currentIndex],
+//     ];
+//   }
+
+//   return array;
+// };
+
+// shuffle method that shuffles all the images randomly ONLY horizontally
 const shuffle = (array) => {
-  let currentIndex = array.length,
-    randomIndex;
+  const totalImages = array.length;
+  const sqrtTotalImages = Math.ceil(Math.sqrt(totalImages));
 
-  while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
+  const newArray = [...array];
 
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
+  for (let row = 0; row < sqrtTotalImages; row++) {
+    for (let col = 0; col < sqrtTotalImages; col++) {
+      const currentIdx = row * sqrtTotalImages + col;
+      if (currentIdx < totalImages) {
+        const randomRow = row;
+        const randomCol = Math.floor(Math.random() * sqrtTotalImages);
+        const randomIdx = randomRow * sqrtTotalImages + randomCol;
+
+        // Swap elements in the same row
+        [newArray[currentIdx], newArray[randomIdx]] = [
+          newArray[randomIdx],
+          newArray[currentIdx],
+        ];
+      }
+    }
   }
 
-  return array;
+  return newArray;
 };
 
 const generateSquares = () => {
@@ -41,11 +71,13 @@ const generateSquares = () => {
       layout
       transition={{ duration: 1.5, type: "spring" }}
       className="w-full h-full"
-      style={{
-        backgroundImage: `url(${sq.src})`,
-        backgroundSize: "cover",
-      }}
-    ></motion.div>
+    >
+      <img
+        src={sq.src}
+        alt={`Square ${sq.id}`}
+        className="w-full h-full object-cover"
+      />
+    </motion.div>
   ));
 };
 
@@ -67,11 +99,7 @@ const ShuffleGrid = () => {
   }, [setSquares]);
 
   return (
-    <div
-      className="
-      grid grid-cols-4 grid-rows-4 gap-1
-      h-[200px] 2xsm:h-[300px] xsm:h-[400px] sm:h-[600px] md:h-[600px] lg:h-[400px] xl:h-[600px]"
-    >
+    <div className="grid grid-cols-4 grid-rows-4 gap-1 h-full">
       {squares.map((sq) => sq)}
     </div>
   );

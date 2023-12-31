@@ -70,19 +70,19 @@ const Navbar = ({ options, contactMeOverlayOn, contactMeButtonNotClicked }) => {
                 className='' 
                 onClick={openOverlay}
               >
-                <div className='w-fit xsm:w-16 xsm:text-lg p-2 px-8
+                <div className='w-16 text-lg py-1 px-2
                   text-amber-400 group-hover/contact:text-black
                   border-2 border-stone-500 items-center
                   transition-all duration-500 rounded-lg
                   shadow-[0_0_35px_black] flex flex-col
                   group-hover/contact:shadow-[0_0_35px_gray]
                   bg-purple-900 group-hover/contact:bg-gradient-to-b
-                   group-hover/contact:from-amber-500 group-hover/contact:to-pink-500'
+                  group-hover/contact:from-amber-500 group-hover/contact:to-pink-500'
                 >
                   <div className='flex items-center '>
                     
                     <svg 
-                      className="w-6 xsm:w-8 h-4 xsm:h-8 animate-pulse
+                      className="w-8 h-8 animate-pulse
                       group-hover/contact:animate-[wave_.3s_ease-in-out_2]
                       group-hover/contact:text-green-500" 
                       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">

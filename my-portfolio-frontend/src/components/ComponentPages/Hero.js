@@ -11,7 +11,6 @@ import BubbleText from "../ReusablePages/BubbleText";
 // importing data from local files
 import heroTextAnimateData from "../../data/heroTextAnimateData.json";
 import profileData from "../../data/profileData.json";
-import shuffleHeroData from "../../data/shuffleHeroData.json";
 
 function Hero() {
   const [typingComponentInViewPort, setTypingComponentInViewPort] = useState(false) // first time the visibily is false
@@ -19,11 +18,6 @@ function Hero() {
     setTypingComponentInViewPort(!typingComponentInViewPort);
     console.log(`Component is ${typingComponentInViewPort===true ? 'entering' : 'exiting'} the viewport`);
   }
-
-  const loadedImages = shuffleHeroData.images.map(imageSrc => ({
-    original: imageSrc[1],
-    thumbnail: imageSrc[1]
-  }));
 
   return (
     <div 
@@ -60,32 +54,33 @@ function Hero() {
         </Fade></Slide>
 
         {/* Typing Text Animation  */}
-        <Slide onVisibilityChange={handleComponentInViewPort} 
-          direction='down'
+        <Fade 
+          onVisibilityChange={handleComponentInViewPort} 
+          delay={500} duration={1500} direction='down'
           className="font-mono text-base p-4 mt-4 rounded-2xl drop-shadow-xl
           md:text-xl text-white bg-zinc-700 sm:max-w-[460px] lg:min-w-[460px] xl:min-w-[560px]
           shadow-[0_0_25px_black]"
         >
           {typingComponentInViewPort===true ? (
             <div>
-              <DelayedComponent isDelayStart={false} isDelayEnd={true} delayToShow={0} delayToHide={1500}>
+              <DelayedComponent isDelayStart={false} isDelayEnd={true} delayToShow={0} delayToHide={2000}>
               <div>{heroTextAnimateData.defaultText}</div>
               </DelayedComponent>
-              <DelayedComponent isDelayStart={true} isDelayEnd={false} delayToShow={1500} delayToHide={0}>
+              <DelayedComponent isDelayStart={true} isDelayEnd={false} delayToShow={2000} delayToHide={0}>
                 <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={50}/>
               </DelayedComponent>
             </div>
           ) : (
             <DelayedComponent delayToShow={0} delayToHide={0}>
-              <div>text never visible XD</div>
+              <div>{heroTextAnimateData.defaultText}</div>
             </DelayedComponent>
           )}
-        </Slide>
+        </Fade>
 
         {/* About Me Button */}
         <Slide direction='down'><Fade>
         <Link 
-          activeClass="active" spy={true} offset={-200} duration={1500} smooth={'easeOutBack'}
+          activeClass="active" spy={true} offset={-180} duration={1500} smooth={'easeOutBack'}
           className=''
           to='about'
         >
@@ -109,12 +104,9 @@ function Hero() {
       </div>
 
       {/* The grid for shuffling hero images */}
-      {/* <Fade> */}
-        {/* <div className='w-full lg:w-[500px] xl:w-[600px] 2xl:w-[700px] p-2 xsm:p-8 lg:p-0 bg-black/20 rounded-lg '>
-          <ShuffleHero />
-        </div> */}
-      {/* </Fade> */}
-      
+      <Fade delay={500} duration={1500}>
+        <ShuffleHero />
+      </Fade>
       
     </div>
   )

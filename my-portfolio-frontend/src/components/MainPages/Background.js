@@ -20,13 +20,13 @@ const Background = () => {
   const options = useMemo(
     () => (
 			
-			{
+		{
 			"autoPlay": true,
 			"background": {
 				"color": {
 					"value": "#000000"
 				},
-				"image": {},
+				"image": "",
 				"position": "",
 				"repeat": "",
 				"size": "",
@@ -51,13 +51,13 @@ const Background = () => {
 			},
 			"detectRetina": true,
 			"duration": 0,
-			"fpsLimit": 60,
+			"fpsLimit": 120,
 			"interactivity": {
 				"detectsOn": "window",
 				"events": {
 					"onClick": {
 						"enable": true,
-						"mode": []
+						"mode": "repulse"
 					},
 					"onDiv": {
 						"selectors": [],
@@ -66,8 +66,8 @@ const Background = () => {
 						"type": "circle"
 					},
 					"onHover": {
-						"enable": false,
-						"mode": [],
+						"enable": true,
+						"mode": "grab",
 						"parallax": {
 							"enable": false,
 							"force": 2,
@@ -119,7 +119,10 @@ const Background = () => {
 						"links": {
 							"blink": false,
 							"consent": false,
-							"opacity": 1
+							"opacity": 1,
+							"color": {
+								"value": "#ffffff"
+							}
 						}
 					},
 					"push": {
@@ -132,9 +135,9 @@ const Background = () => {
 					},
 					"repulse": {
 						"distance": 200,
-						"duration": 0.4,
+						"duration": 1,
 						"factor": 100,
-						"speed": 1,
+						"speed": 0.2,
 						"maxSpeed": 50,
 						"easing": "ease-out-quad",
 						"divs": {
@@ -203,7 +206,7 @@ const Background = () => {
 					}
 				},
 				"color": {
-					"value": "#fff",
+					"value": "#739aff",
 					"animation": {
 						"h": {
 							"count": 0,
@@ -345,7 +348,7 @@ const Background = () => {
 						"mode": "delete",
 						"value": 0
 					},
-					"value": 250
+					"value": 200
 				},
 				"opacity": {
 					"value": 1,
@@ -508,7 +511,7 @@ const Background = () => {
 						"value": "#fff"
 					},
 					"consent": false,
-					"distance": 100,
+					"distance": 50,
 					"enable": false,
 					"frequency": 1,
 					"opacity": 1,
@@ -523,7 +526,7 @@ const Background = () => {
 						"enable": false,
 						"frequency": 1
 					},
-					"width": 1,
+					"width": 2,
 					"warp": false
 				},
 				"repulse": {
@@ -565,43 +568,7 @@ const Background = () => {
 					"mode": "percent",
 					"height": 0,
 					"width": 0
-				},
-				"particles": {
-					"shape": {
-						"type": "images",
-						"options": {
-							"images": {
-								"src": "https://particles.js.org/images/cyan_amongus.png",
-								"width": 500,
-								"height": 634
-							}
-						}
-					},
-					"size": {
-						"value": 40
-					},
-					"move": {
-						"speed": 10,
-						"outModes": {
-							"default": "none",
-							"right": "destroy"
-						},
-						"straight": true
-					},
-					"zIndex": {
-						"value": 0
-					},
-					"rotate": {
-						"value": {
-							"min": 0,
-							"max": 360
-						},
-						"animation": {
-							"enable": true,
-							"speed": 10,
-							"sync": true
-						}
-					}
+				
 				},
 				"position": {
 					"x": -5,
