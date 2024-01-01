@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
 // importing reusable components
 // import DisableRightClick from './components/ReusablePages/DisableRightClick';
 // import DisableInspectMenu from './components/ReusablePages/DisableInspectMenu';
