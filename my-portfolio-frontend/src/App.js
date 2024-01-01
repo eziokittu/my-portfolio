@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 // importing reusable components
 // import DisableRightClick from './components/ReusablePages/DisableRightClick';
 // import DisableInspectMenu from './components/ReusablePages/DisableInspectMenu';
@@ -16,6 +16,7 @@ function App() {
     setIsOverlayOpen(parameter);
   };
 
+  // for changing title and logo of website dynamically
   useEffect(() => {
     const handleVisibilityChange = () => {
       const favicon = document.getElementById('favicon');
@@ -43,20 +44,14 @@ function App() {
   return (
     <div>
       <Background/>
-      <Navbar 
-        contactMeOverlayOn={!isOverlayOpen}
-        contactMeButtonNotClicked={closeOverlay}
-      />
-
       <BrowserRouter>
+        <Navbar contactMeOverlayOn={!isOverlayOpen} contactMeButtonNotClicked={closeOverlay} />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/" element={<Navbar />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      
-      <Footer />
     </div> 
   );
 }

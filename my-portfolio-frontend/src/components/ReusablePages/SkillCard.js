@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade} from "react-awesome-reveal";
 
 function SkillCard({skillName, skillImageSrc}) {
   const [buttonHovered, setButtonHovered] = useState(false);
@@ -14,7 +14,7 @@ function SkillCard({skillName, skillImageSrc}) {
       onMouseEnter={handleButtonHovered}
       onMouseLeave={handleButtonNotHovered}
     >
-      <Slide direction='down'><Fade delay={100}>
+      <Fade delay={100}>
       <div
         className='w-full h-[140px]
           cursor-default
@@ -47,7 +47,7 @@ function SkillCard({skillName, skillImageSrc}) {
             {skillName}
           </p>
         </div>
-      </div></Fade></Slide>
+      </div></Fade>
     </button>
   )
 }

@@ -1,20 +1,39 @@
 import React from "react";
-import { Link } from 'react-scroll';
-// import { useNavigate } from 'react-router-dom';
+import { scroller } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import Divider from "../ReusablePages/Divider";
+import FooterLinkButton from "../ReusablePages/FooterLinkButton";
 
 import contactData from '../../data/contactData.json';
 import resourceData from '../../data/resourcesData.json';
 import otherData from '../../data/otherData.json';
 
 const Footer = () => {
-	// let navigate = useNavigate()
 
-  // Function to handle redirection and scrolling
-  // const redirectToDefaultPage = (myLink) => {
-  //   navigate('/');
-  // }; 
+	// for using react-scroll and react-router at the same time
+  const path = useLocation().pathname;
+  const location = path.split('/')[1];
+  const navigate = useNavigate();
+  const scrollToSection = (section) => {
+    console.log(section);
+    scroller.scrollTo(section, {
+      duration: 1500,
+      delay: 100,
+      smooth: 'easeOutBack',
+      offset: -180
+    });
+  };
+  // method applied to the navbar buttons when not in the default page
+  const goToHomeAndScroll = async (section) => {
+    await navigate('/');
+    await scroller.scrollTo(section, {
+      duration: 1500,
+      delay: 100,
+      smooth: 'easeOutBack',
+      offset: -180
+    });
+  };
 
 	return (
 		<footer className="relative w-full z-0">
@@ -65,31 +84,24 @@ const Footer = () => {
 							Quick Links
 						</h1>
 
-						{/* Body */}
-						<div className="mt-2 ml-4 text-lg ">
-							{/* All the Buttons */}
-							{otherData.navbarOptionLinks.map((option) => (
-								// <Link to={option.toLowerCase()}
-								<Link to={option.toLowerCase()}
-									activeClass="active" spy={true} offset={-200} duration={1500} smooth={'easeOutBack'}
-								>
-									<button className="flex items-center gap-1 group/g1">
-										<div className=" transition-all duration-300 group-hover/g1:bg-amber-400 bg-clip-content rounded-full">
-											<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" 
-												class="w-5 h-5 border-2 rounded-full transition-all duration-300 
-												group-hover/g1:border-black group-hover/g1:stroke-black ">
-												<path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-											</svg>
-										</div>
-										<p 
-											className=" transition-all duration-300 
-										group-hover/g1:text-amber-400 group-hover/g1:font-bold">
-											{option}
-										</p>
-									</button>
-								</Link>
-							))}
-						</div>
+						{/* Body - All the Buttons */}
+						{location === '' ? (
+							<div className="mt-2 ml-4 text-lg flex flex-col">
+								<FooterLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[1])}} buttonName={otherData.navbarOptions[0]} />
+								<FooterLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[2])}} buttonName={otherData.navbarOptions[1]} />
+								<FooterLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[3])}} buttonName={otherData.navbarOptions[2]} />
+								<FooterLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[4])}} buttonName={otherData.navbarOptions[3]} />
+								<FooterLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[5])}} buttonName={otherData.navbarOptions[4]} />
+							</div>
+						) : (
+							<div className="mt-2 ml-4 text-lg flex flex-col">
+								<FooterLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[1])}} buttonName={otherData.navbarOptions[0]} />
+								<FooterLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[2])}} buttonName={otherData.navbarOptions[1]} />
+								<FooterLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[3])}} buttonName={otherData.navbarOptions[2]} />
+								<FooterLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[4])}} buttonName={otherData.navbarOptions[3]} />
+								<FooterLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[5])}} buttonName={otherData.navbarOptions[4]} />
+							</div>
+						)}
 
 					</div>
 

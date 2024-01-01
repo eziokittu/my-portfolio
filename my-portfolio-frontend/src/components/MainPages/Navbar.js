@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import {Link as ScrollLink} from 'react-scroll';
-// import {Link as RouterLink} from 'react-router-dom';
+import { scroller } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-import ButtonLink1 from '../ReusablePages/ButtonLink1';
+import NavbarLinkButton from '../ReusablePages/NavbarLinkButton';
 import ContactMe from '../ComponentPages/ContactMe';
 import Divider from '../ReusablePages/Divider';
 
@@ -22,6 +22,30 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
     setIsOverlayOpen(parameter);
   };
 
+  // for using react-scroll and react-router at the same time
+  const path = useLocation().pathname;
+  const location = path.split('/')[1];
+  const navigate = useNavigate();
+  const scrollToSection = (section) => {
+    console.log(section);
+    scroller.scrollTo(section, {
+      duration: 1500,
+      delay: 100,
+      smooth: 'easeOutBack',
+      offset: -180
+    });
+  };
+  // method applied to the navbar buttons when not in the default page
+  const goToHomeAndScroll = async (section) => {
+    await navigate('/');
+    await scroller.scrollTo(section, {
+      duration: 1500,
+      delay: 100,
+      smooth: 'easeOutBack',
+      offset: -180
+    });
+  };
+
   return (
     <div 
       className='sticky top-0 z-20'
@@ -33,27 +57,43 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
 
         {/* logo */}
         <div className='mr-auto xsm:ml-2 my-8 md:my-2'>
-          {/* <RouterLink to='/'>
-            <button>Home</button>
-          </RouterLink> */}
-          <ScrollLink to="home"
-            activeClass="active" spy={true} offset={-200} duration={1500} smooth={'easeOutBack'}
-            className=" w-fit p-2 rounded-full group/nav-logo
-              bg-gradient-to-b from-amber-400/60 to-fuchsia-600/60 
-              hover:bg-gradient-to-b hover:from-amber-400 hover:to-fuchsia-600 
-              flex justify-between 
-              shadow-[0_0_15px_black]
-              hover:shadow-[0_0_35px_white]
-            "
-          >
-            <img 
-              className='h-16 min-w-16 max-w-16 rounded-full
-              animate-[pulse_1s_ease-in-out_infinite_0.2s]
-              group-hover/nav-logo:animate-[spin_1s_ease-in-out_1_0.2s]'
-              src={process.env.PUBLIC_URL + '/' + profileData.display_image}
-              alt='Bodhisatta'
-            />
-          </ScrollLink>
+          {location === '' ? (
+            <button onClick={()=>{scrollToSection('home')}}
+              className=" w-fit p-2 rounded-full group/nav-logo
+                bg-gradient-to-b from-amber-400/60 to-fuchsia-600/60 
+                hover:bg-gradient-to-b hover:from-amber-400 hover:to-fuchsia-600 
+                flex justify-between 
+                shadow-[0_0_15px_black]
+                hover:shadow-[0_0_35px_white]
+              "
+            >
+              <img 
+                className='h-16 min-w-16 max-w-16 rounded-full
+                animate-[pulse_1s_ease-in-out_infinite_0.2s]
+                group-hover/nav-logo:animate-[spin_1s_ease-in-out_1_0.2s]'
+                src={process.env.PUBLIC_URL + '/' + profileData.display_image}
+                alt='Bodhisatta'
+              />
+            </button>
+          ) : (
+            <button onClick={()=>{goToHomeAndScroll('home')}}
+              className=" w-fit p-2 rounded-full group/nav-logo
+                bg-gradient-to-b from-amber-400/60 to-fuchsia-600/60 
+                hover:bg-gradient-to-b hover:from-amber-400 hover:to-fuchsia-600 
+                flex justify-between 
+                shadow-[0_0_15px_black]
+                hover:shadow-[0_0_35px_white]
+              "
+            >
+              <img 
+                className='h-16 min-w-16 max-w-16 rounded-full
+                animate-[pulse_1s_ease-in-out_infinite_0.2s]
+                group-hover/nav-logo:animate-[spin_1s_ease-in-out_1_0.2s]'
+                src={process.env.PUBLIC_URL + '/' + profileData.display_image}
+                alt='Bodhisatta'
+              />
+            </button>
+          )}
         </div>
 
         {/* Primary Navbar options */}
@@ -62,11 +102,24 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
           2xsm:gap-2 sm:gap-4 items-center justify-center my-4 md:my-2 xsm:my-0
           md:text-2xl lg:text-3xl'
         >
-          <ButtonLink1 linkTo={otherData.navbarOptionLinks[0]} buttonName={otherData.navbarOptions[0]} />
-          <ButtonLink1 linkTo={otherData.navbarOptionLinks[1]} buttonName={otherData.navbarOptions[1]} />
-          <ButtonLink1 linkTo={otherData.navbarOptionLinks[2]} buttonName={otherData.navbarOptions[2]} />
-          <ButtonLink1 linkTo={otherData.navbarOptionLinks[3]} buttonName={otherData.navbarOptions[3]} />
-          <ButtonLink1 linkTo={otherData.navbarOptionLinks[4]} buttonName={otherData.navbarOptions[4]} />
+          {location === '' ? (
+            <>
+              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[1])}} buttonName={otherData.navbarOptions[0]} />
+              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[2])}} buttonName={otherData.navbarOptions[1]} />
+              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[3])}} buttonName={otherData.navbarOptions[2]} />
+              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[4])}} buttonName={otherData.navbarOptions[3]} />
+              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[5])}} buttonName={otherData.navbarOptions[4]} />
+            </>
+          ) : (
+            <>
+              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[1])}} buttonName={otherData.navbarOptions[0]} />
+              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[2])}} buttonName={otherData.navbarOptions[1]} />
+              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[3])}} buttonName={otherData.navbarOptions[2]} />
+              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[4])}} buttonName={otherData.navbarOptions[3]} />
+              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[5])}} buttonName={otherData.navbarOptions[4]} />
+            </>
+          )}
+          
         </div>  
 
         {/* Contact Me */}

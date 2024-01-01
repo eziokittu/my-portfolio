@@ -17,9 +17,7 @@ const Projects = (props) => {
   // }));
 
   return (
-    <div 
-      id="projects"
-      className="relative z-0">
+    <div className="relative z-0">
 
       {/* content of projects */}
       <div className='p-4 bg-blue-600/20 group/g1'>

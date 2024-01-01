@@ -13,7 +13,6 @@ const SkillDisplay = () => {
 
 	return (
 		<div 
-			id="skills" 
 			className='bg-pink-300/20  min-h-[700px] p-2 group/g1'
 		>
 

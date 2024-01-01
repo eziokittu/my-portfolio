@@ -3,6 +3,6 @@
     "Home", "About", "Skills", "Projects", "Education"
   ],
   "navbarOptionLinks": [
-    "home", "about", "skills", "projects", "education"
+    "home", "hero", "about", "skills", "projects", "education"
   ]
 }

@@ -9,7 +9,7 @@ import educationData from "../../data/educationData.json";
 
 const Education = () => {
   return (
-    <div id='education' className='bg-yellow-300/20 min-h-[700px]'>
+    <div className='bg-yellow-300/20 min-h-[700px]'>
       {/* drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] */}
 
 

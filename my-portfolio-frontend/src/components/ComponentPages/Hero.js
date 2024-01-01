@@ -22,7 +22,6 @@ function Hero() {
   return (
     <div 
       className="w-full pt-12 px-2 xsm:px-8 lg:px-0 lg:flex items-center justify-around mx-auto mb-8 bg-stone-800/20"
-      id='hero'
     >
       
       {/* The welcome text */}
