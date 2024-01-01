@@ -7,12 +7,12 @@ const squareData = shuffleHeroData.images;
 
 const ShuffleHero = () => {
   return (
-    <div>
+    <div className="mx-auto  w-full sm:w-5/6 ">
       <div 
         className=" bg-blue-800/25
         text-lime-500 font-bold mb-4 text-center text-4xl "
       >Some Pictures</div>
-      <div className="h-[200px] 2xsm:h-[300px] xsm:h-[400px] sm:h-[600px] md:h-[600px] lg:h-[400px] xl:h-[600px] overflow-hidden">
+      <div className="h-[200px] 2xsm:h-[330px] xsm:h-[450px] sm:h-[500px] md:h-[600px] lg:h-[400px] xl:h-[600px] overflow-hidden">
         <ShuffleGrid />
       </div>
     </div>

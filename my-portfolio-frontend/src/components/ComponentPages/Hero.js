@@ -25,29 +25,29 @@ function Hero() {
     >
       
       {/* The welcome text */}
-      <div className='  mb-12 lg:mb-0'>
+      <div className='mx-auto lg:mx-0 w-11/12 sm:w-5/6 lg:w-fit mb-12 lg:mb-0'>
 
         <Slide direction='down'><Fade>
-        <div className="flex font-Merriweather text-4xl text-indigo-500 ">
-          Hey There<span class="text-5xl animate-[wave_1.3s_ease-in-out_infinite]">👋🏻</span>
+        <div className="flex font-Merriweather text-2xl sm:text-4xl text-indigo-500 ">
+          Hey There<span class="text-4xl xsm:text-5xl animate-[wave_1.3s_ease-in-out_infinite]">👋🏻</span>
         </div>
         </Fade></Slide>
 
         <Slide direction='down'><Fade>
-        <h1 className='font-Merriweather text-blue-300 text-4xl'>
+        <h1 className='font-Merriweather text-blue-300 text-2xl sm:text-4xl'>
           <p>I'm </p>
         </h1>
         </Fade></Slide>
 
         <Slide direction='down'><Fade>
-        <div className="text-7xl md:text-6xl lg:text-8xl 
+        <div className="text-5xl sm:text-7xl md:text-6xl lg:text-8xl 
           font-semibold text-blue-600 mt-2">
           <BubbleText text={profileData.name.firstName}/>
         </div>
         </Fade></Slide>
         
         <Slide direction='down'><Fade>
-        <h3 className="text-4xl md:text-6xl mt-2 
+        <h3 className="text-4xl sm:text-5xl md:text-6xl mt-2 
         font-semibold text-blue-500 font-Merriweather"
         >{profileData.name.lastName}</h3>
         </Fade></Slide>
@@ -56,8 +56,8 @@ function Hero() {
         <Fade 
           onVisibilityChange={handleComponentInViewPort} 
           delay={500} duration={1500} direction='down'
-          className="font-mono text-base p-4 mt-4 rounded-2xl drop-shadow-xl
-          md:text-xl text-white bg-zinc-700 sm:max-w-[460px] lg:min-w-[460px] xl:min-w-[560px]"
+          className="font-mono p-2 sm:p-4 mt-4 rounded-2xl drop-shadow-xl
+          text-xs sm:text-xl text-white bg-zinc-700 max-w-[460px] lg:min-w-[460px] xl:min-w-[560px]"
         >
           {/* {typingComponentInViewPort===true ? (
             <div>
