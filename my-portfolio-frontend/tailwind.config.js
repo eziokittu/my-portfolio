@@ -34,10 +34,25 @@ module.exports = {
           '40%, 60%': { transform: 'rotate(10deg)' },
           '0%, 20%, 40%, 60%, 80%, 100%': { transformOrigin: 'bottom right' },
         },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-5deg)' },
+          '50%': { transform: 'rotate(5deg)' },
+        },
+        translateLeftToRight: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(5px)' },
+        },
+        translateRightToLeft: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(-5px)' },
+        },
       },
       animation: {
         'heartbeat': 'heartbeat 1s infinite',
         'waving-hand': 'wave 1.5s ease-in-out infinite',
+        'wiggle': 'wiggle 1s ease-in-out infinite',
+        'left-to-right': 'translateLeftToRight 1.5s ease-in-out infinite',
+        'right-to-left': 'translateRightToLeft 1.5s ease-in-out infinite',
       },
     },
   },

@@ -3,11 +3,11 @@ import React from "react";
 import { Fade, Slide } from 'react-awesome-reveal';
 
 // importing reusable components
-// import ProjectCard from "../ReusablePages/ProjectCard";
+import ProjectCard from "../ReusablePages/ProjectCard";
 // import ProjectDisplayCard from '../ReusablePages/ProjectDisplayCard';
 
 // importing data
-// import projectData from '../../data/projectData.json';
+import projectData from '../../data/projectData.json';
 
 const Projects = (props) => {
 
@@ -20,7 +20,7 @@ const Projects = (props) => {
     <div className="relative z-0">
 
       {/* content of projects */}
-      <div className='p-4 bg-blue-600/20 group/g1'>
+      <div className='p-4 bg-sky-600/20 group/g1'>
 
         {/* Title of the section */}
         <Slide direction='down'><Fade>
@@ -67,17 +67,21 @@ const Projects = (props) => {
           <span className='flex flex-wrap items-center justify-center font-Kolnia text-xl 2xsm:text-2xl xsm:text-3xl sm:text-5xl xl:text-7xl'>
             <p className='text-blue-900 pr-1 sm:pr-3'>My Projects</p>
           </span>
-        </div></Fade></Slide>
+        </div>
+        </Fade></Slide>
 
         {/* Project cards in grid */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-          {projectData.Projects.map(p => (
-            <ProjectCard project={p} />
-          ))}
-        </div> */}
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"> */}
+        <div className="relative flex flex-col bg-sky-600/5 hover:bg-sky-600/20 rounded-3xl
+				shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500
+        w-full xsm:w-11/12 lg:w-3/4 xl:w-3/5 2xl:w-1/2 mx-auto">
+          <div className="w-full text-lg px-4">
+            <ProjectCard projects={projectData.Projects} />
+          </div>
+        </div>
 
         {/* Temporary - TO BE REMOVED */}
-        <div className="w-fit p-4 m-4 bg-sky-500 text-4xl mx-auto animate-pulse">This Section is being worked upon</div>
+        {/* <div className="w-fit p-4 m-4 bg-sky-500 text-4xl mx-auto animate-pulse">This Section is being worked upon</div> */}
 
       </div>
 

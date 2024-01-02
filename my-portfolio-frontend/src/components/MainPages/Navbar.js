@@ -27,7 +27,7 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
   const location = path.split('/')[1];
   const navigate = useNavigate();
   const scrollToSection = (section) => {
-    console.log(section);
+    // console.log(section);
     scroller.scrollTo(section, {
       duration: 1500,
       delay: 100,

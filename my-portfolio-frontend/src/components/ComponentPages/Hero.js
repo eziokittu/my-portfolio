@@ -40,7 +40,7 @@ function Hero() {
         </Fade></Slide>
 
         <Slide direction='down'><Fade>
-        <div className="text-5xl sm:text-7xl md:text-6xl lg:text-8xl 
+        <div className="text-5xl sm:text-7xl md:text-7xl lg:text-8xl 
           font-semibold text-blue-600 mt-2">
           <BubbleText text={profileData.name.firstName}/>
         </div>
@@ -57,7 +57,7 @@ function Hero() {
           onVisibilityChange={handleComponentInViewPort} 
           delay={500} duration={1500} direction='down'
           className="font-mono p-2 sm:p-4 mt-4 rounded-2xl drop-shadow-xl
-          text-xs sm:text-xl text-white bg-zinc-700 max-w-[460px] lg:min-w-[460px] xl:min-w-[560px]"
+          text-xs sm:text-xl text-white bg-zinc-700 max-w-[460px] lg:min-w-[500px] xl:min-w-[560px]"
         >
           {/* {typingComponentInViewPort===true ? (
             <div>

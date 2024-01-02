@@ -15,7 +15,7 @@ const EducationCard = ({props}) => {
       onMouseEnter={buttonCardHovered}
       onMouseLeave={buttonCardNotHovered}
       className='bg-yellow-50 hover:bg-yellow-100
-      rounded-lg p-2 sm:flex '
+      rounded-lg p-2 sm:flex w-full'
     >
 
       {/* Institute Image */}

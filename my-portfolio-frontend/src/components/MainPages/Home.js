@@ -38,14 +38,14 @@ const Home = () => {
         <Element name={otherData.navbarOptionLinks[3]}>
           <SkillDisplay />
           {/* Transperant gradient - change the height and colours acordingly*/}
-			    <div className="h-44 w-full bg-gradient-to-b from-pink-300/20 to-blue-600/20"></div>
+			    <div className="h-44 w-full bg-gradient-to-b from-pink-300/20 to-sky-600/20"></div>
         </Element>
 
         {/* Projects Section - NEEDS WORK ---- min-h-[700px]*/} 
         <Element name={otherData.navbarOptionLinks[4]}>
           <Projects />
           {/* Transperant gradient - change the height and colours acordingly*/}
-			    <div className="h-44 w-full bg-gradient-to-b from-blue-600/20 to-yellow-300/20"></div>
+			    <div className="h-44 w-full bg-gradient-to-b from-sky-600/20 to-yellow-300/20"></div>
         </Element>
 
         {/* Education Section */}

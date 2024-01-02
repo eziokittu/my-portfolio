@@ -1,7 +1,9 @@
 {
 	"Projects": [
 		{
+			"id": 1,
 			"title": "Project1",
+			"domain":"App Dev",
 			"tags": [
 				"MERN",
 				"ReactJS",
@@ -18,17 +20,19 @@
 			"description_short": "Project 1 Description in short",
 			"description_long": "Project 1 Description in long",
 			"images": [
-				"images/projectImages/img_p1_1.jpg",
 				"images/projectImages/img_p1_2.jpg",
 				"images/projectImages/img_p1_1.jpg",
 				"images/projectImages/img_p1_2.jpg",
 				"images/projectImages/img_p1_1.jpg",
 				"images/projectImages/img_p1_2.jpg",
 				"images/projectImages/img_p1_1.jpg"
-			]
+			],
+			"thumbnail": "images/projectImages/img_p1_1.jpg"
 		},
 		{
+			"id": 2,
 			"title": "Project2",
+			"domain":"Game Dev",
 			"tags": [
 				"MERN",
 				"ReactJS",
@@ -47,10 +51,13 @@
 			"images": [
 				"images/projectImages/img_p1_1.jpg",
 				"images/projectImages/img_p1_2.jpg"
-			]
+			],
+			"thumbnail": "images/projectImages/img_p1_2.jpg"
 		},
 		{
+			"id": 3,
 			"title": "Project3",
+			"domain":"Web Dev",
 			"tags": [
 				"MERN",
 				"ReactJS",
@@ -67,12 +74,15 @@
 			"description_short": "Project 3 Description in short",
 			"description_long": "Project 3 Description in long",
 			"images": [
-				"images/projectImages/img_p1_1.jpg",
-				"images/projectImages/img_p1_2.jpg"
-			]
+				"images/projectImages/img_p1_2.jpg",
+				"images/projectImages/img_p1_1.jpg"
+			],
+			"thumbnail": "images/projectImages/img_p1_1.jpg"
 		},
 		{
+			"id": 4,
 			"title": "Project4",
+			"domain":"App Dev",
 			"tags": [
 				"MERN",
 				"ReactJS",
@@ -91,7 +101,8 @@
 			"images": [
 				"images/projectImages/img_p1_1.jpg",
 				"images/projectImages/img_p1_2.jpg"
-			]
+			],
+			"thumbnail": "images/projectImages/img_p1_2.jpg"
 		}
 	]
 }
