@@ -35,8 +35,8 @@ module.exports = {
           '0%, 20%, 40%, 60%, 80%, 100%': { transformOrigin: 'bottom right' },
         },
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-5deg)' },
-          '50%': { transform: 'rotate(5deg)' },
+          '0%, 100%': { transform: 'rotate(-10deg)' },
+          '50%': { transform: 'rotate(10deg)' },
         },
         translateLeftToRight: {
           '0%, 100%': { transform: 'translateX(0)' },

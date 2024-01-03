@@ -4,6 +4,7 @@
 			"id": 1,
 			"title": "Project1",
 			"domain":"App Dev",
+			"link":"https://github.com/eziokittu",
 			"tags": [
 				"MERN",
 				"ReactJS",
@@ -18,7 +19,6 @@
 				"Website"
 			],
 			"description_short": "Project 1 Description in short",
-			"description_long": "Project 1 Description in long",
 			"images": [
 				"images/projectImages/img_p1_2.jpg",
 				"images/projectImages/img_p1_1.jpg",
@@ -31,8 +31,9 @@
 		},
 		{
 			"id": 2,
-			"title": "Project2",
-			"domain":"Game Dev",
+			"title": "Project1",
+			"domain":"App Dev",
+			"link":"https://github.com/eziokittu",
 			"tags": [
 				"MERN",
 				"ReactJS",
@@ -46,67 +47,16 @@
 				"Full Stack",
 				"Website"
 			],
-			"description_short": "Project 2 Description in short",
-			"description_long": "Project 2 Description in long",
+			"description_short": "Project 1 Description in short",
 			"images": [
+				"images/projectImages/img_p1_2.jpg",
 				"images/projectImages/img_p1_1.jpg",
-				"images/projectImages/img_p1_2.jpg"
-			],
-			"thumbnail": "images/projectImages/img_p1_2.jpg"
-		},
-		{
-			"id": 3,
-			"title": "Project3",
-			"domain":"Web Dev",
-			"tags": [
-				"MERN",
-				"ReactJS",
-				"HTML",
-				"CSS",
-				"NodeJS",
-				"ExpressJS",
-				"MongoDB",
-				"React-Router-DOM",
-				"Tailwind CSS",
-				"Full Stack",
-				"Website"
-			],
-			"description_short": "Project 3 Description in short",
-			"description_long": "Project 3 Description in long",
-			"images": [
+				"images/projectImages/img_p1_2.jpg",
+				"images/projectImages/img_p1_1.jpg",
 				"images/projectImages/img_p1_2.jpg",
 				"images/projectImages/img_p1_1.jpg"
 			],
 			"thumbnail": "images/projectImages/img_p1_1.jpg"
-		},
-		{
-			"id": 4,
-			"title": "Project4",
-			"domain":"App Dev",
-			"tags": [
-				"MERN",
-				"ReactJS",
-				"HTML",
-				"CSS",
-				"NodeJS",
-				"ExpressJS",
-				"MongoDB",
-				"React-Router-DOM",
-				"Tailwind CSS",
-				"Full Stack",
-				"Website"
-			],
-			"description_short": "Project 4 Description in short",
-			"description_long": "Project 4 Description in long",
-			"images": [
-				"images/projectImages/img_p1_1.jpg",
-				"images/projectImages/img_p1_0.jpg",
-				"images/projectImages/img_p1_0.jpg",
-				"images/projectImages/img_p1_0.jpg",
-				"images/projectImages/img_p1_0.jpg",
-				"images/projectImages/img_p1_2.jpg"
-			],
-			"thumbnail": "images/projectImages/img_p1_2.jpg"
 		}
 	]
 }
