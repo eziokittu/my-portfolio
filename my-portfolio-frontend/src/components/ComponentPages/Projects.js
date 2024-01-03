@@ -1,5 +1,5 @@
 // importing library files
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Fade, Zoom } from 'react-awesome-reveal';
 
 // importing reusable components
@@ -22,11 +22,11 @@ const Projects = (props) => {
           className='relative overflow-hidden group/g2
           flex items-center justify-between transition-colors duration-300
           font-bold cursor-default text-center
-          bg-sky-200 group-hover/g1:bg-sky-300 w-fit mx-auto rounded-lg p-4 my-2'
+          bg-sky-200 group-hover/g1:bg-sky-300 w-fit mx-auto rounded-lg p-2 sm:p-4 mb-4'
         >
 
           {/* The animated underline */}
-          <span className="mx-2 absolute inset-x-0 bottom-2 h-1 bg-blue-900 transform origin-center scale-x-0 group-hover/g1:scale-x-100 transition-transform duration-1000"></span>
+          <span className="mx-2 absolute inset-x-0 bottom-2 h-[2px] bg-blue-900 transform origin-center scale-x-0 group-hover/g1:scale-x-100 transition-transform duration-1000"></span>
           
           {/* The title logo */}
           <div
@@ -63,6 +63,7 @@ const Projects = (props) => {
           <span className='flex flex-wrap items-center justify-center font-Kolnia text-xl 2xsm:text-2xl xsm:text-3xl sm:text-5xl xl:text-7xl'>
             <p className='text-blue-900 pr-1 sm:pr-3'>My Projects</p>
           </span>
+
         </div>
         </Fade></Zoom>
 
@@ -76,8 +77,12 @@ const Projects = (props) => {
           </div>
         </div>
 
-        {/* Temporary - TO BE REMOVED */}
-        {/* <div className="w-fit p-4 m-4 bg-sky-500 text-4xl mx-auto animate-pulse">This Section is being worked upon</div> */}
+        {/* Temporary Text - TO BE REMOVED */}
+        <div 
+          className="p-4 m-4 bg-sky-200/80 text-xl animate-pulse rounded-2xl
+          w-full xsm:w-11/12 lg:w-3/4 xl:w-3/5 2xl:w-1/2 mx-auto">
+          The Project Section is still incomplete - my previous projects remain to be added. Will be updated soon...
+        </div>
 
       </div>
 

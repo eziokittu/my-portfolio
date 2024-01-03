@@ -54,7 +54,7 @@ const About = () => {
           <div>
             
             {/* About Me Text */}
-            <div className='text-justify text-sm xsm:text-lg md:text-2xl'>
+            <div className='text-emerald-950 text-justify text-sm xsm:text-lg md:text-2xl'>
               {profileData.about.map((text) => 
                 <Zoom duration={revealDuration}><Fade delay={revealDelay} duration={revealDuration}>
                 <div className='mb-4'>

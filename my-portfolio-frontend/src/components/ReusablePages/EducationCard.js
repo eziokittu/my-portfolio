@@ -11,7 +11,6 @@ const EducationCard = ({props}) => {
 
   return (
     <button
-      // onMouseEnter={buttonCardHovered}
       onMouseEnter={buttonCardHovered}
       onMouseLeave={buttonCardNotHovered}
       className='bg-yellow-50 hover:bg-yellow-100

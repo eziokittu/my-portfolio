@@ -50,13 +50,14 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
     <div 
       className='sticky top-0 z-20'
     >
-      <div className='absolute top-0 h-28 md:h-16 w-full bg-white blur-2xl -z-10'></div>
+      {/* Blur background for the navbar */}
+      <div className='absolute top-0 h-28 sm:h-16 w-full bg-white blur-2xl -z-10'></div>
 
       <div className='w-full z-50
       flex items-center justify-around bg-slate-500/20 cursor-default'>
 
         {/* logo */}
-        <div className='mr-auto xsm:ml-2 my-8 md:my-2'>
+        <div className='mr-auto xsm:ml-2 my-8 sm:my-2'>
           {location === '' ? (
             <button onClick={()=>{scrollToSection('home')}}
               className=" w-fit p-2 rounded-full group/nav-logo
@@ -130,27 +131,15 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
                 className='' 
                 onClick={openOverlay}
               >
-                <div className='w-16 text-lg py-1 px-2
-                  text-amber-400 group-hover/contact:text-black
-                  border-2 border-stone-500 items-center
-                  transition-all duration-500 rounded-lg
-                  shadow-[0_0_35px_black] flex flex-col
-                  group-hover/contact:shadow-[0_0_35px_gray]
-                  bg-purple-900 group-hover/contact:bg-gradient-to-b
-                  group-hover/contact:from-amber-500 group-hover/contact:to-pink-500'
-                >
-                  <div className='flex items-center '>
-                    
-                    <svg 
-                      className="w-8 h-8 animate-pulse
-                      group-hover/contact:animate-[wave_.3s_ease-in-out_2]
-                      group-hover/contact:text-green-500" 
-                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                    </svg>
-                  </div>               
-                  <p>Contact</p>
-                  
+                <div className='max-w-22 text-lg py-1 
+                  text-amber-400 group-hover/contact:text-amber-500
+                  border-2 border-slate-400 group-hover/contact:border-black items-center
+                  transition-all duration-300 rounded-lg
+                  flex flex-col bg-gray-700 group-hover/contact:bg-gray-800
+                  shadow-[0_0_15px_black] group-hover/contact:shadow-[0_0_35px_white]
+                  '
+                >            
+                  <p className='px-2'>Contact</p>
                 </div>
               </div>
             </div>
