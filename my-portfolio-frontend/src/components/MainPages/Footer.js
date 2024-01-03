@@ -238,7 +238,7 @@ const Footer = () => {
 							{/* Auro's Portfolio */}
 							<div>
 								<div className="">
-									<p>Website design is heavily insired from</p>
+									<p>Website design is heavily inspired from</p>
 									<button
 										className="animate-pulse mr-2 hover:animate-none"
 										onClick={()=>{window.open(`${contactData.links.link_auro}`, '_blank')}}
