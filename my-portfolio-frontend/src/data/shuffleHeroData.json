@@ -2,67 +2,19 @@
   "images" : [
     {
       "id": 1,
-      "src": "./images/myImages/img_1.jpg"
-    },
-    {
-      "id": 2,
       "src": "./images/myImages/img_2.jpg"
     },
     {
+      "id": 2,
+      "src": "./images/myImages/img_5.jpg"
+    },
+    {
       "id": 3,
-      "src": "./images/myImages/img_3.jpg"
+      "src": "./images/myImages/img_6.jpg"
     },
     {
       "id": 4,
       "src": "./images/myImages/img_4.jpg"
-    },
-    {
-      "id": 5,
-      "src": "./images/myImages/img_5.jpg"
-    },
-    {
-      "id": 6,
-      "src": "./images/myImages/img_6.jpg"
-    },
-    {
-      "id": 7,
-      "src": "./images/myImages/img_9.jpg"
-    },
-    {
-      "id": 8,
-      "src": "./images/otherImages/img_sister.jpg"
-    },
-    {
-      "id": 9,
-      "src": "./images/otherImages/img_cat2.jpg"
-    },
-    {
-      "id": 10,
-      "src": "./images/myImages/img_10.jpg"
-    },
-    {
-      "id": 11,
-      "src": "./images/myImages/img_11.jpg"
-    },
-    {
-      "id": 12,
-      "src": "./images/myImages/img_12.jpg"
-    },
-    {
-      "id": 13,
-      "src": "./images/myImages/img_13.jpg"
-    },
-    {
-      "id": 14,
-      "src": "./images/myImages/img_14.jpg"
-    },
-    {
-      "id": 15,
-      "src": "./images/myImages/img_15.jpg"
-    },
-    {
-      "id": 16,
-      "src": "./images/myImages/img_16.jpg"
     }
   ]
 }
