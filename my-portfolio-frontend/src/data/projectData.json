@@ -1,0 +1,59 @@
+{
+	"Projects": [
+		{
+			"id": 1,
+			"title": "KalaSangam",
+			"domain":"Web Dev",
+			"link":"https://github.com/eziokittu/Kalasangam-app",
+			"tags": [
+				"MERN",
+				"ReactJS",
+				"HTML",
+				"CSS",
+				"NodeJS",
+				"ExpressJS",
+				"MongoDB",
+				"Tailwind CSS",
+				"Full Stack",
+				"react-router-dom"
+			],
+			"description_short": "A Full Stack Product Catalogue App for indigenous artisans and artists, to know and connect with them providing them a marketplace",
+			"images": [
+				"images/projectImages/p1_1.png",
+				"images/projectImages/p1_2.png",
+				"images/projectImages/p1_3.png",
+				"images/projectImages/p1_4.png"
+			],
+			"thumbnail": "images/projectImages/p1_1.png"
+		},
+		{
+			"id": 2,
+			"title": "My Portfolio",
+			"domain":"Web Dev",
+			"link":"https://github.com/eziokittu/my-portfolio",
+			"tags": [
+				"ReactJS",
+				"HTML",
+				"CSS",
+				"Tailwind CSS",
+				"JSON",
+				"react-awesome-reveal",
+				"react-type-animation",
+				"framer-motion",
+				"react-scroll",
+				"react-router-dom"
+			],
+			"description_short": "My personal portfolio website where I can show case my skills, projects and share other relevant information about me. I will keep this website upto date as my career progresses.",
+			"images": [
+				"images/projectImages/p2_1.jpg",
+				"images/projectImages/p2_2.jpg",
+				"images/projectImages/p2_3.jpg",
+				"images/projectImages/p2_4.jpg",
+				"images/projectImages/p2_5.jpg",
+				"images/projectImages/p2_6.jpg",
+				"images/projectImages/p2_7.jpg"
+			],
+			"thumbnail": "images/projectImages/p2_1.jpg"
+		}
+	]
+}

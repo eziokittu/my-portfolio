@@ -1,57 +1,63 @@
-import Home from './components/pages/Home';
-import Projects from './components/pages/Projects';
-import Project from './components/pages/Project';
-import Navbar from './components/pages/Navbar';
-import Navbar2 from './components/pages/Navbar2';
-import StickyContactMeButton from './components/reusable/StickyContactMeButton';
-import Footer from './components/pages/Footer';
-import ContactMe from './components/pages/ContactMe';
-import Background from './components/pages/Background';
-
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
+// importing reusable components
+// import DisableRightClick from './components/ReusablePages/DisableRightClick';
+// import DisableInspectMenu from './components/ReusablePages/DisableInspectMenu';
+import NotFound from './components/MainPages/NotFound';
+import Home from './components/MainPages/Home';
+import Navbar from './components/MainPages/Navbar';
+import Footer from './components/MainPages/Footer';
+import Background from './components/MainPages/Background';
 
 function App() {
-  const navbarOptions1 = ['Home', 'Projects', 'Blogs'];
-  const navbarOptions2 = ['Home', 'About', 'Skills', 'Projects', 'Education'];
-
   // For Contact Me Overlay
 	const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const closeOverlay = (parameter) => {
     setIsOverlayOpen(parameter);
   };
 
+  // for changing title and logo of website dynamically
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      const favicon = document.getElementById('favicon');
+
+      if (document.hidden) {
+        // The page is not visible (user switched tabs)
+        document.title = 'Thanks for Visiting | Bodhisatta';
+        favicon.href = '/favicon2.ico';
+      } else {
+        // The page is visible again
+        document.title = 'Portfolio | Bodhisatta';
+        favicon.href = '/favicon1.ico';
+      }
+    };
+
+    // Add event listener when the component mounts
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once on mount
+
   return (
-    <div className='flex flex-col min-h-screen relative'>
+    <div>
       <Background/>
-      
       <BrowserRouter>
-        {/* <Navbar options={navbarOptions1} contactMeButtonNotClicked={closeOverlay}/> */}
-        <Navbar2 
-          options={navbarOptions2} 
-          contactMeOverlayOn={!isOverlayOpen}
-          contactMeButtonNotClicked={closeOverlay}
-        />
-        {/* <StickyContactMeButton 
-          contactMeButtonNotClicked={closeOverlay} 
-          contactMeOverlayOn={!isOverlayOpen}
-        /> */}
-
+        <Navbar contactMeOverlayOn={!isOverlayOpen} contactMeButtonNotClicked={closeOverlay} />
         <Routes>
-          <Route exact path="/" element={<Home/>} />
-          <Route exact path="/home" element={<Home/>} />
-          <Route exact path="/projects" element={<Projects/>} />
-          <Route exact path="/contact" element={<ContactMe/>} />
-          <Route exact path="/projects/:pid" element={<Project contactMeOverlayOn={!isOverlayOpen}/>} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-
-        {/* a gap for the footer - adjust the height  */}
-        <div className="w-full mt-auto h-64"></div>
-
+        <Footer />
       </BrowserRouter>
-        <Footer/>
-    </div>
+    </div> 
   );
 }
 
+// comment this line when testing the webpage
+// export default DisableInspectMenu( DisableRightClick(App) );
+
+// comment this line before commiting changes
 export default App;
