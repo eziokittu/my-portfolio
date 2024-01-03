@@ -40,11 +40,21 @@ module.exports = {
         },
         translateLeftToRight: {
           '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(5px)' },
+          '50%': { transform: 'translateX(-10px) scale(1.3)' },
         },
         translateRightToLeft: {
           '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(-5px)' },
+          '50%': { transform: 'translateX(10px) scale(1.3)' },
+        },
+        translateDownToUp: {
+          '0%, 100%': { transform: 'translateY(0) translateX(0)' },
+          '50%': { transform: 'scale(1.5) translateY(10px) translateX(-4px)' },
+          '100%': { transform: 'scale(1) translateY(0) translateX(0)' },
+        },
+        translateUpToDown: {
+          '0%': { transform: 'scale(1) translateY(0) translateX(0)' },
+          '50%': { transform: 'scale(1.5) translateY(-10px) translateX(-4px)' },
+          '100%': { transform: 'scale(1) translateY(0) translateX(0)' },
         },
       },
       animation: {
@@ -53,6 +63,8 @@ module.exports = {
         'wiggle': 'wiggle 1s ease-in-out infinite',
         'left-to-right': 'translateLeftToRight 1.5s ease-in-out infinite',
         'right-to-left': 'translateRightToLeft 1.5s ease-in-out infinite',
+        'bounce-down-to-up':'translateDownToUp 1.5s ease-in-out infinite',
+        'bounce-up-to-down':'translateUpToDown 1.5s ease-in-out infinite',
       },
     },
   },
