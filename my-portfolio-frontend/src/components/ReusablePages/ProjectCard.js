@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Fade, Zoom } from 'react-awesome-reveal';
+import { Fade, Slide, Zoom } from 'react-awesome-reveal';
 
 const ProjectCard = ({projects}) => {
   const defaultProjectPanelIndex = -1;
@@ -55,7 +55,7 @@ const ProjectCard = ({projects}) => {
       
       {projects.map((project) => (
       <Zoom delay={200} duration={800}><Fade duration={1000}>
-      <div className="relative my-4 rounded-2xl bg-sky-400/50  group/g3
+      <div className="relative my-1 xsm:my-2 rounded-2xl bg-sky-400/50  group/g3
       group-hover/g2:bg-sky-400/70 transition-all duration-300">
 
         {/* Project Details */}
@@ -66,7 +66,8 @@ const ProjectCard = ({projects}) => {
 
           {/* Project Title and Description and Link Button*/}
           {projectPanelOpen===project.id ? (
-            <div className='flex flex-col sm:flex-row m-4'>
+            <div className='flex flex-col sm:flex-row m-2 xsm:m-4'>
+              <Slide direction='left' delay={1000}><Fade delay={1000}>
               <button 
                 onClick={()=>{window.open(`${project.link}`, '_blank')}}
                 className='flex gap-2 items-center bg-sky-800 group-hover/g3:border-sky-950
@@ -85,14 +86,15 @@ const ProjectCard = ({projects}) => {
                   </svg>
                 </div>
               </button>
+              </Fade></Slide>
               <button 
                 onClick={()=> (SetDefaultProjectPanel())}
-                className='p-2 h-full mx-auto'
+                className='p-0 xsm:p-2 h-full mx-auto'
               >
-                <div className='text-2xl font-bold text-sky-200 group-hover/g3:text-sky-900 transition-colors duration-300'>
+                <div className='text-xl xsm:text-2xl font-bold text-sky-200 group-hover/g3:text-sky-900 transition-colors duration-300'>
                   {project.title}
                 </div>
-                <div>
+                <div className='text-sm xsm:text-lg'>
                   {project.description_short}
                 </div>
               </button>
@@ -102,10 +104,10 @@ const ProjectCard = ({projects}) => {
               onClick={()=> (OpenProjectPanel(project))}
               className='ml-auto w-2/3 h-[120px] p-2 overflow-hidden'
             >
-              <div className='text-2xl font-bold text-sky-200 group-hover/g3:text-sky-900 transition-colors duration-300'>
+              <div className='text-xl xsm:text-2xl font-bold text-sky-200 group-hover/g3:text-sky-900 transition-colors duration-300'>
                 {project.title}
               </div>
-              <div>
+              <div className='text-sm xsm:text-lg'>
                 {project.description_short}
               </div>
             </button>
@@ -113,10 +115,10 @@ const ProjectCard = ({projects}) => {
 
           {/* image*/}
           {projectPanelOpen === project.id ? (
-            <div className='relative overflow-hidden w-full h-[300px] rounded-xl'>
+            <div className='relative overflow-hidden w-full sm:h-[300px] rounded-xl'>
               {/* Project Image Viewer */}
               <div 
-                className="mx-4 relative flex items-center justify-center border-4 transition-colors duration-300
+                className=" mx-2 xsm:mx-4 relative flex items-center justify-center border-4 transition-colors duration-300
               border-sky-200 group-hover/g3:border-sky-900 bg-sky-200 h-full rounded-xl">
                 {/* Left Image */}
                 <div className=" rounded-xl absolute left-0 top-0 bottom-0 w-[15%] max-w-[65px] overflow-hidden">
@@ -182,7 +184,7 @@ const ProjectCard = ({projects}) => {
           ) : (
             <div 
               className='absolute left-0 top-0 bottom-0 overflow-hidden
-              m-2 w-1/3 border-4 rounded-2xl border-sky-400 group-hover/g3:border-sky-800 bg-sky-200'>
+              m-1 xsm:m-2 w-1/3 border-4 rounded-2xl border-sky-400 group-hover/g3:border-sky-800 bg-sky-200'>
               <img 
                 src={project.thumbnail}
                 alt={project.title}
@@ -193,11 +195,11 @@ const ProjectCard = ({projects}) => {
 
           {/* Project Tags */}
           {projectPanelOpen===project.id && (
-            <div className='m-4'>
-              <p className="text-2xl font-bold text-sky-200 group-hover/g3:text-sky-900 text-center transition-all duration-300"># TAGS</p>
-              <div className='flex flex-wrap justify-center border border-stone-400 bg-sky-200 rounded-2xl p-1  gap-[2px]'>
+            <div className='m-2 xsm:m-4'>
+              <p className="text-lg xsm:text-xl font-bold text-sky-200 group-hover/g3:text-sky-900 text-center transition-all duration-300"># TAGS</p>
+              <div className='flex flex-wrap justify-center border border-stone-400 bg-sky-200 rounded-2xl p-[2px] xsm:p-1  gap-[2px]'>
                 {project.tags.map(tag => (
-                  <p className='text-center rounded-full px-[6px] py-1 text-sm
+                  <p className='text-center rounded-full px-1 xsm:px-[6px] xsm:py-1 text-xs xsm:text-sm
                   text-sky-100 group-hover/g3:text-white border bg-sky-800 group-hover/g3:bg-sky-900'>
                     {tag}
                   </p>

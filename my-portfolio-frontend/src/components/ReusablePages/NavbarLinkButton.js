@@ -5,7 +5,7 @@ const NavbarLinkButton = ({ buttonName, myOnClick }) => {
     <button
       onClick={myOnClick}
       className='
-      p-[2px] 2xsm:p-1 xsm:p-2
+      p-[2px] 2xsm:p-1 sm:p-2
       transition-all duration-500
       text-slate-50 hover:text-stone-900
       border-2 border-slate-50 hover:border-slate-800

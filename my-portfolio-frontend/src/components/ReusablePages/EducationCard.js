@@ -19,9 +19,9 @@ const EducationCard = ({props}) => {
 
       {/* Institute Image */}
       <div 
-        className='h-[300px] xl:h-[400px]
+        className='h-[160px] xsm:h-[200px] sm:h-[200px] xl:h-[240px]
         w-full sm:w-5/12 lg:w-2/5 xl:w-1/3
-        mb-4 mx-auto sm:mr-4 sm:mb-0'
+        mb-1 mx-auto sm:mr-4 sm:mb-0'
       >
         <img
           className='h-full w-full rounded-t-2xl sm:rounded-tr-none sm:rounded-l-2xl'
@@ -33,12 +33,12 @@ const EducationCard = ({props}) => {
       {/* Education Details */}
       <div className='flex flex-col
         w-full sm:w-7/12 lg:w-3/5 xl:w-2/3
-        sm:h-[300px] lg:h-[300px] xl:h-[400px]
+        sm:h-[200px] xl:h-[240px]
         '>
 
         {/* Degree Achieved */}
         <div 
-          className={`font-bold text-2xl lg:text-3xl xl:text-4xl
+          className={`font-bold text-lg lg:text-xl xl:text-3xl
           ${cardHovered ? 'text-gray-900' : 'text-gray-600'}
           text-center`}
         >
@@ -50,7 +50,7 @@ const EducationCard = ({props}) => {
 
         {/* Name and Board */}
         <div 
-          className={`text-lg lg:text-xl xl:text-2xl
+          className={`text-sm  xl:text-xl
           ${cardHovered ? 'text-gray-900' : 'text-gray-600'}
         `}>
 
@@ -81,7 +81,7 @@ const EducationCard = ({props}) => {
         <div 
           className={`font-bold 
           ${cardHovered ? 'text-green-900' : 'text-green-700'}
-          text-xl lg:text-2xl xl:text-3xl flex`}
+          text-lg lg:text-xl xl:text-2xl flex`}
         >
           <span>{props.yearStart}</span>
           <span>-</span>

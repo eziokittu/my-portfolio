@@ -51,13 +51,13 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
       className='sticky top-0 z-20'
     >
       {/* Blur background for the navbar */}
-      <div className='absolute top-0 h-28 sm:h-16 w-full bg-white blur-2xl -z-10'></div>
+      <div className='absolute top-0 h-14 xsm:h-12 w-full bg-white blur-2xl -z-10'></div>
 
-      <div className='w-full z-50
+      <div className='w-full z-50 p-0
       flex items-center justify-around bg-slate-500/20 cursor-default'>
 
         {/* logo */}
-        <div className='mr-auto xsm:ml-2 my-8 sm:my-2'>
+        <div className='mr-auto xsm:ml-2 my-2 '>
           {location === '' ? (
             <button onClick={()=>{scrollToSection('home')}}
               className=" w-fit p-2 rounded-full group/nav-logo
@@ -100,8 +100,8 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
         {/* Primary Navbar options */}
         <div 
           className='flex 2xsm:flex-wrap flex-col 2xsm:flex-row
-          2xsm:gap-2 sm:gap-4 items-center justify-center my-4 md:my-2 xsm:my-0
-          md:text-2xl lg:text-3xl'
+          2xsm:gap-[2px] xsm:gap-1 sm:gap-4 items-center justify-center 
+          text-sm md:text-2xl lg:text-3xl'
         >
           {location === '' ? (
             <>
@@ -124,7 +124,7 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
         </div>  
 
         {/* Contact Me */}
-        <div className="ml-auto xsm:mr-2 my-8 md:my-2">
+        <div className="ml-auto xsm:mr-2">
           {(contactMeOverlayOn===true) && 
             <div className=' group/contact'>
               <div 

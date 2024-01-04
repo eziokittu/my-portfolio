@@ -39,13 +39,13 @@ const About = () => {
               fill="none" viewBox="0 0 24 24" 
               stroke-width="1.5" 
               stroke="currentColor" 
-              className="w-16 h-16 group-hover/g1:animate-spin">
+              className="w-8 sm:w-16 h-8 sm:h-16 group-hover/g1:animate-spin">
               <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
             </svg>
           </div>
 
           {/* Heating Title */}
-          <p className='text-xl 2xsm:text-2xl xsm:text-3xl sm:text-5xl xl:text-7xl'>About Me</p>
+          <p className='text-lg 2xsm:text-xl xsm:text-2xl sm:text-4xl xl:text-5xl'>About Me</p>
 
         </div>
 
@@ -54,7 +54,7 @@ const About = () => {
           <div>
             
             {/* About Me Text */}
-            <div className='text-emerald-950 text-justify text-sm xsm:text-lg md:text-2xl'>
+            <div className='mt-4 text-emerald-950 text-justify text-xs xsm:text-sm sm:text-lg md:text-2xl'>
               {profileData.about.map((text) => 
                 <Zoom duration={revealDuration}><Fade delay={revealDelay} duration={revealDuration}>
                 <div className='mb-4'>
@@ -64,7 +64,7 @@ const About = () => {
             </div>
 
             {/* Some Contact details */}
-            <div className='mt-12 text-md sm:text-2xl md:text-3xl text-teal-950'>
+            <div className='mt-12 text-sm sm:text-xl md:text-2xl text-teal-950'>
 
               {/* Primary Email */}
               <Zoom duration={revealDuration}><Fade delay={revealDelay} duration={revealDuration}>
@@ -110,16 +110,16 @@ const About = () => {
               <div className='w-fit'>
                 <button
                   onClick={()=>{window.open(`${profileData.resume}`, '_blank')}}
-                  className='mt-12 transition duration-500 w-[250px] rounded-lg
+                  className='mt-12 transition duration-500 w-[160px] rounded-lg
                   bg-green-400 hover:bg-green-500 hover:font-bold group/g2'
                 >
                   <div className='flex items-center p-4 justify-center'>
                     <p 
-                      className='text-4xl
+                      className='text-2xl
                       transition duration-500'
                     >Resume</p>
                     <svg 
-                      className='w-10 h-10 
+                      className='w-8 h-8
                       group-hover/g2:translate-x-2' 
                       xmlns="http://www.w3.org/2000/svg"  
                       viewBox="0 0 30 30"

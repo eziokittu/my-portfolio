@@ -58,13 +58,13 @@ const Footer = () => {
 
 						{/* Heading */}
 						<h1 
-							className="w-fit text-4xl sm:text-3xl lg:text-2xl
+							className="w-fit text-2xl sm:text-3xl lg:text-2xl
 							border-b-2 border-slate-500 font-semibold">
 							Bodhisatta's Portfolio
 						</h1>
 
 						{/* Body */}
-						<div className=" mt-2 ml-4 text-lg">
+						<div className=" mt-2 ml-4 sm:text-lg">
 							<p>Thank you 🙌 for visiting my personal portfolio website 😽</p>
 							<p>Connect with me over socials.📱</p>
 							<p>Keep Rising 🚀.</p>
@@ -79,7 +79,7 @@ const Footer = () => {
 
 						{/* Heading */}
 						<h1 
-							className="w-fit text-4xl sm:text-3xl lg:text-2xl
+							className="w-fit text-2xl sm:text-3xl lg:text-2xl
 							border-b-2 border-slate-500 font-semibold">
 							Quick Links
 						</h1>
@@ -110,13 +110,13 @@ const Footer = () => {
 
 						{/* Heading */}
 						<h1 
-							className="w-fit text-4xl sm:text-3xl lg:text-2xl
+							className="w-fit text-2xl sm:text-3xl lg:text-2xl
 							border-b-2 border-slate-500 font-semibold">
 							Contact Info
 						</h1>
 
 						{/* Body */}
-						<div className="mt-2 ml-4 text-lg ">
+						<div className="mt-2 ml-4 ">
 
 							{/* Essential Info */}
 							<div>
@@ -226,14 +226,14 @@ const Footer = () => {
 
 						{/* Heading */}
 						<h1 
-							className="w-fit text-4xl sm:text-3xl lg:text-2xl
+							className="w-fit text-2xl sm:text-3xl lg:text-2xl
 							border-b-2 border-slate-500 font-semibold"
 						>
 							Other Information
 						</h1>
 
 						{/* Body */}
-						<div className="mt-2 ml-4 text-lg ">
+						<div className="mt-2 ml-4  ">
 
 							{/* Auro's Portfolio */}
 							<div>
