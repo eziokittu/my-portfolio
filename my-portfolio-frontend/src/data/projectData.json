@@ -19,12 +19,12 @@
 			],
 			"description_short": "A Full Stack Product Catalogue App for indigenous artisans and artists, to know and connect with them providing them a marketplace",
 			"images": [
-				"images/projectImages/p1_1.png",
-				"images/projectImages/p1_2.png",
-				"images/projectImages/p1_3.png",
-				"images/projectImages/p1_4.png"
+				"images/projectImages/project01_KalaSangam/1.png",
+				"images/projectImages/project01_KalaSangam/2.png",
+				"images/projectImages/project01_KalaSangam/3.png",
+				"images/projectImages/project01_KalaSangam/4.png"
 			],
-			"thumbnail": "images/projectImages/p1_1.png"
+			"thumbnail": "images/projectImages/project01_KalaSangam/1.png"
 		},
 		{
 			"id": 2,
@@ -45,18 +45,41 @@
 			],
 			"description_short": "My personal portfolio website where I can show case my skills, projects and share other relevant information about me. I will keep this website upto date as my career progresses.",
 			"images": [
-				"images/projectImages/p2_1.jpg",
-				"images/projectImages/p2_2.jpg",
-				"images/projectImages/p2_3.jpg",
-				"images/projectImages/p2_4.jpg",
-				"images/projectImages/p2_5.jpg",
-				"images/projectImages/p2_6.jpg",
-				"images/projectImages/p2_7.jpg"
+				"images/projectImages/project02_MyPortfolio/1.jpg",
+				"images/projectImages/project02_MyPortfolio/2.jpg",
+				"images/projectImages/project02_MyPortfolio/3.jpg",
+				"images/projectImages/project02_MyPortfolio/4.jpg",
+				"images/projectImages/project02_MyPortfolio/5.jpg",
+				"images/projectImages/project02_MyPortfolio/6.jpg",
+				"images/projectImages/project02_MyPortfolio/7.jpg"
 			],
-			"thumbnail": "images/projectImages/p2_1.jpg"
+			"thumbnail": "images/projectImages/project02_MyPortfolio/1.jpg"
 		},
 		{
 			"id": 3,
+			"title": "Simple Box Game",
+			"domain":"Game Dev",
+			"link":"https://github.com/eziokittu/Game-Development-Projects",
+			"tags": [
+				"UNITY",
+				"Unity Engine",
+				"C#",
+				"TextMeshPro",
+				"GUI Menu",
+				"Level System",
+				"2D"
+			],
+			"description_short": "The Game of 'Wumpus World' of finding the gold and avoiding the monster Wumpus and pits using the sensors and arrow. This is a text-based game.",
+			"images": [
+				"images/projectImages/project03_SimpleBoxGame/1.jpg",
+				"images/projectImages/project03_SimpleBoxGame/2.jpg",
+				"images/projectImages/project03_SimpleBoxGame/3.jpg",
+				"images/projectImages/project03_SimpleBoxGame/4.jpg"
+			],
+			"thumbnail": "images/projectImages/project03_SimpleBoxGame/1.jpg"
+		},
+		{
+			"id": 4,
 			"title": "MiniGame - Wumpus World",
 			"domain":"Game Dev",
 			"link":"https://github.com/eziokittu/MiniGames2D",
@@ -71,12 +94,54 @@
 			],
 			"description_short": "The Game of 'Wumpus World' of finding the gold and avoiding the monster Wumpus and pits using the sensors and arrow. This is a text-based game.",
 			"images": [
-				"images/projectImages/p3_wumpus1.jpg",
-				"images/projectImages/p3_wumpus2.jpg",
-				"images/projectImages/p3_wumpus3.jpg",
-				"images/projectImages/p3_wumpus4.jpg"
+				"images/projectImages/project04_Wumpus/1.jpg",
+				"images/projectImages/project04_Wumpus/2.jpg",
+				"images/projectImages/project04_Wumpus/3.jpg",
+				"images/projectImages/project04_Wumpus/4.jpg"
 			],
-			"thumbnail": "images/projectImages/p3_wumpus1.jpg"
+			"thumbnail": "images/projectImages/project04_Wumpus/1.jpg"
+		},
+		{
+			"id": 5,
+			"title": "Password Generator & Validator",
+			"domain":"App Dev",
+			"link":"https://github.com/eziokittu/Android-PasswordGenerator",
+			"tags": [
+				"ANDROID",
+				"Java",
+				"Generate password",
+				"Validate Password"
+			],
+			"description_short": "An app that can validate a password if it follows all the rules. Or Generate a randomized password. The passwords can also be saved.",
+			"images": [
+				"images/projectImages/project05_Android_Password/1.jpeg",
+				"images/projectImages/project05_Android_Password/2.jpeg",
+				"images/projectImages/project05_Android_Password/3.jpeg",
+				"images/projectImages/project05_Android_Password/4.jpeg"
+			],
+			"thumbnail": "images/projectImages/project05_Android_Password/1.jpeg"
+		},
+		{
+			"id": 8,
+			"title": "Tkinter - Simple Calculator",
+			"domain":"App Dev",
+			"link":"https://github.com/eziokittu/Python-Small-Projects/tree/main/SimpleCalulator",
+			"tags": [
+				"UNITY",
+				"Unity Engine",
+				"C#",
+				"ANDROID",
+				"Windows",
+				"TextMeshPro",
+				"GUI"
+			],
+			"description_short": "A simple calculator app made with python Tkinter (GUI and CLI)",
+			"images": [
+				"images/projectImages/project08_SimpleCalculator/1.jpg",
+				"images/projectImages/project08_SimpleCalculator/2.jpg",
+				"images/projectImages/project08_SimpleCalculator/3.jpg"
+			],
+			"thumbnail": "images/projectImages/project08_SimpleCalculator/1.jpg"
 		}
 	]
 }

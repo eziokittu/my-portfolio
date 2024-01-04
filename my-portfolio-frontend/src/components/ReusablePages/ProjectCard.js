@@ -66,7 +66,7 @@ const ProjectCard = ({projects}) => {
 
           {/* Project Title and Description and Link Button*/}
           {projectPanelOpen===project.id ? (
-            <div className='flex flex-col sm:flex-row m-2 xsm:m-4'>
+            <div className='flex flex-col sm:flex-row m-2 xsm:m-4 transition-all duration-300'>
               <Slide direction='left' delay={1000}><Fade delay={1000}>
               <button 
                 onClick={()=>{window.open(`${project.link}`, '_blank')}}
@@ -102,7 +102,7 @@ const ProjectCard = ({projects}) => {
           ) : (
             <button 
               onClick={()=> (OpenProjectPanel(project))}
-              className='ml-auto w-2/3 h-[120px] p-2 overflow-hidden'
+              className='ml-auto w-2/3 h-[120px] p-2 overflow-hidden transition-all duration-300'
             >
               <div className='text-xl xsm:text-2xl font-bold text-sky-200 group-hover/g3:text-sky-900 transition-colors duration-300'>
                 {project.title}
@@ -115,7 +115,7 @@ const ProjectCard = ({projects}) => {
 
           {/* image*/}
           {projectPanelOpen === project.id ? (
-            <div className='relative overflow-hidden w-full sm:h-[300px] rounded-xl'>
+            <div className='relative overflow-hidden w-full sm:h-[300px] rounded-xl transition-all duration-300'>
               {/* Project Image Viewer */}
               <div 
                 className=" mx-2 xsm:mx-4 relative flex items-center justify-center border-4 transition-colors duration-300
@@ -133,7 +133,7 @@ const ProjectCard = ({projects}) => {
                 {/* Center Image */}
                 <img src={projectImages[imageIndex]}
                   alt={`Center`}
-                  className=" h-full max-w-full rounded-xl"
+                  className=" h-full max-h-[300px] max-w-full rounded-xl"
                 />
                 {/* Right Image */}
                 <div className="rounded-xl absolute right-0 top-0 bottom-0 w-[15%] max-w-[65px] overflow-hidden">
@@ -183,7 +183,7 @@ const ProjectCard = ({projects}) => {
             </div>
           ) : (
             <div 
-              className='absolute left-0 top-0 bottom-0 overflow-hidden
+              className='absolute left-0 top-0 bottom-0 overflow-hidden transition-all duration-300
               m-1 xsm:m-2 w-1/3 border-4 rounded-2xl border-sky-400 group-hover/g3:border-sky-800 bg-sky-200'>
               <img 
                 src={project.thumbnail}
@@ -215,7 +215,7 @@ const ProjectCard = ({projects}) => {
           onClick={() => {
             projectPanelOpen===project.id ? SetDefaultProjectPanel() : OpenProjectPanel(project)
           }}
-          className='absolute top-4 right-0 animate-pulse group-hover/g3:animate-none'
+          className='absolute top-4 right-0 animate-pulse group-hover/g3:animate-none transition-all duration-300'
         >
           {projectPanelOpen!==project.id ? (
           <div className=''>

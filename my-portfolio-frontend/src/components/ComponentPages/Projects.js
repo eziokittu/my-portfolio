@@ -7,6 +7,7 @@ import ProjectCard from "../ReusablePages/ProjectCard";
 
 // importing data
 import projectData from '../../data/projectData.json';
+import otherData from '../../data/otherData.json';
 
 const Projects = (props) => {
 
@@ -61,7 +62,7 @@ const Projects = (props) => {
 
           {/* The title */}
           <span className='flex flex-wrap items-center justify-center font-Kolnia text-xl 2xsm:text-2xl xsm:text-3xl sm:text-5xl xl:text-7xl'>
-            <p className='text-blue-900 pr-1 sm:pr-3'>My Projects</p>
+            <p className='text-blue-900 pr-1 sm:pr-3'>{`My ${otherData.navbarOptions[3]}`}</p>
           </span>
 
         </div>
@@ -81,7 +82,7 @@ const Projects = (props) => {
         <div 
           className="p-2 xsm:p-4 my-2 xsm:mx-auto bg-sky-200/80 text-xl animate-pulse rounded-2xl
           w-full xsm:w-11/12 lg:w-3/4 xl:w-3/5 2xl:w-1/2 ">
-          The Project Section is still incomplete - my previous projects remain to be added. Will be updated soon...
+          The Project/Work Section is still incomplete (almost done). Will be updated soon...
         </div>
 
       </div>

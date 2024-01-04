@@ -351,7 +351,7 @@ const Footer = () => {
 				
 
 				{/* Bottom Area */}
-				<div className="mb-8 xsm:flex text-center items-center text-sm xsm:text-lg sm:text-xl">
+				<div className="mb-4 xsm:flex text-center items-center text-sm xsm:text-lg sm:text-xl">
 				<p>Designed With</p>
 				<p className="mx-[4px] xsm:mx-2 xsm:animate-heartbeat">❤️</p> 
 				<p className="mr-[4px] xsm:mr-2">By</p>
