@@ -54,6 +54,29 @@
 				"images/projectImages/p2_7.jpg"
 			],
 			"thumbnail": "images/projectImages/p2_1.jpg"
+		},
+		{
+			"id": 3,
+			"title": "MiniGame - Wumpus World",
+			"domain":"Game Dev",
+			"link":"https://github.com/eziokittu/MiniGames2D",
+			"tags": [
+				"UNITY",
+				"C#",
+				"TextMeshPro",
+				"Game Dev",
+				"Text-Based",
+				"Simple Game",
+				"2D"
+			],
+			"description_short": "The Game of 'Wumpus World' of finding the gold and avoiding the monster Wumpus and pits using the sensors and arrow. This is a text-based game.",
+			"images": [
+				"images/projectImages/p3_wumpus1.jpg",
+				"images/projectImages/p3_wumpus2.jpg",
+				"images/projectImages/p3_wumpus3.jpg",
+				"images/projectImages/p3_wumpus4.jpg"
+			],
+			"thumbnail": "images/projectImages/p3_wumpus1.jpg"
 		}
 	]
 }
