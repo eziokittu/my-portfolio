@@ -69,7 +69,7 @@
 				"Level System",
 				"2D"
 			],
-			"description_short": "The Game of 'Wumpus World' of finding the gold and avoiding the monster Wumpus and pits using the sensors and arrow. This is a text-based game.",
+			"description_short": "This is a 2D puzzle game where the player has to react the goal avoiding obstacles. There are many levels. Music, sounds, animations, GUI are all implemented.",
 			"images": [
 				"images/projectImages/project03_SimpleBoxGame/1.jpg",
 				"images/projectImages/project03_SimpleBoxGame/2.jpg",
@@ -109,6 +109,7 @@
 			"tags": [
 				"ANDROID",
 				"Java",
+				"Kotlin",
 				"Generate password",
 				"Validate Password"
 			],
