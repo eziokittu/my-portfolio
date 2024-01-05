@@ -127,12 +127,11 @@
 			"domain":"App Dev",
 			"link":"https://github.com/eziokittu/Python-Small-Projects/tree/main/SimpleCalulator",
 			"tags": [
-				"UNITY",
-				"Unity Engine",
-				"C#",
-				"ANDROID",
+				"Python",
+				"Tkinter",
+				"Calculator",
 				"Windows",
-				"TextMeshPro",
+				"File Management",
 				"GUI"
 			],
 			"description_short": "A simple calculator app made with python Tkinter (GUI and CLI)",
