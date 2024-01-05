@@ -69,7 +69,7 @@
 				"Level System",
 				"2D"
 			],
-			"description_short": "This is a 2D puzzle game where the player has to react the goal avoiding obstacles. There are many levels. Music, sounds, animations, GUI are all implemented.",
+			"description_short": "This is a 2D puzzle game where the player has to reach the goal avoiding obstacles. There are many levels. Music, sounds, animations, GUI are all implemented.",
 			"images": [
 				"images/projectImages/project03_SimpleBoxGame/1.jpg",
 				"images/projectImages/project03_SimpleBoxGame/2.jpg",

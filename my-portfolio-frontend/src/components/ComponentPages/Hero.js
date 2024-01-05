@@ -28,27 +28,27 @@ function Hero() {
       <div className='mx-auto lg:mx-0 w-11/12 sm:w-5/6 lg:w-fit mb-12 lg:mb-0'>
 
         <Slide direction='down'><Fade>
-        <div className="flex font-Merriweather text-2xl sm:text-4xl text-indigo-500 ">
+        <div className="flex font-Merriweather text-2xl sm:text-4xl text-fuchsia-500 ">
           Hey There<span class="text-4xl xsm:text-5xl animate-[wave_1.3s_ease-in-out_infinite]">👋🏻</span>
         </div>
         </Fade></Slide>
 
         <Slide direction='down'><Fade>
-        <h1 className='font-Merriweather text-blue-300 text-2xl sm:text-4xl'>
+        <h1 className='font-Merriweather text-fuchsia-300 text-2xl sm:text-4xl'>
           <p>I'm </p>
         </h1>
         </Fade></Slide>
 
         <Slide direction='down'><Fade>
         <div className="text-5xl sm:text-7xl md:text-7xl lg:text-8xl 
-          font-semibold text-blue-600 mt-2">
+          font-semibold text-fuchsia-500 mt-2">
           <BubbleText text={profileData.name.firstName}/>
         </div>
         </Fade></Slide>
         
         <Slide direction='down'><Fade>
         <h3 className="text-4xl sm:text-5xl md:text-6xl mt-2 
-        font-semibold text-blue-500 font-Merriweather"
+        font-semibold text-fuchsia-300 font-Merriweather"
         >{profileData.name.lastName}</h3>
         </Fade></Slide>
 
@@ -57,22 +57,8 @@ function Hero() {
           onVisibilityChange={handleComponentInViewPort} 
           delay={500} duration={1500} direction='down'
           className="font-mono p-2 sm:p-4 mt-4 rounded-2xl drop-shadow-xl
-          text-xs sm:text-xl text-white bg-zinc-700 max-w-[460px] lg:min-w-[500px] xl:min-w-[560px]"
+          text-xs sm:text-xl text-fuchsia-100 bg-fuchsia-950 max-w-[460px] lg:min-w-[500px] xl:min-w-[560px]"
         >
-          {/* {typingComponentInViewPort===true ? (
-            <div>
-              <DelayedComponent isDelayStart={false} isDelayEnd={true} delayToShow={0} delayToHide={2000}>
-              <div>{heroTextAnimateData.defaultText}</div>
-              </DelayedComponent>
-              <DelayedComponent isDelayStart={true} isDelayEnd={false} delayToShow={2000} delayToHide={0}>
-                <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={50}/>
-              </DelayedComponent>
-            </div>
-          ) : (
-            <DelayedComponent delayToShow={0} delayToHide={0}>
-              <div>{heroTextAnimateData.defaultText}</div>
-            </DelayedComponent>
-          )} */}
           <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={50}/>
         </Fade>
 
@@ -84,15 +70,15 @@ function Hero() {
           to='about'
         >
           <button 
-            className="w-[160px] flex justify-center mt-4 group
-            bg-indigo-500 text-white font-normal  rounded 
-            transition hover:bg-indigo-600 active:scale-95 py-2 px-4
+            className="w-[160px] flex justify-center mt-4 group rounded-lg
+            bg-fuchsia-700 text-fuchsia-100 hover:text-fuchsia-50   
+            transition-colors hover:bg-fuchsia-800 active:scale-95 py-2 px-4
             duration-500"
           >
             <p
-              className='group-hover:font-bold'
+              className='font-normal group-hover:font-bold transition-all duration-300'
             >About Me</p>
-            <svg className='w-6 h-6 ml-2 fill-slate-400 group-hover:fill-white group-hover:translate-x-2'
+            <svg className='w-6 h-6 ml-2 fill-slate-400 group-hover:fill-white group-hover:translate-x-2 transition-transform duration-300'
               xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
               <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"/>
             </svg>

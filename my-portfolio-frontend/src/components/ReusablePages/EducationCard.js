@@ -50,7 +50,7 @@ const EducationCard = ({props}) => {
 
         {/* Name and Board */}
         <div 
-          className={`text-sm  xl:text-xl
+          className={`text-sm text-left xl:text-xl
           ${cardHovered ? 'text-gray-900' : 'text-gray-600'}
         `}>
 
@@ -87,7 +87,9 @@ const EducationCard = ({props}) => {
           <span>-</span>
           <span>{props.yearEnd}</span>
           <span className='mx-auto'>~</span>
-          <span className=''>{props.status}</span>
+          <span className={`${props.status==="Pursuing"?"animate-[pulse_.9s_ease-in-out_infinite]":""}`}>
+            {props.status}
+          </span>
         </div>
 
       </div>

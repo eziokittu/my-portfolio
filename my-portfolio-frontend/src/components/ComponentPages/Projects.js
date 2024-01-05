@@ -80,7 +80,7 @@ const Projects = (props) => {
 
         {/* Temporary Text - TO BE REMOVED */}
         <div 
-          className="p-2 xsm:p-4 my-2 xsm:mx-auto bg-sky-200/80 text-xl animate-pulse rounded-2xl
+          className="p-2 xsm:p-4 my-2 xsm:mx-auto bg-sky-300/60 text-xl animate-pulse rounded-2xl
           w-full xsm:w-11/12 lg:w-3/4 xl:w-3/5 2xl:w-1/2 ">
           The Project/Work Section is still incomplete (almost done). Will be updated soon...
         </div>

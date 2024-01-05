@@ -133,7 +133,7 @@ const ProjectCard = ({projects}) => {
                 {/* Center Image */}
                 <img src={projectImages[imageIndex]}
                   alt={`Center`}
-                  className=" h-full max-h-[300px] max-w-full rounded-xl"
+                  className=" h-full max-h-[150px] sm:max-h-[300px] max-w-full rounded-xl"
                 />
                 {/* Right Image */}
                 <div className="rounded-xl absolute right-0 top-0 bottom-0 w-[15%] max-w-[65px] overflow-hidden">
@@ -182,7 +182,8 @@ const ProjectCard = ({projects}) => {
               </div>
             </div>
           ) : (
-            <div 
+            <button 
+              onClick={() => (OpenProjectPanel(project))}
               className='absolute left-0 top-0 bottom-0 overflow-hidden transition-all duration-300
               m-1 xsm:m-2 w-1/3 border-4 rounded-2xl border-sky-400 group-hover/g3:border-sky-800 bg-sky-200'>
               <img 
@@ -190,7 +191,7 @@ const ProjectCard = ({projects}) => {
                 alt={project.title}
                 className='mx-auto h-full rounded-lg'
               />
-            </div>
+            </button>
           )}
 
           {/* Project Tags */}

@@ -10,7 +10,7 @@ const ShuffleHero = () => {
     <div className="mx-auto  w-full sm:w-5/6 ">
       <div 
         className=" bg-white/5 rounded-2xl
-        text-pink-500 font-bold mb-4 text-center text-4xl "
+        text-fuchsia-500 font-bold mb-4 text-center text-4xl "
       >GALLERY</div>
       <div className="h-[200px] 2xsm:h-[330px] xsm:h-[450px] sm:h-[500px] md:h-[600px] lg:h-[400px] xl:h-[600px] overflow-hidden">
         <ShuffleGrid />
