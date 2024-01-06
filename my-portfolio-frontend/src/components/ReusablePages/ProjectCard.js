@@ -67,12 +67,14 @@ const ProjectCard = ({projects}) => {
           {/* Project Title and Description and Link Button*/}
           {projectPanelOpen===project.id ? (
             <div className='flex flex-col sm:flex-row m-2 xsm:m-4 transition-all duration-300'>
+
+              {/* Link Button */}
               <Slide direction='left' delay={1000}><Fade delay={1000}>
               <button 
                 onClick={()=>{window.open(`${project.link}`, '_blank')}}
-                className='flex gap-2 items-center bg-sky-800 group-hover/g3:border-sky-950
-                rounded-2xl border-4 border-sky-200 text-sky-100 hover:bg-sky-200 hover:shadow-[0_0_15px_black]
-                transition-all duration-300 w-[122px] h-12 group/g4 hover:text-sky-900 shadow-[0_0_5px_black]'
+                className='flex gap-2 items-center bg-sky-200 group-hover/g3:border-sky-950
+                rounded-2xl border-4 border-sky-900 text-sky-950 group-hover/g3:bg-sky-800 hover:shadow-[0_0_15px_black]
+                transition-all duration-300 w-[122px] h-12 group/g4 group-hover/g3:text-sky-100 shadow-[0_0_5px_black]'
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
                   className="w-6 h-6 animate-pulse group-hover/g4:animate-none">
@@ -86,6 +88,8 @@ const ProjectCard = ({projects}) => {
                   </svg>
                 </div>
               </button>
+
+              {/* Title and Description */}
               </Fade></Slide>
               <button 
                 onClick={()=> (SetDefaultProjectPanel())}
