@@ -110,6 +110,7 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
               <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[3])}} buttonName={otherData.navbarOptions[2]} />
               <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[4])}} buttonName={otherData.navbarOptions[3]} />
               <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[5])}} buttonName={otherData.navbarOptions[4]} />
+              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[6])}} buttonName={otherData.navbarOptions[5]} />
             </>
           ) : (
             <>
@@ -118,6 +119,7 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
               <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[3])}} buttonName={otherData.navbarOptions[2]} />
               <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[4])}} buttonName={otherData.navbarOptions[3]} />
               <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[5])}} buttonName={otherData.navbarOptions[4]} />
+              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[6])}} buttonName={otherData.navbarOptions[5]} />
             </>
           )}
           

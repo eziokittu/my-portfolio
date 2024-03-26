@@ -2,6 +2,42 @@
 	"Projects": [
 		{
 			"id": 1,
+			"title": "OpiniAnalyzer",
+			"domain":"Web Dev with ML-NLP (Full Stack)",
+			"link":"https://github.com/eziokittu/OpiniAnalyzer",
+			"tags": [
+				"ReactJS",
+				"Python",
+				"Flask",
+				"Sentiment Analysis",
+				"twitter BERT model",
+				"ML",
+				"NLP",
+				"nltk library",
+				"Web Hosting",
+				"VERCEL-hosting",
+				"RENDER-hosting",
+				"client",
+				"server",
+				"JavaScript",
+				"HTML",
+				"CSS",
+				"NodeJS",
+				"Tailwind CSS",
+				"Full Stack"
+			],
+			"description_short": "A Full Stack Web application hosted on vercel where Sentiment Analysis is done for reviews written in English. NLP models like twitter's BERT is used. Also nltk is used as the My Model.",
+			"images": [
+				"images/projectImages/project07_OpiniAnalyzer/1.jpg",
+				"images/projectImages/project07_OpiniAnalyzer/2.jpg",
+				"images/projectImages/project07_OpiniAnalyzer/3.jpg",
+				"images/projectImages/project07_OpiniAnalyzer/4.jpg"
+			],
+			"thumbnail": "images/projectImages/project07_OpiniAnalyzer/1.jpg"
+		},
+
+		{
+			"id": 2,
 			"title": "KalaSangam",
 			"domain":"Web Dev",
 			"link":"https://github.com/eziokittu/Kalasangam-app",
@@ -27,8 +63,9 @@
 			],
 			"thumbnail": "images/projectImages/project01_KalaSangam/1.png"
 		},
+
 		{
-			"id": 2,
+			"id": 3,
 			"title": "My Portfolio",
 			"domain":"Web Dev",
 			"link":"https://github.com/eziokittu/my-portfolio",
@@ -57,8 +94,9 @@
 			],
 			"thumbnail": "images/projectImages/project02_MyPortfolio/1.jpg"
 		},
+
 		{
-			"id": 3,
+			"id": 4,
 			"title": "Simple Box Game",
 			"domain":"Game Dev",
 			"link":"https://github.com/eziokittu/Game-Development-Projects",
@@ -80,8 +118,9 @@
 			],
 			"thumbnail": "images/projectImages/project03_SimpleBoxGame/1.jpg"
 		},
+
 		{
-			"id": 4,
+			"id": 5,
 			"title": "MiniGame - Wumpus World",
 			"domain":"Game Dev",
 			"link":"https://github.com/eziokittu/MiniGames2D",
@@ -103,8 +142,9 @@
 			],
 			"thumbnail": "images/projectImages/project04_Wumpus/1.jpg"
 		},
+
 		{
-			"id": 5,
+			"id": 6,
 			"title": "Password Generator & Validator",
 			"domain":"App Dev",
 			"link":"https://github.com/eziokittu/Android-PasswordGenerator",
@@ -124,6 +164,7 @@
 			],
 			"thumbnail": "images/projectImages/project05_Android_Password/1.jpeg"
 		},
+
 		{
 			"id": 8,
 			"title": "Tkinter - Simple Calculator",

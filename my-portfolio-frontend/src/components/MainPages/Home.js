@@ -8,6 +8,7 @@ import Hero from "../ComponentPages/Hero";
 import About from "../ComponentPages/About";
 import SkillDisplay from "../ComponentPages/SkillDisplay";
 import Projects from "../ComponentPages/Projects";
+import Experiences from "../ComponentPages/Experiences";
 import Education from "../ComponentPages/Education";
 
 import otherData from "../../data/otherData.json";
@@ -41,15 +42,22 @@ const Home = () => {
 			    <div className="h-44 w-full bg-gradient-to-b from-pink-300/20 to-sky-600/20"></div>
         </Element>
 
-        {/* Projects Section - NEEDS WORK ---- min-h-[700px]*/} 
+        {/* Projects Section */} 
         <Element name={otherData.navbarOptionLinks[4]}>
           <Projects />
           {/* Transperant gradient - change the height and colours acordingly*/}
-			    <div className="h-44 w-full bg-gradient-to-b from-sky-600/20 to-yellow-300/20"></div>
+			    <div className="h-44 w-full bg-gradient-to-b from-sky-600/20 to-white/30"></div>
+        </Element>
+        
+        {/* Experiences Section */} 
+        <Element name={otherData.navbarOptionLinks[5]}>
+          <Experiences />
+          {/* Transperant gradient - change the height and colours acordingly*/}
+			    <div className="h-44 w-full bg-gradient-to-b from-white/30 to-yellow-300/20"></div>
         </Element>
 
         {/* Education Section */}
-        <Element name={otherData.navbarOptionLinks[5]}>
+        <Element name={otherData.navbarOptionLinks[6]}>
           <Education />
           {/* Transperant gradient - change the height and colours acordingly*/}
 			    <div className="h-44 w-full bg-gradient-to-b from-yellow-300/20 to-transparent"></div>

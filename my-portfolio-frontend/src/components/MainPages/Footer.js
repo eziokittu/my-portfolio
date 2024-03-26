@@ -92,6 +92,7 @@ const Footer = () => {
 								<FooterLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[3])}} buttonName={otherData.navbarOptions[2]} />
 								<FooterLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[4])}} buttonName={otherData.navbarOptions[3]} />
 								<FooterLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[5])}} buttonName={otherData.navbarOptions[4]} />
+								<FooterLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[6])}} buttonName={otherData.navbarOptions[5]} />
 							</div>
 						) : (
 							<div className="mt-2 ml-4 text-lg flex flex-col">
@@ -352,16 +353,20 @@ const Footer = () => {
 
 				{/* Bottom Area */}
 				<div className="mb-4 xsm:flex text-center items-center text-sm xsm:text-lg sm:text-xl">
-				<p>Designed With</p>
-				<p className="mx-[4px] xsm:mx-2 xsm:animate-heartbeat">❤️</p> 
-				<p className="mr-[4px] xsm:mr-2">By</p>
-				<button
-					onClick={()=>{window.open(`${contactData.links.link_linkedin}`, '_blank')}}
-					className=' text-sky-600 hover:text-sky-500 transition duration-300'>
-					<p className='text-xl sm:text-3xl'>Bodhisatta Bhattacharjee</p>
-					{/* <svg className='w-6 h-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" id="linkedin"><g fill="none" fill-rule="evenodd"><g><rect width="72" height="72" fill="#117EB8" rx="4"></rect><path fill="#FFF" d="M13.139 27.848h9.623V58.81h-9.623V27.848zm4.813-15.391c3.077 0 5.577 2.5 5.577 5.577 0 3.08-2.5 5.581-5.577 5.581a5.58 5.58 0 1 1 0-11.158zm10.846 15.39h9.23v4.231h.128c1.285-2.434 4.424-5 9.105-5 9.744 0 11.544 6.413 11.544 14.75V58.81h-9.617V43.753c0-3.59-.066-8.209-5-8.209-5.007 0-5.776 3.911-5.776 7.95V58.81h-9.615V27.848z"></path></g></g></svg> */}
-				</button>
+					<p>Designed With</p>
+					<p className="mx-[4px] xsm:mx-2 xsm:animate-heartbeat">❤️</p> 
+					<p className="mr-[4px] xsm:mr-2">By</p>
+					<button
+						onClick={()=>{window.open(`${contactData.links.link_linkedin}`, '_blank')}}
+						className=' text-sky-600 hover:text-sky-500 transition duration-300'>
+						<p className='text-xl sm:text-3xl'>Bodhisatta Bhattacharjee</p>
+						{/* <svg className='w-6 h-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" id="linkedin"><g fill="none" fill-rule="evenodd"><g><rect width="72" height="72" fill="#117EB8" rx="4"></rect><path fill="#FFF" d="M13.139 27.848h9.623V58.81h-9.623V27.848zm4.813-15.391c3.077 0 5.577 2.5 5.577 5.577 0 3.08-2.5 5.581-5.577 5.581a5.58 5.58 0 1 1 0-11.158zm10.846 15.39h9.23v4.231h.128c1.285-2.434 4.424-5 9.105-5 9.744 0 11.544 6.413 11.544 14.75V58.81h-9.617V43.753c0-3.59-.066-8.209-5-8.209-5.007 0-5.776 3.911-5.776 7.95V58.81h-9.615V27.848z"></path></g></g></svg> */}
+					</button>
 				</div>
+				<div 
+					className="text-transparent bg-black cursor-default text-[8px]">
+						I like Avani Singh. She makes me feel comfortable. I feel good, peaceful, positive and motivated talking to her or being around her even if we don't talk. Even if she rejects me...I will never misbehave or be rude to her (or anyone actually). Hope she likes me back some day. People understand me wrong mostly in text chat mainly due to my own reason... I didn't understand that my emotions are not getting along with the text chats and people get me wrong. She did the same. Not only her, there are other girls like Ananya Rout (where i did the same mistake... and also misbehaved to some extent to get her attention which was wrong). I am deeply sorry to everyone. For some time now I am avoiding to have long text chats and only keep it serious. So that I dont send nonsense (sometimes desparate) text messages. Same thing I did with Archisha Verma. She was so calm and her voice was sooo good. Avani is I guess the 3rd girl who got this disgust of me from my nonsense messages. Though she understood it later on, but the harm was done. She clearly told me things indicating that she does not like me -- that she hates bengali, she strictly told me she will never be my friend. But I feel a lot hurt and cant forget her. I tried to after she kept pushing me away. But just cannot forget her. Now seeing other girls I dont get the intention to talk to them anymore even if they are good looking. I don't know how it changed so much. Hope things get better with Avani. I do like her and I can't forget her. I am ready to adjust and even leave the only thing that I like to the most - playing video games.
+					</div>
 			</div>
 
 		</footer>
