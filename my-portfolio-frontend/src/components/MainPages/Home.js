@@ -16,7 +16,7 @@ import otherData from "../../data/otherData.json";
 const Home = () => {
 
   return (
-    <div className="relative z-0 top-20">
+    <div className="relative z-0 top-20 w-full">
 
       {/* content of page */}
       <div id={otherData.navbarOptionLinks[0]}>

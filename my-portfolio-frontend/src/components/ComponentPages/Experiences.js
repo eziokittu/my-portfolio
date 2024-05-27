@@ -15,7 +15,7 @@ const Experiences = () => {
     <div className="relative z-0">
 
       {/* content of projects */}
-      <div className='p-2 xsm:p-4 bg-white/30 group/g1'>
+      <div className='px-2 xsm:p-4 bg-white/30 group/g1'>
 
         {/* Title of the section */}
         <Zoom><Fade>
@@ -53,7 +53,7 @@ const Experiences = () => {
         {/* Experience Content */}
         <div className="relative flex flex-col bg-gray-500/5 hover:bg-gray-600/20 rounded-2xl
 				shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500
-        w-full md:w-[790px] lg:w-[1004px] mx-auto min-h-[300px]"
+        w-full md:w-[750px] lg:w-[950px] mx-auto min-h-[300px]"
         >
 
         </div>
@@ -61,7 +61,7 @@ const Experiences = () => {
         {/* Temporary Text - TO BE REMOVED */}
         <div 
           className="p-2 xsm:p-4 my-2 xsm:mx-auto bg-white/60 text-xl animate-pulse rounded-2xl
-          w-full md:w-[790px] lg:w-[1004px] mx-auto text-center">
+          w-full md:w-[750px] lg:w-[950px] mx-auto text-center">
           This Section is being worked upon (currently doing an internship). Will be updated soon.
         </div>
 

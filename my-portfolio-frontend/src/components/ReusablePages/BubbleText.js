@@ -60,7 +60,7 @@ const Text = ({ children }) => {
     <span>
       {children.split("").map((child, idx) => (
         <span
-          className="transition duration-350 ease-in-out font-thin text-fuchsia-500"
+          className="transition-all duration-100 ease-in-out font-thin text-fuchsia-500"
           key={idx}
         >
           {child}

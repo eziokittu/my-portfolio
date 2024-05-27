@@ -59,10 +59,10 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
 
   return (
     <div
-      className='fixed w-screen top-0 z-20'
+      className='fixed w-full top-0 z-20'
     >
       <div className='w-full z-50 bg-gradient-to-r from-yellow-600 via-yellow-900 to-yellow-600 h-20 border-b-2 border-yellow-300 flex justify-between'>
-        <div className=' px-[10px] w-full md:w-[790px] lg:w-[1004px] cursor-default flex items-center justify-between mx-auto'>
+        <div className='  w-full md:w-[790px] lg:w-[1004px] cursor-default flex items-center justify-between mx-auto'>
 
 
           {/* logo */}
@@ -154,7 +154,7 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
           <div className="ml-auto xsm:mr-2">
             {(contactMeOverlayOn === true) &&
               <div className=' group/contact'>
-                <NavbarLinkButton myOnClick={() => { openOverlay() }} buttonName={'Contact Me'} extraClasses={'text-2xl'} />
+                <NavbarLinkButton myOnClick={() => { openOverlay() }} buttonName={'Contact Me'} extraClasses={'text-xl sm:text-2xl'} />
               </div>
             }
             {/* Contact Me Overlay */}

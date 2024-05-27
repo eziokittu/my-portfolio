@@ -13,7 +13,7 @@ const SkillDisplay = () => {
 
 	return (
 		<div 
-			className='bg-pink-300/20 p-2 group/g1'
+			className='bg-pink-300/20 group/g1 '
 		>
 
 			{/* Title of the section */}
@@ -64,8 +64,8 @@ const SkillDisplay = () => {
 				<Fade>
 					<div 
 						className='
-						grid grid-cols-2 2xsm:grid-cols-3 xsm:grid-cols-3
-						sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-9 2xl:grid-cols-10
+						grid grid-cols-3 2xsm:grid-cols-4
+						sm:grid-cols-6 md:grid-cols-7 
 						gap-x-2  p-2 pr-4'>
 						{skills.map((skill, num) => (
 							<SkillCard key={num} skillImageSrc={skill[1]} skillName={skill[0]}/>

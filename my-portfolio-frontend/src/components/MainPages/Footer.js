@@ -42,8 +42,8 @@ const Footer = () => {
 			<Divider isBgTransparent={false} isNavbarAbove={false} hasCentreGap={true}/>
 
 			{/* Footer Area */}
-			<div className="
-				w-full h-fit overflow-hidden
+			<div className=" w-full md:w-[790px] lg:w-[1004px]
+				h-fit overflow-hidden mx-auto
 				bg-gradient-to-b from-black/95 via-black/75 to-black text-slate-100 
 				flex flex-col items-center"
 			>

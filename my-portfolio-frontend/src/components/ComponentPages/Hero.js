@@ -21,49 +21,49 @@ function Hero() {
 
   return (
     <div 
-      className=" w-full md:w-[790px] lg:w-[1004px] pt-12 px-2 xsm:px-8 lg:px-0 lg:flex items-center justify-around mx-auto mb-8"
+      className="w-full md:w-[750px] lg:w-[950px] flex lg:grid flex-col lg:grid-cols-2 items-center justify-center mx-auto mt-20 "
     >
       
       {/* The welcome text */}
-      <div className='mx-auto lg:mx-0 w-full md:w-[790px] lg:w-[1004px] mb-12 lg:mb-0'>
+      <div className='mx-auto lg:pr-8 lg:mx-0 w-full mb-12 lg:mb-0 justify-center flex flex-col'>
 
-        <Slide direction='down'><Fade>
+        <Slide direction='down' className='mx-auto'><Fade>
         <div className="flex font-Merriweather text-2xl sm:text-4xl text-fuchsia-500 ">
           Hey There<span className="text-4xl xsm:text-5xl animate-[wave_1.3s_ease-in-out_infinite]">👋🏻</span>
         </div>
         </Fade></Slide>
 
-        <Slide direction='down'><Fade>
+        <Slide direction='down' className='mx-auto'><Fade>
         <h1 className='font-Merriweather text-fuchsia-300 text-2xl sm:text-4xl'>
           <p>I'm </p>
         </h1>
         </Fade></Slide>
 
-        <Slide direction='down'><Fade>
+        <Slide direction='down' className='mx-auto'><Fade>
         <div className="text-5xl sm:text-7xl md:text-7xl lg:text-8xl 
           font-semibold text-fuchsia-500 mt-2">
           <BubbleText text={profileData.name.firstName}/>
         </div>
         </Fade></Slide>
         
-        <Slide direction='down'><Fade>
+        <Slide direction='down' className='mx-auto'><Fade>
         <h3 className="text-4xl sm:text-5xl md:text-6xl mt-2 
         font-semibold text-fuchsia-300 font-Merriweather"
         >{profileData.name.lastName}</h3>
         </Fade></Slide>
 
         {/* Typing Text Animation  */}
-        <Fade 
+        <Fade
           onVisibilityChange={handleComponentInViewPort} 
           delay={500} duration={1500} direction='down'
-          className="font-mono p-2 sm:p-4 mt-4 rounded-2xl drop-shadow-xl
-          text-xs sm:text-xl text-fuchsia-100 bg-fuchsia-950 max-w-[460px] lg:min-w-[500px] xl:min-w-[560px]"
+          className="mx-auto font-mono p-2 sm:p-4 mt-4 rounded-2xl drop-shadow-xl
+          text-xs sm:text-xl text-fuchsia-100 bg-fuchsia-950 w-fit"
         >
           <TypingComponent texts={heroTextAnimateData.data} speedTyping={60} speedDelete={50}/>
         </Fade>
 
         {/* About Me Button */}
-        <Slide direction='down'><Fade>
+        <Slide direction='down' className='mx-auto'><Fade>
         <Link 
           spy={true} offset={-180} duration={1500} smooth={'easeOutBack'}
           className=''

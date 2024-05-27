@@ -15,7 +15,7 @@ const Projects = (props) => {
     <div className="relative z-0">
 
       {/* content of projects */}
-      <div className='p-2 xsm:p-4 bg-sky-600/20 group/g1'>
+      <div className='px-2 xsm:p-4 bg-sky-600/20 group/g1'>
 
         {/* Title of the section */}
         <Zoom><Fade>
@@ -72,7 +72,7 @@ const Projects = (props) => {
         {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"> */}
         <div className="relative flex flex-col bg-sky-500/5 hover:bg-sky-600/20 rounded-2xl
 				shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500
-        w-full md:w-[790px] lg:w-[1004px] mx-auto">
+        w-full md:w-[750px] lg:w-[950px] mx-auto">
           <div className="w-full text-lg p-2 xsm:px-4">
             <ProjectCard projects={projectData.Projects} />
           </div>
@@ -81,7 +81,7 @@ const Projects = (props) => {
         {/* Temporary Text - TO BE REMOVED */}
         <div 
           className="p-2 xsm:p-4 my-2 xsm:mx-auto bg-sky-300/60 text-xl animate-pulse rounded-2xl
-          w-full md:w-[790px] lg:w-[1004px] mx-auto  text-center">
+          w-full md:w-[750px] lg:w-[950px] mx-auto  text-center">
           The Project/Work Section will be updated as life progresses ... 😇
         </div>
 

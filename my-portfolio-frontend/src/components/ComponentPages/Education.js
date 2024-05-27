@@ -15,7 +15,7 @@ const Education = () => {
 
       {/* All the contents of section */}
       <div 
-        className='mx-2 xsm:mx-auto p-2 xsm:p-4
+        className='xsm:mx-auto p-2 xsm:p-4
         w-full md:w-[790px] lg:w-[1004px]
         bg-yellow-500/10 hover:bg-yellow-500/20 rounded-lg group/edu1
         shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500'
