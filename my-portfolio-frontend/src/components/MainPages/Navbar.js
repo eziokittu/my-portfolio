@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import NavbarLinkButton from '../ReusablePages/NavbarLinkButton';
 import ContactMe from '../ComponentPages/ContactMe';
-import Divider from '../ReusablePages/Divider';
 import Sidebar from './Sidebar';
 
 import profileData from '../../data/profileData.json';
