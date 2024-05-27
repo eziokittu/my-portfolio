@@ -1,3 +1,15 @@
 {
-  
+  "data": [
+    {
+      "type": "Internship",
+      "name": "RnPSoft",
+      "image":"./images/educationImages/img_rnpsoft.png",
+      "domain": "Web Development",
+      "link": "https://www.linkedin.com/company/rnpsoft/",
+      "certificate": "https://drive.google.com/file/d/1k7eoZ1Cbq_7HiyvGDU1nr8VqJPWUf_kE/view?usp=sharing",
+      "description": "Worked as a Full Stack Web Developer in a MERN Project. Used React Vite and TailwindCSS as Frontend, NodeJs with ExpressJs as Backend, MongoDB as our NoSQL Database, Used Google's Firebase for OTP Verification, FormSpree API for Contact Page.",
+      "start": "01/2024",
+      "end": "04/2024"
+    }
+  ]
 }

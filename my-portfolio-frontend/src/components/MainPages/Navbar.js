@@ -61,11 +61,10 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
       className='fixed w-full top-0 z-20'
     >
       <div className='w-full z-50 bg-gradient-to-r from-yellow-600 via-yellow-900 to-yellow-600 h-20 border-b-2 border-yellow-300 flex justify-between'>
-        <div className='  w-full md:w-[790px] lg:w-[1004px] cursor-default flex items-center justify-between mx-auto'>
-
+        <div className='  w-full md:w-[790px] lg:w-[1004px] cursor-default grid grid-cols-4 xsm:grid-cols-3 md:flex items-center justify-between mx-auto'>
 
           {/* logo */}
-          <div className='mr-auto my-2 '>
+          <div className='mr-auto my-2 grid-cols-1'>
             <button 
               onClick={() => { location === '' ? scrollToSection('home') : goToHomeAndScroll('home') }}
               className=" w-fit p-2 rounded-full group/nav-logo
@@ -85,7 +84,7 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
           </div>
 
           {/* Hamburger sign */}
-          <div className="md:hidden">
+          <div className="md:hidden mx-auto grid-cols-1">
             <button
               onClick={toggleMenu}
               className="text-yellow-200 focus:outline-none relative"
@@ -127,30 +126,19 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
           2xsm:gap-[2px] xsm:gap-1 sm:gap-4 items-center justify-center 
           tracking-tighter text-[16px]'
           >
-            {location === '' ? (
-              <>
-                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[1]) }} buttonName={otherData.navbarOptions[0]} />
-                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[2]) }} buttonName={otherData.navbarOptions[1]} />
-                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[3]) }} buttonName={otherData.navbarOptions[2]} />
-                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[4]) }} buttonName={otherData.navbarOptions[3]} />
-                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[5]) }} buttonName={otherData.navbarOptions[4]} />
-                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[6]) }} buttonName={otherData.navbarOptions[5]} />
-              </>
-            ) : (
-              <>
-                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[1]) }} buttonName={otherData.navbarOptions[0]} />
-                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[2]) }} buttonName={otherData.navbarOptions[1]} />
-                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[3]) }} buttonName={otherData.navbarOptions[2]} />
-                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[4]) }} buttonName={otherData.navbarOptions[3]} />
-                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[5]) }} buttonName={otherData.navbarOptions[4]} />
-                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[6]) }} buttonName={otherData.navbarOptions[5]} />
-              </>
-            )}
-
+            {otherData.navbarOptions.map((link, num) => (
+							<NavbarLinkButton
+								key={num}
+								myOnClick={() => {
+									location === '' ? scrollToSection(otherData.navbarOptionLinks[num + 1]) : goToHomeAndScroll(otherData.navbarOptionLinks[num + 1])
+								}}
+								buttonName={otherData.navbarOptions[num]}
+							/>
+						))}
           </div>
 
           {/* Contact Me */}
-          <div className="ml-auto xsm:mr-2">
+          <div className="ml-auto xsm:mr-2 col-span-2 xsm:col-span-1">
             {(contactMeOverlayOn === true) &&
               <div className=' group/contact'>
                 <NavbarLinkButton myOnClick={() => { openOverlay() }} buttonName={'Contact Me'} extraClasses={'text-xl sm:text-2xl'} />

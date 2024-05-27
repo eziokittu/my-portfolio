@@ -3,10 +3,10 @@ import React from "react";
 import { Fade, Zoom } from 'react-awesome-reveal';
 
 // importing reusable components
-// import ExperienceCard from "../ReusablePages/ExperienceCard";
+import ExperienceCard from "../ReusablePages/ExperienceCard";
 
 // importing data
-// import experienceData from '../../data/experienceData.json';
+import experienceData from '../../data/experienceData.json';
 import otherData from '../../data/otherData.json';
 
 const Experiences = () => {
@@ -53,17 +53,21 @@ const Experiences = () => {
         {/* Experience Content */}
         <div className="relative flex flex-col bg-gray-500/5 hover:bg-gray-600/20 rounded-2xl
 				shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500
-        w-full md:w-[750px] lg:w-[950px] mx-auto min-h-[300px]"
+        w-full md:w-[750px] lg:w-[950px] mx-auto gap-2 py-2"
         >
-
+          {experienceData.data.map((exp, num) => (
+            <Fade key={num} duration={1200} delay={300} ><Zoom>
+              <ExperienceCard data={exp}/>
+            </Zoom></Fade>
+          ))}
         </div>
 
         {/* Temporary Text - TO BE REMOVED */}
-        <div 
+        {/* <div 
           className="p-2 xsm:p-4 my-2 xsm:mx-auto bg-white/60 text-xl animate-pulse rounded-2xl
           w-full md:w-[750px] lg:w-[950px] mx-auto text-center">
           This Section is being worked upon (currently doing an internship). Will be updated soon.
-        </div>
+        </div> */}
 
       </div>
       

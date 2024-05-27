@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 // reusable components
 import EducationCard from '../ReusablePages/EducationCard';
@@ -52,10 +52,9 @@ const Education = () => {
 
         {/* Section Body */}
         <div className='flex flex-col text-center gap-2 xsm:gap-4 '>
-          <Fade delay={100}><EducationCard props={educationData.data[0]}/></Fade>
-          <Fade delay={100}><EducationCard props={educationData.data[1]}/></Fade>
-          <Fade delay={100}><EducationCard props={educationData.data[2]}/></Fade>
-          <Fade delay={100}><EducationCard props={educationData.data[3]}/></Fade>
+          {educationData.data.map((e, num) => (
+            <Fade key={num} duration={1200} delay={300}><Zoom><EducationCard props={e}/></Zoom></Fade>
+          ))}
         </div>
         
       </div>

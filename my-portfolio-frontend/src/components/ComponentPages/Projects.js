@@ -79,11 +79,11 @@ const Projects = (props) => {
         </div>
 
         {/* Temporary Text - TO BE REMOVED */}
-        <div 
+        {/* <div 
           className="p-2 xsm:p-4 my-2 xsm:mx-auto bg-sky-300/60 text-xl animate-pulse rounded-2xl
           w-full md:w-[750px] lg:w-[950px] mx-auto  text-center">
           The Project/Work Section will be updated as life progresses ... 😇
-        </div>
+        </div> */}
 
       </div>
 
