@@ -17,11 +17,12 @@ const About = () => {
   };
 
   return (
-    <div className='bg-green-400/20 min-h-[700px]' id='about'>
+    <div className='bg-green-400/20 min-h-[500px]' id='about'>
       
       {/* About Body */}
       <div 
-        className=' group/g1 mx-2 xsm:mx-12 md:mx-auto md:w-[700px] lg:w-[900px] p-2 xsm:p-4 rounded-lg shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-300
+        className=' w-full md:w-[790px] lg:w-[1004px]
+        group/g1 mx-2 xsm:mx-12 md:mx-auto  p-2 xsm:p-4 rounded-lg shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-300
         bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-lime-600/75 via-green-200/75 to-teal-600/75
         hover:bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] hover:from-lime-600 hover:via-green-200 hover:to-teal-600'
       >
@@ -37,10 +38,10 @@ const About = () => {
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               fill="none" viewBox="0 0 24 24" 
-              stroke-width="1.5" 
+              strokeWidth="1.5" 
               stroke="currentColor" 
               className="w-8 sm:w-16 h-8 sm:h-16 group-hover/g1:animate-spin">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
             </svg>
           </div>
 
@@ -61,8 +62,8 @@ const About = () => {
                   {new Date().toLocaleDateString()}
                   {profileData.about2}
                 </div></Fade></Zoom>
-                {profileData.about3.map((text) => 
-                <Zoom duration={revealDuration}><Fade delay={revealDelay} duration={revealDuration}>
+                {profileData.about3.map((text, num) => 
+                <Zoom key={num} duration={revealDuration}><Fade delay={revealDelay} duration={revealDuration}>
                 <div className='mb-4'>
                   {text}
                 </div></Fade></Zoom>

@@ -50,10 +50,18 @@ const Experiences = () => {
         </div>
         </Fade></Zoom>
 
+        {/* Experience Content */}
+        <div className="relative flex flex-col bg-gray-500/5 hover:bg-gray-600/20 rounded-2xl
+				shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500
+        w-full md:w-[790px] lg:w-[1004px] mx-auto min-h-[300px]"
+        >
+
+        </div>
+
         {/* Temporary Text - TO BE REMOVED */}
         <div 
           className="p-2 xsm:p-4 my-2 xsm:mx-auto bg-white/60 text-xl animate-pulse rounded-2xl
-          w-full xsm:w-11/12 lg:w-3/4 xl:w-3/5 2xl:w-1/2 text-center">
+          w-full md:w-[790px] lg:w-[1004px] mx-auto text-center">
           This Section is being worked upon (currently doing an internship). Will be updated soon.
         </div>
 

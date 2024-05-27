@@ -7,7 +7,7 @@ const squareData = shuffleHeroData.images;
 
 const ShuffleHero = () => {
   return (
-    <div className="mx-auto  w-full sm:w-5/6 ">
+    <div className="mx-auto w-full ">
       <div 
         className=" bg-white/5 rounded-2xl
         text-fuchsia-500 font-bold mb-4 text-center text-4xl "

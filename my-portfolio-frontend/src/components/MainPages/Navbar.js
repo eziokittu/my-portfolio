@@ -5,20 +5,31 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import NavbarLinkButton from '../ReusablePages/NavbarLinkButton';
 import ContactMe from '../ComponentPages/ContactMe';
 import Divider from '../ReusablePages/Divider';
+import Sidebar from './Sidebar';
 
 import profileData from '../../data/profileData.json';
 import otherData from '../../data/otherData.json';
 
 const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
 
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Callback function to receive the parameter from the child
+  const onSidebarButtonClick = () => {
+    setIsOpen(false);
+  };
+
   // For Contact Me Overlay
-	const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const openOverlay = () => {
-		contactMeButtonNotClicked(true);
+    contactMeButtonNotClicked(true);
     setIsOverlayOpen(true);
   };
   const closeOverlay = (parameter) => {
-		contactMeButtonNotClicked(false);
+    contactMeButtonNotClicked(false);
     setIsOverlayOpen(parameter);
   };
 
@@ -47,117 +58,120 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
   };
 
   return (
-    <div 
-      className='sticky top-0 z-20'
+    <div
+      className='fixed w-screen top-0 z-20'
     >
-      {/* Blur background for the navbar */}
-      <div className='absolute top-0 h-14 xsm:h-12 w-full bg-white blur-2xl -z-10'></div>
+      <div className='w-full z-50 bg-gradient-to-r from-yellow-600 via-yellow-900 to-yellow-600 h-20 border-b-2 border-yellow-300 flex justify-between'>
+        <div className=' px-[10px] w-full md:w-[790px] lg:w-[1004px] cursor-default flex items-center justify-between mx-auto'>
 
-      <div className='w-full z-50 p-0
-      flex items-center justify-around bg-slate-500/20 cursor-default'>
 
-        {/* logo */}
-        <div className='mr-auto xsm:ml-2 my-2 '>
-          {location === '' ? (
-            <button onClick={()=>{scrollToSection('home')}}
+          {/* logo */}
+          <div className='mr-auto my-2 '>
+            <button 
+              onClick={() => { location === '' ? scrollToSection('home') : goToHomeAndScroll('home') }}
               className=" w-fit p-2 rounded-full group/nav-logo
                 bg-gradient-to-b from-amber-400/60 to-fuchsia-600/60 
                 hover:bg-gradient-to-b hover:from-amber-400 hover:to-fuchsia-600 
                 flex justify-between 
-                shadow-[0_0_15px_black]
-                hover:shadow-[0_0_35px_white]
-              "
+                shadow-[0_0_30px_purple] shadow-yellow-950 hover:shadow-yellow-300"
             >
-              <img 
-                className='h-16 min-w-16 max-w-16 rounded-full
+              <img
+                className='h-12 min-w-12 max-w-12 rounded-full
                 animate-[pulse_1s_ease-in-out_infinite_0.2s]
                 group-hover/nav-logo:animate-[spin_1s_ease-in-out_1_0.2s]'
-                src={process.env.PUBLIC_URL + '/' + profileData.display_image}
+                src={profileData.display_image}
                 alt='Bodhisatta'
               />
             </button>
-          ) : (
-            <button onClick={()=>{goToHomeAndScroll('home')}}
-              className=" w-fit p-2 rounded-full group/nav-logo
-                bg-gradient-to-b from-amber-400/60 to-fuchsia-600/60 
-                hover:bg-gradient-to-b hover:from-amber-400 hover:to-fuchsia-600 
-                flex justify-between 
-                shadow-[0_0_15px_black]
-                hover:shadow-[0_0_35px_white]
-              "
+          </div>
+
+          {/* Hamburger sign */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-yellow-200 focus:outline-none relative"
             >
-              <img 
-                className='h-16 min-w-16 max-w-16 rounded-full
-                animate-[pulse_1s_ease-in-out_infinite_0.2s]
-                group-hover/nav-logo:animate-[spin_1s_ease-in-out_1_0.2s]'
-                src={process.env.PUBLIC_URL + '/' + profileData.display_image}
-                alt='Bodhisatta'
-              />
-            </button>
-          )}
-        </div>
-
-        {/* Primary Navbar options */}
-        <div 
-          className='flex 2xsm:flex-wrap flex-col 2xsm:flex-row
-          2xsm:gap-[2px] xsm:gap-1 sm:gap-4 items-center justify-center 
-          text-sm md:text-2xl lg:text-3xl'
-        >
-          {location === '' ? (
-            <>
-              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[1])}} buttonName={otherData.navbarOptions[0]} />
-              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[2])}} buttonName={otherData.navbarOptions[1]} />
-              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[3])}} buttonName={otherData.navbarOptions[2]} />
-              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[4])}} buttonName={otherData.navbarOptions[3]} />
-              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[5])}} buttonName={otherData.navbarOptions[4]} />
-              <NavbarLinkButton myOnClick={()=>{scrollToSection(otherData.navbarOptionLinks[6])}} buttonName={otherData.navbarOptions[5]} />
-            </>
-          ) : (
-            <>
-              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[1])}} buttonName={otherData.navbarOptions[0]} />
-              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[2])}} buttonName={otherData.navbarOptions[1]} />
-              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[3])}} buttonName={otherData.navbarOptions[2]} />
-              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[4])}} buttonName={otherData.navbarOptions[3]} />
-              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[5])}} buttonName={otherData.navbarOptions[4]} />
-              <NavbarLinkButton myOnClick={()=>{goToHomeAndScroll(otherData.navbarOptionLinks[6])}} buttonName={otherData.navbarOptions[5]} />
-            </>
-          )}
-          
-        </div>  
-
-        {/* Contact Me */}
-        <div className="ml-auto xsm:mr-2">
-          {(contactMeOverlayOn===true) && 
-            <div className=' group/contact'>
-              <div 
-                className='' 
-                onClick={openOverlay}
+              <svg
+                className={`w-16 h-16 transform transition-transform duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <div className='max-w-22 text-lg py-1 
-                  text-amber-400 group-hover/contact:text-amber-500
-                  border-2 border-slate-400 group-hover/contact:border-black items-center
-                  transition-all duration-300 rounded-lg
-                  flex flex-col bg-gray-700 group-hover/contact:bg-gray-800
-                  shadow-[0_0_15px_black] group-hover/contact:shadow-[0_0_35px_white]
-                  '
-                >            
-                  <p className='px-2'>Contact</p>
-                </div>
-              </div>
-            </div>
-          }
-          {/* Contact Me Overlay */}
-          {isOverlayOpen && 
-            <ContactMe onParameterChange={closeOverlay}/>
-          }
-        </div>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+              <svg
+                className={`w-16 h-16 absolute top-0 left-0 transform transition-transform duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
 
+          {/* Primary Navbar options */}
+          <div
+            className='hidden md:flex 2xsm:flex-wrap flex-col 2xsm:flex-row
+          2xsm:gap-[2px] xsm:gap-1 sm:gap-4 items-center justify-center 
+          tracking-tighter text-[16px]'
+          >
+            {location === '' ? (
+              <>
+                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[1]) }} buttonName={otherData.navbarOptions[0]} />
+                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[2]) }} buttonName={otherData.navbarOptions[1]} />
+                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[3]) }} buttonName={otherData.navbarOptions[2]} />
+                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[4]) }} buttonName={otherData.navbarOptions[3]} />
+                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[5]) }} buttonName={otherData.navbarOptions[4]} />
+                <NavbarLinkButton myOnClick={() => { scrollToSection(otherData.navbarOptionLinks[6]) }} buttonName={otherData.navbarOptions[5]} />
+              </>
+            ) : (
+              <>
+                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[1]) }} buttonName={otherData.navbarOptions[0]} />
+                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[2]) }} buttonName={otherData.navbarOptions[1]} />
+                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[3]) }} buttonName={otherData.navbarOptions[2]} />
+                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[4]) }} buttonName={otherData.navbarOptions[3]} />
+                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[5]) }} buttonName={otherData.navbarOptions[4]} />
+                <NavbarLinkButton myOnClick={() => { goToHomeAndScroll(otherData.navbarOptionLinks[6]) }} buttonName={otherData.navbarOptions[5]} />
+              </>
+            )}
+
+          </div>
+
+          {/* Contact Me */}
+          <div className="ml-auto xsm:mr-2">
+            {(contactMeOverlayOn === true) &&
+              <div className=' group/contact'>
+                <NavbarLinkButton myOnClick={() => { openOverlay() }} buttonName={'Contact Me'} extraClasses={'text-2xl'} />
+              </div>
+            }
+            {/* Contact Me Overlay */}
+            {isOverlayOpen &&
+              <ContactMe onParameterChange={closeOverlay} />
+            }
+          </div>
+
+        </div>
       </div>
 
-      {isOverlayOpen===false && (
-        <Divider isBgTransparent={true} isNavbarAbove={true} hasCentreGap={false} />
+      {/* Transperant gradient - change the height acordingly*/}
+      {!isOverlayOpen && (
+        <div className="fixed top-20 z-20 h-32 w-full bg-gradient-to-b from-yellow-950 to-transparent pointer-events-none"></div>
       )}
-      
+      {isOpen && (<Sidebar onParameterChange={onSidebarButtonClick} isContactMeOpen={isOverlayOpen} />)}
+
     </div>
   )
 };

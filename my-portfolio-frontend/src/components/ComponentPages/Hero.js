@@ -21,15 +21,15 @@ function Hero() {
 
   return (
     <div 
-      className="w-full pt-12 px-2 xsm:px-8 lg:px-0 lg:flex items-center justify-around mx-auto mb-8 bg-stone-800/20"
+      className=" w-full md:w-[790px] lg:w-[1004px] pt-12 px-2 xsm:px-8 lg:px-0 lg:flex items-center justify-around mx-auto mb-8"
     >
       
       {/* The welcome text */}
-      <div className='mx-auto lg:mx-0 w-11/12 sm:w-5/6 lg:w-fit mb-12 lg:mb-0'>
+      <div className='mx-auto lg:mx-0 w-full md:w-[790px] lg:w-[1004px] mb-12 lg:mb-0'>
 
         <Slide direction='down'><Fade>
         <div className="flex font-Merriweather text-2xl sm:text-4xl text-fuchsia-500 ">
-          Hey There<span class="text-4xl xsm:text-5xl animate-[wave_1.3s_ease-in-out_infinite]">👋🏻</span>
+          Hey There<span className="text-4xl xsm:text-5xl animate-[wave_1.3s_ease-in-out_infinite]">👋🏻</span>
         </div>
         </Fade></Slide>
 
@@ -65,7 +65,7 @@ function Hero() {
         {/* About Me Button */}
         <Slide direction='down'><Fade>
         <Link 
-          activeClass="active" spy={true} offset={-180} duration={1500} smooth={'easeOutBack'}
+          spy={true} offset={-180} duration={1500} smooth={'easeOutBack'}
           className=''
           to='about'
         >
@@ -79,7 +79,7 @@ function Hero() {
               className='font-normal group-hover:font-bold transition-all duration-300'
             >About Me</p>
             <svg className='w-6 h-6 ml-2 fill-slate-400 group-hover:fill-white group-hover:translate-x-2 transition-transform duration-300'
-              xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
               <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"/>
             </svg>
           </button>

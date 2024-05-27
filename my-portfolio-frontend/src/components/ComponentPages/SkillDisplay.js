@@ -57,7 +57,8 @@ const SkillDisplay = () => {
 			{/* the grid consisting of all the skills */}
 			<Fade>
 			<div 
-				className='w-5/6 mx-auto rounded-3xl bg-pink-300/5 hover:bg-pink-300/20 
+				className=' w-full md:w-[790px] lg:w-[1004px]
+				mx-auto rounded-3xl bg-pink-300/5 hover:bg-pink-300/20 
 				shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-500'
 			>
 				<Fade>
@@ -66,8 +67,8 @@ const SkillDisplay = () => {
 						grid grid-cols-2 2xsm:grid-cols-3 xsm:grid-cols-3
 						sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-9 2xl:grid-cols-10
 						gap-x-2  p-2 pr-4'>
-						{skills.map((skill) => (
-							<SkillCard skillImageSrc={skill[1]} skillName={skill[0]}/>
+						{skills.map((skill, num) => (
+							<SkillCard key={num} skillImageSrc={skill[1]} skillName={skill[0]}/>
 						))}
 					</div>
 				</Fade>
