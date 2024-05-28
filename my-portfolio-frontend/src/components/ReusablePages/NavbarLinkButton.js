@@ -11,7 +11,7 @@ const NavbarLinkButton = ({ buttonName, myOnClick, extraClasses }) => {
       border-2 border-yellow-500 hover:border-yellow-900
       hover:bg-yellow-500 bg-yellow-900
       shadow-[0_0_30px_purple] shadow-yellow-950 hover:shadow-yellow-300
-      rounded-lg focus:rounded-xl`}
+      rounded-lg`}
     >{buttonName}</button>
   );
 }
