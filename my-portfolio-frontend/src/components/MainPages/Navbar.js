@@ -61,7 +61,7 @@ const Navbar = ({ contactMeOverlayOn, contactMeButtonNotClicked }) => {
       className='fixed w-full top-0 z-20'
     >
       <div className='w-full z-50 bg-gradient-to-r from-yellow-600 via-yellow-900 to-yellow-600 h-20 border-b-2 border-yellow-300 flex justify-between'>
-        <div className='  w-full md:w-[790px] lg:w-[1004px] cursor-default grid grid-cols-4 xsm:grid-cols-3 md:flex items-center justify-between mx-auto'>
+        <div className='  w-full md:w-[790px] lg:w-[1004px] cursor-default flex items-center justify-evenly mx-auto'>
 
           {/* logo */}
           <div className='mr-auto my-2 grid-cols-1'>

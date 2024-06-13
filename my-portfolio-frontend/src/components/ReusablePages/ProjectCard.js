@@ -68,29 +68,52 @@ const ProjectCard = ({ projects }) => {
               {projectPanelOpen === project.id ? (
                 <div className='flex flex-col sm:flex-row m-2 xsm:m-4 transition-all duration-300'>
 
-                  {/* Link Button */}
-                  <Slide direction='left' delay={1000}><Fade delay={1000}>
-                    <button
-                      onClick={() => { window.open(`${project.link}`, '_blank') }}
-                      className='flex gap-2 items-center bg-sky-200 group-hover/g3:border-sky-950
-                rounded-2xl border-4 border-sky-900 text-sky-950 group-hover/g3:bg-sky-800 hover:shadow-[0_0_15px_black]
-                transition-all duration-300 w-[122px] h-12 group/g4 group-hover/g3:text-sky-100 shadow-[0_0_5px_black]'
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
-                        className="w-6 h-6 animate-pulse group-hover/g4:animate-none">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-                      </svg>
-                      <p className='text-lg animate-wiggle group-hover/g4:animate-none'>CODE</p>
-                      <div>
+                  {/* Link and Code buttons */}
+                  <div className='flex flex-row sm:flex-col gap-4'>
+                    {/* Link Button */}
+                    <Slide direction='left' delay={1000}><Fade delay={1000}>
+                      <button
+                        onClick={() => { window.open(`${project.link}`, '_blank') }}
+                        className='flex gap-2 items-center justify-center bg-sky-200 group-hover/g3:border-sky-950
+                  rounded-2xl border-4 border-sky-900 text-sky-950 group-hover/g3:bg-sky-800 hover:shadow-[0_0_15px_black]
+                  transition-all duration-300 w-[122px] h-12 group/g4 group-hover/g3:text-sky-100 shadow-[0_0_5px_black]'
+                      >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
                           className="w-6 h-6 animate-pulse group-hover/g4:animate-none">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
                         </svg>
-                      </div>
-                    </button>
+                        <p className='text-lg animate-wiggle group-hover/g4:animate-none'>CODE</p>
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                            className="w-6 h-6 animate-pulse group-hover/g4:animate-none">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                          </svg>
+                        </div>
+                      </button>
 
-                    {/* Title and Description */}
-                  </Fade></Slide>
+                    </Fade></Slide>
+
+                    {/* Website Button */}
+                    <Slide direction='left' delay={1000}><Fade delay={1000}>
+                      <button
+                        onClick={() => { window.open(`${project.website}`, '_blank') }}
+                        className='flex gap-2 items-center justify-center mx-auto bg-sky-200 group-hover/g3:border-sky-950
+                  rounded-2xl border-4 border-sky-900 text-sky-950 group-hover/g3:bg-sky-800 hover:shadow-[0_0_15px_black]
+                  transition-all duration-300 w-[122px] h-12 group/g4 group-hover/g3:text-sky-100 shadow-[0_0_5px_black]'
+                      >
+                        <div>
+                          <svg className="w-6 h-6 animate-pulse group-hover/g4:animate-none" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14 7H16C18.7614 7 21 9.23858 21 12C21 14.7614 18.7614 17 16 17H14M10 7H8C5.23858 7 3 9.23858 3 12C3 14.7614 5.23858 17 8 17H10M8 12H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+                        </div>
+                        <p className='text-lg animate-wiggle group-hover/g4:animate-none'>LINK</p>
+                        <div>
+                          <svg className='w-6 h-6 animate-pulse group-hover/g4:animate-none' viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="96" cy="96" r="74" stroke="currentColor" strokeWidth="12"></circle><ellipse cx="96" cy="96" stroke="currentColor" strokeWidth="12" rx="30" ry="74"></ellipse><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="12" d="M28 72h136M28 120h136"></path></g></svg>
+                        </div>
+                      </button>
+
+                    </Fade></Slide>
+                  </div>
+
+                  {/* Title and Description */}
                   <button
                     onClick={() => (SetDefaultProjectPanel())}
                     className='p-0 xsm:p-2 h-full mx-auto'
@@ -204,7 +227,7 @@ const ProjectCard = ({ projects }) => {
                   <p className="text-lg xsm:text-xl font-bold text-sky-200 group-hover/g3:text-sky-900 text-center transition-all duration-300"># TAGS</p>
                   <div className='flex flex-wrap justify-center border border-stone-400 bg-sky-200 rounded-2xl p-[2px] xsm:p-1  gap-[2px]'>
                     {project.tags.map((tag, num) => (
-                      <p key={num+'-tag'} className='text-center rounded-full px-1 xsm:px-[6px] xsm:py-1 text-xs xsm:text-sm
+                      <p key={num + '-tag'} className='text-center rounded-full px-1 xsm:px-[6px] xsm:py-1 text-xs xsm:text-sm
                   text-sky-100 group-hover/g3:text-white border bg-sky-800 group-hover/g3:bg-sky-900'>
                         {tag}
                       </p>

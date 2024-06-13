@@ -1,10 +1,62 @@
 {
 	"Projects": [
 		{
+			"id": 10,
+			"title": "To-do list Web Application",
+			"domain":"Web Dev",
+			"link":"https://github.com/eziokittu/Week2_ToDoList",
+			"website":"https://bodhisatta1999-celebaltech-todolist.netlify.app",
+			"tags": [
+				"Web Dev",
+				"React Js",
+				"TailwindCss",
+				"localStorage",
+				"react-router",
+				"uuid",
+				"todo app"
+			],
+			"description_short": "A To-do list web application to create multiple todo lists containing todo items. LocalStorage implemented. Sorting the items can also be done. Project made during 'Celebal Technologies' summer internship as Week 2 Assignment.",
+			"images": [
+				"images/projectImages/project15_Todolist/1.png",
+				"images/projectImages/project15_Todolist/2.png",
+				"images/projectImages/project15_Todolist/3.png",
+				"images/projectImages/project15_Todolist/4.png"
+			],
+			"thumbnail": "images/projectImages/project15_Todolist/1.png"
+		},
+
+		{
+			"id": 9,
+			"title": "Forms and Form Validation",
+			"domain":"Web Dev",
+			"link":"https://github.com/eziokittu/CelebalTechnologies_Projects/tree/master/week1_FormsAndFormValidation",
+			"website":"https://bodhisatta1999-celebaltech-week1.netlify.app",
+			"tags": [
+				"Web Dev",
+				"React Js",
+				"TailwindCss",
+				"@tailwindcss/forms",
+				"react-router",
+				"input validation"
+			],
+			"description_short": "A form using various form validations to submit and view the details. Project made during 'Celebal Technologies' summer internship as Week 1 Assignment.",
+			"images": [
+				"images/projectImages/project14_FormValidation/1.png",
+				"images/projectImages/project14_FormValidation/2.png",
+				"images/projectImages/project14_FormValidation/3.png",
+				"images/projectImages/project14_FormValidation/4.png",
+				"images/projectImages/project14_FormValidation/5.png",
+				"images/projectImages/project14_FormValidation/6.png"
+			],
+			"thumbnail": "images/projectImages/project14_FormValidation/2.png"
+		},
+
+		{
 			"id": 1,
 			"title": "OpiniAnalyzer",
 			"domain":"Web Dev with ML-NLP (Full Stack)",
 			"link":"https://github.com/eziokittu/OpiniAnalyzer",
+			"website":"https://opini-analyzer-client.vercel.app",
 			"tags": [
 				"ReactJS",
 				"Python",
@@ -41,6 +93,7 @@
 			"title": "KalaSangam",
 			"domain":"Web Dev",
 			"link":"https://github.com/eziokittu/Kalasangam-app",
+			"website":"https://github.com/eziokittu/Kalasangam-app",
 			"tags": [
 				"MERN",
 				"ReactJS",
@@ -69,6 +122,7 @@
 			"title": "My Portfolio",
 			"domain":"Web Dev",
 			"link":"https://github.com/eziokittu/my-portfolio",
+			"website":"https://bodhisatta1999.netlify.app",
 			"tags": [
 				"ReactJS",
 				"JavaScript",
@@ -100,8 +154,10 @@
 			"title": "Simple Box Game",
 			"domain":"Game Dev",
 			"link":"https://github.com/eziokittu/Game-Development-Projects",
+			"website":"https://github.com/eziokittu/Game-Development-Projects/blob/main/Simple%20Box%20Game%20version%200.5%20(x86).rar",
 			"tags": [
 				"UNITY",
+				"game",
 				"Unity Engine",
 				"C#",
 				"TextMeshPro",
@@ -124,6 +180,7 @@
 			"title": "MiniGame - Wumpus World",
 			"domain":"Game Dev",
 			"link":"https://github.com/eziokittu/MiniGames2D",
+			"website":"https://github.com/eziokittu/MiniGames2D",
 			"tags": [
 				"UNITY",
 				"C#",
@@ -148,6 +205,7 @@
 			"title": "Password Generator & Validator",
 			"domain":"App Dev",
 			"link":"https://github.com/eziokittu/Android-PasswordGenerator",
+			"website":"https://github.com/eziokittu/Android-PasswordGenerator",
 			"tags": [
 				"ANDROID",
 				"Java",
@@ -170,6 +228,7 @@
 			"title": "Tkinter - Simple Calculator",
 			"domain":"App Dev",
 			"link":"https://github.com/eziokittu/Python-Small-Projects/tree/main/SimpleCalulator",
+			"website":"https://github.com/eziokittu/Python-Small-Projects/tree/main/SimpleCalulator",
 			"tags": [
 				"Python",
 				"Tkinter",
