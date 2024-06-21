@@ -227,8 +227,8 @@
 			"id": 8,
 			"title": "Tkinter - Simple Calculator",
 			"domain":"App Dev",
-			"link":"https://github.com/eziokittu/Python-Small-Projects/tree/main/SimpleCalulator",
-			"website":"https://github.com/eziokittu/Python-Small-Projects/tree/main/SimpleCalulator",
+			"link":"https://github.com/eziokittu/All-Python-Codings/blob/master/MyProjects/Calculator/Calculator1_Tkinter.py",
+			"website":"https://github.com/eziokittu/All-Python-Codings/blob/master/MyProjects/Calculator/Calculator1_Tkinter.py",
 			"tags": [
 				"Python",
 				"Tkinter",
