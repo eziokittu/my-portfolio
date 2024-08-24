@@ -361,7 +361,7 @@ const Footer = () => {
 
 				{hiddenText && (
 					<button 
-						className="text-[10px]" 
+						className="text-[8px] text-black" 
 						onClick={() => {
 							setHiddenText(false);
 							alert("You have unlocked my hidden confession!. Scroll down to read!")
