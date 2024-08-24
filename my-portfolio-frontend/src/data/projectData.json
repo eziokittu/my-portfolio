@@ -4,8 +4,8 @@
 			"id": 10,
 			"title": "To-do list Web Application",
 			"domain":"Web Dev",
-			"link":"https://github.com/eziokittu/Week2_ToDoList",
-			"website":"https://bodhisatta1999-celebaltech-todolist.netlify.app",
+			"link":"https://github.com/eziokittu/my-todo-list",
+			"website":"https://bodhisatta1999-mytodolist.netlify.app/",
 			"tags": [
 				"Web Dev",
 				"React Js",
@@ -29,8 +29,8 @@
 			"id": 9,
 			"title": "Forms and Form Validation",
 			"domain":"Web Dev",
-			"link":"https://github.com/eziokittu/CelebalTechnologies_Projects/tree/master/week1_FormsAndFormValidation",
-			"website":"https://bodhisatta1999-celebaltech-week1.netlify.app",
+			"link":"https://github.com/eziokittu/FormAndFormValidation",
+			"website":"https://bodhisatta1999-formwithvalidation.netlify.app/",
 			"tags": [
 				"Web Dev",
 				"React Js",

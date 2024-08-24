@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { scroller } from 'react-scroll';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -10,6 +10,8 @@ import resourceData from '../../data/resourcesData.json';
 import otherData from '../../data/otherData.json';
 
 const Footer = () => {
+
+	const [hiddenText, setHiddenText] = useState(true);
 
 	// for using react-scroll and react-router at the same time
 	const path = useLocation().pathname;
@@ -356,11 +358,24 @@ const Footer = () => {
 						{/* <svg className='w-6 h-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" id="linkedin"><g fill="none" fillRule="evenodd"><g><rect width="72" height="72" fill="#117EB8" rx="4"></rect><path fill="#FFF" d="M13.139 27.848h9.623V58.81h-9.623V27.848zm4.813-15.391c3.077 0 5.577 2.5 5.577 5.577 0 3.08-2.5 5.581-5.577 5.581a5.58 5.58 0 1 1 0-11.158zm10.846 15.39h9.23v4.231h.128c1.285-2.434 4.424-5 9.105-5 9.744 0 11.544 6.413 11.544 14.75V58.81h-9.617V43.753c0-3.59-.066-8.209-5-8.209-5.007 0-5.776 3.911-5.776 7.95V58.81h-9.615V27.848z"></path></g></g></svg> */}
 					</button>
 				</div>
-				<div
-					className="text-transparent bg-black cursor-default text-[6px] hidden"
-				>
-					I like Anshika Jaiswal. I want to serve her as her slave. Yes I am submissive and want her as my master. Kinky right?? Share this to her if you read this. Tell her that I like her
-				</div>
+
+				{hiddenText && (
+					<button 
+						className="text-[10px]" 
+						onClick={() => {
+							setHiddenText(false);
+							alert("You have unlocked my hidden confession!. Scroll down to read!")
+						}}
+					>My confession</button>
+				)}
+
+				{!hiddenText && (
+					<div className="text-white cursor-default text-[12px] text-justify mb-8">
+						I think I love Avani Singh or atleast I have convinced my mind to the feeling of loving her. She is decent looking and quite cute and sweet. She has great amount of determination and ambition and has a solid goal in life unlike most other girls. Whenever I am around her, I feel at peace. Even if i dont talk to her and she is around, i feel at ease and happy. I feel like i can change myself to get her. But only problem is that she has convinced herself that I have some flaws which will always be there and so she will never want me. I had made a terrible mistake earlier, not only with her but with most other girls I had been attracted to. The mistake is that I get obsessed with talking to that person and over time I get so obsessed, that if the girl does not respond or sort of ignors, I feel deeply hurt and emotional. I know i have to control this and have been trying. But this mostly happens in chats (like Whatsapp/ Instagram...) where I sometimes tell mean things when I have feeling too low and emotional. I am not thinking properly and tell her whatever nonsense comes to my mind. I know I am wrong. So this I did with Avani and she felt really bad (I am extremely sorry if u r reading this Avani). But whatever, the pretty girl gave me another change sort of... but stupid me again got emotional one day and ruined the friendship with her. I felt miserable after that day. I was on full control after this for a long time like 3 months. But I had been friends with another girl "Anshika Jaiswal" where I repeated the same mistake. I would blame her too, cuz she never really understood my value, she didnt appreciate me as much of the hard work I did thinking she will feel good. But whatever, I don't get to insult someone just because I am emotionally feeling low. I need to improve. Thanks for reading this much. I have got my lesson and I promise that I will never have long chats with another girl. If I have to express something, I will call her or tell in-person.
+						<br></br>I want to list all the girls I have done this with (mostly in order by time). Ananya Rout, Aparajita Dash, Adwaita Basu Bal, Archisha Verma, Bhumika Mukherjee (not from KIIT), Avani Singh, Anshika Jaiswal. I am again VERY VERY SORRY to whomever is reading this. It will never happen again. I promise. I will never hurt any other girl just becasue I am upset / feeling low.
+						<br></br>Thanks to Anuroop Roy, Auro Saswat Raj, and recently Anuj Pradhan for tolerating me for so long and considering me as a friend. I am grateful to them for helping me in their ways so I can share my feelings and overcome this depression. Also thanks to Avani Singh for still talking to me (work related only) even though I am such miserable and full of nonsense.
+					</div>
+				)}
 			</div>
 
 		</footer>
