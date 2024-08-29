@@ -21,7 +21,7 @@ const About = () => {
       
       {/* About Body */}
       <div 
-        className=' w-fullmd:w-[750px] lg:w-[950px]
+        className=' w-full md:w-[750px] lg:w-[950px]
         group/g1 mx-auto  p-2 xsm:p-4 rounded-lg shadow-[0_0_5px_black] hover:shadow-[0_0_15px_black] transition duration-300
         bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-lime-600/75 via-green-200/75 to-teal-600/75
         hover:bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] hover:from-lime-600 hover:via-green-200 hover:to-teal-600'

@@ -1,6 +1,36 @@
 {
 	"Projects": [
 		{
+			"id": 11,
+			"title": "NeuroNode - ML/AI Model Catalogue Application",
+			"domain":"Full StackWeb Dev with ML and AI",
+			"link":"https://github.com/eziokittu/NeuroNode",
+			"website":"https://neuronode.vercel.app/",
+			"tags": [
+				"Web Dev",
+				"Full Stack",
+				"React Js",
+				"TailwindCss",
+				"Python",
+				"FastAPI",
+				"ML/AI",
+				"Testing Models",
+				"HuggingFace Spaces",
+				"Vercel"
+			],
+			"description_short": "An ML/AI Model catalogue website using React and TailwindCSS in client side hosted on VERCEL, and Python FastAPI in server side hosted in HuggingFace Spaces",
+			"images": [
+				"images/projectImages/project16_NeuroNode/1.png",
+				"images/projectImages/project16_NeuroNode/2.png",
+				"images/projectImages/project16_NeuroNode/3.png",
+				"images/projectImages/project16_NeuroNode/4.png",
+				"images/projectImages/project16_NeuroNode/5.png",
+				"images/projectImages/project16_NeuroNode/6.png"
+			],
+			"thumbnail": "images/projectImages/project16_NeuroNode/1.png"
+		},
+
+		{
 			"id": 10,
 			"title": "To-do list Web Application",
 			"domain":"Web Dev",
