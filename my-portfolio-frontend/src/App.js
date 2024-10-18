@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 // importing reusable components
 // import DisableRightClick from './components/ReusablePages/DisableRightClick';
@@ -11,10 +12,10 @@ import Background from './components/MainPages/Background';
 
 function App() {
   // For Contact Me Overlay
-	const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-  const closeOverlay = (parameter) => {
-    setIsOverlayOpen(parameter);
-  };
+	// const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  // const closeOverlay = (parameter) => {
+  //   setIsOverlayOpen(parameter);
+  // };
 
   // for changing title and logo of website dynamically
   useEffect(() => {
@@ -45,7 +46,8 @@ function App() {
     <div>
       <Background/>
       <BrowserRouter>
-        <Navbar contactMeOverlayOn={!isOverlayOpen} contactMeButtonNotClicked={closeOverlay} />
+        <Navbar />
+        {/* <Navbar contactMeOverlayOn={!isOverlayOpen} contactMeButtonNotClicked={closeOverlay} /> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
