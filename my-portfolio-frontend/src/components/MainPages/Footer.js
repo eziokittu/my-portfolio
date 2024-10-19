@@ -68,7 +68,6 @@ const Footer = () => {
 							<p>Thank you 🙌 for visiting my personal portfolio website 😽</p>
 							<p>Connect with me over socials.📱</p>
 							<p>Keep Rising 🚀.</p>
-							<p>Let's play Counter Strike 🔥 together sometimes </p>
 							<p>😸🌎😇</p>
 						</div>
 

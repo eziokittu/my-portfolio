@@ -61,7 +61,7 @@ const Navbar = () => {
     <div
       className='fixed w-full top-0 z-20'
     >
-      <div className='w-full z-50 bg-gradient-to-r from-yellow-600 via-yellow-900 to-yellow-600 h-20 border-b-2 border-yellow-300 flex justify-between'>
+      <div className='w-full z-50 bg-gradient-to-r from-yellow-600 via-yellow-700 to-yellow-600 h-20 border-b-2 border-yellow-300 flex justify-between'>
         <div className='px-2  w-full md:w-[790px] lg:w-[1004px] cursor-default flex items-center justify-evenly mx-auto'>
 
           {/* logo */}
@@ -71,7 +71,6 @@ const Navbar = () => {
               className=" w-fit p-2 rounded-2xl group/nav-logo
                 transition-all duration-500 hover:font-bold
                 text-yellow-200 hover:text-stone-900
-                border-2 border-yellow-500 hover:border-yellow-900
                 hover:bg-yellow-500 bg-yellow-900
                 shadow-[0_0_30px_purple] shadow-yellow-950 hover:shadow-yellow-300
                 flex justify-between items-center space-x-2"

@@ -28,9 +28,9 @@ function SkillCard({skillName, skillImageSrc}) {
         {/* image of skill */}
         <div className='w-fit h-fit place-self-center'>
           <img 
-            className={`w-full rounded-t-lg  ${buttonHovered ?
-              'h-[30px] xsm:h-[50px] sm:h-[70px] transition-all duration-1000':
-              'h-[20px] xsm:h-[60px] sm:h-[80px] transition-all duration-1000'
+            className={`w-full rounded-t-lg transition-all duration-1000 ${buttonHovered ?
+              'h-[30px] xsm:h-[50px] sm:h-[70px]':
+              'h-[20px] xsm:h-[60px] sm:h-[80px]'
             }`}
             src={skillImageSrc}
             alt='skill'
@@ -41,7 +41,7 @@ function SkillCard({skillName, skillImageSrc}) {
         <div className={
           `flex items-center justify-center w-full  rounded-b-lg
           ${buttonHovered ? 
-            'h-[30px] xsm:h-[50px] sm:h-[60px] -translate-y-1/4 bg-violet-950 transition-all duration-1000' : 
+            'h-[30px] xsm:h-[50px] sm:h-[70px]  bg-violet-950 transition-all duration-1000' : 
             'h-[40px] xsm:h-[40px] sm:h-[60px]  bg-fuchsia-100'}
           `}>
           <p className={`overflow-visible
