@@ -72,7 +72,8 @@ const Navbar = () => {
                 transition-all duration-500 hover:font-bold
                 text-yellow-200 hover:text-stone-900
                 hover:bg-yellow-500 bg-yellow-900
-                shadow-[0_0_30px_purple] shadow-yellow-950 hover:shadow-yellow-300
+                border-2 border-yellow-500/30 hover:border-yellow-800
+                shadow-[0_0_30px_purple] shadow-yellow-950 hover:shadow-yellow-800
                 flex justify-between items-center space-x-2"
             >
               <img
