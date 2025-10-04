@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "type": "Internship + Full Time",
+      "name": "SuperAGI",
+      "image":"./images/educationImages/img_superagi.jpg",
+      "domain": "Full Stack Software Development",
+      "link": "https://in.linkedin.com/company/superagi",
+      "certificate": "https://drive.google.com/file/d/1ENvrjH_LrbNS7Z8A9lOXLir3BYEtewV3/view?usp=drive_link",
+      "description": "Working as a Full Stack Software developer to build an Agentic CRM 'SuperAGI' consisting of micro services interconnected with each other. Built on Ruby on Rails, Golang and Python mostly.",
+      "start": "01/2025",
+      "end": "current"
+    },
+    {
       "type": "Internship",
       "name": "RnPSoft",
       "image":"./images/educationImages/img_rnpsoft.png",
