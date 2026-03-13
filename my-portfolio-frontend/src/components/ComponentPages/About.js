@@ -50,6 +50,8 @@ const About = () => {
 
         </div>
 
+        <div class="flex flex-row-reverse text-xl">(As of {new Date().toLocaleDateString()})</div>
+
         {/* Content of About Section */}
         <Fade duration={revealDuration} delay={revealDelay}>
           <div>
@@ -59,10 +61,8 @@ const About = () => {
                 <Zoom duration={revealDuration}><Fade delay={revealDelay} duration={revealDuration}>
                 <div className='mb-4'>
                   {profileData.about1}
-                  {new Date().toLocaleDateString()}
-                  {profileData.about2}
                 </div></Fade></Zoom>
-                {profileData.about3.map((text, num) => 
+                {profileData.about2.map((text, num) => 
                 <Zoom key={num} duration={revealDuration}><Fade delay={revealDelay} duration={revealDuration}>
                 <div className='mb-4'>
                   {text}
@@ -88,25 +88,10 @@ const About = () => {
                 </div>
               </Fade></Zoom>
 
-              {/* KIIT Email */}
-              <Zoom duration={revealDuration}><Fade delay={revealDelay} duration={revealDuration}>
-                <div className='mb-2'>
-                  <span className='mr-2 text-lime-950 font-bold'>KIIT Email:</span>
-                  <span>
-                    <button
-                      onClick={() => redirectToGmail(profileData.email_KIIT)}
-                      className='hover:underline'
-                    >
-                      {profileData.email_KIIT}
-                    </button>
-                  </span>
-                </div>
-              </Fade></Zoom>
-
               {/* Place Details */}
               <Zoom duration={revealDuration}><Fade delay={revealDelay} duration={revealDuration}>
                 <div className=''>
-                  <span className='mr-2 text-lime-950 font-bold'>Place:</span>
+                  <span className='mr-2 text-lime-950 font-bold'>Hometown:</span>
                   <span>{profileData.home}</span>
                 </div>
               </Fade></Zoom>

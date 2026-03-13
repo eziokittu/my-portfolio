@@ -1,5 +1,6 @@
 {
   "skills" : [
+    ["Ruby on Rails","images/skillImages/img_rubyOnRails.png"],
     ["Unity Engine", "images/skillImages/img_unity.png"],
     ["C++","images/skillImages/img_cpp.png"],
     ["C","images/skillImages/img_c.png"],
@@ -14,7 +15,6 @@
     ["My SQL","images/skillImages/img_mysql.png"],
     ["MS Word","images/skillImages/img_msword.png"],
     ["Aseprite","images/skillImages/img_aseprite.png"],
-    ["VS Code","images/skillImages/img_vscode.png"],
-    ["Windows","images/skillImages/img_windows.png"]
+    ["VS Code","images/skillImages/img_vscode.png"]
   ]
 }

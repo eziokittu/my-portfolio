@@ -49,7 +49,7 @@ const SkillDisplay = () => {
 						<p className='text-violet-950 pr-1 sm:pr-3'>My</p>
 						<p className='text-fuchsia-700 pr:1 sm:pr-3'>Skills</p>
 						<p className='text-violet-900 pr-1 sm:pr-3'>&</p>
-						<p className='text-teal-800  '>Abilities</p>
+						<p className='text-teal-800  '>Tools</p>
 					</span>
 				</button>
 			</Fade>
