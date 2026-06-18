@@ -1,6 +1,70 @@
 {
 	"Projects": [
 		{
+			"id": 18,
+			"title": "YappyBall",
+			"domain":"2D Mobile Game Development",
+			"link":"https://cloud.unity.com/home/organizations/13469095035954/projects/15483a2f-80de-4b39-aea0-0330edb91a3c/plastic-scm/organizations/13469095035954/repositories/YappyBall%2FYappyBird/branch/%2Fmain/tree/",
+			"website":"https://play.google.com/store/apps/details?id=com.GlitchBong.YappyBall&hl=en-US&ah=mB8RM0VY50NzAkxxpvJy4OFhh9w&pli=1",
+			"tags": [
+				"Game Dev",
+				"Unity",
+				"C#",
+				"2D Game",
+				"Mobile Game",
+				"Android",
+				"Google Play Store"
+			],
+			"description_short": "A 2D mobile game developed in Unity with C# of a 2D ball that can jump and collect coins. The game is hosted on Google Play Store. Please chec kit out.",
+			"images": [
+				"images/projectImages/project18_YappyBall/1.jpg",
+				"images/projectImages/project18_YappyBall/2.jpg",
+				"images/projectImages/project18_YappyBall/3.jpg",
+				"images/projectImages/project18_YappyBall/4.jpg",
+				"images/projectImages/project18_YappyBall/5.jpg",
+				"images/projectImages/project18_YappyBall/6.jpg",
+				"images/projectImages/project18_YappyBall/7.jpg",
+				"images/projectImages/project18_YappyBall/8.jpg",
+				"images/projectImages/project18_YappyBall/9.jpg",
+				"images/projectImages/project18_YappyBall/10.jpg"
+			],
+			"thumbnail": "images/projectImages/project18_YappyBall/1.jpg"
+		},
+
+		{
+			"id": 17,
+			"title": "Personalised Art Gallery",
+			"domain":"Full Stack Web Development",
+			"link":"https://github.com/eziokittu/Art-gallery",
+			"website":"https://moupiya-art.vercel.app/",
+			"tags": [
+				"Web Dev",
+				"Full Stack",
+				"Next Js",
+				"TailwindCss",
+				"Vercel",
+				"MongoDB",
+				"Calculator",
+				"ADMIN Panel",
+				"Dynamic themes and content"
+			],
+			"description_short": "A personalised full stack business website for my friend as an art gallery where they can showcase their artworks in realtime with all the CRUD operations. Also can connect and import posts from instagram.",
+			"images": [
+				"images/projectImages/project17_ArtGallery/1.png",
+				"images/projectImages/project17_ArtGallery/2.png",
+				"images/projectImages/project17_ArtGallery/3.png",
+				"images/projectImages/project17_ArtGallery/4.png",
+				"images/projectImages/project17_ArtGallery/5.png",
+				"images/projectImages/project17_ArtGallery/6.png",
+				"images/projectImages/project17_ArtGallery/7.png",
+				"images/projectImages/project17_ArtGallery/8.png",
+				"images/projectImages/project17_ArtGallery/9.png",
+				"images/projectImages/project17_ArtGallery/10.png"
+			],
+			"thumbnail": "images/projectImages/project17_ArtGallery/1.png"
+		},
+		
+		{
 			"id": 11,
 			"title": "NeuroNode - ML/AI Model Catalogue Application",
 			"domain":"Full StackWeb Dev with ML and AI",
